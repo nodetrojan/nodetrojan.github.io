@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://nodetrojan.github.io/news/article-49699.htm" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Django 之视图url参数获取</title>
+        <meta name="description" content="Django   中的视图主要是负责接受   Web   请求   HttpRequest  ，同时进行逻辑处理，并返回   Web   响应   HttpResponse给请求者。     通过创建" />
+        <link rel="icon" href="/assets/website/img/nodetrojan/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="NodeTrojan节点订阅官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://nodetrojan.github.io/news/article-49699.htm" />
+    <meta property="og:site_name" content="NodeTrojan节点订阅官网" />
+    <meta property="og:title" content="Django 之视图url参数获取" />
+    <meta property="og:image" content="https://nodetrojan.github.io/uploads/20240904-1/1b457b17dd8d636def5c0e11ad1d3f84.webp" />
+        <meta property="og:release_date" content="2025-02-02T09:25:08" />
+    <meta property="og:updated_time" content="2025-02-02T09:25:08" />
+        <meta property="og:description" content="Django   中的视图主要是负责接受   Web   请求   HttpRequest  ，同时进行逻辑处理，并返回   Web   响应   HttpResponse给请求者。     通过创建" />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Django 之视图url参数获取">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="/assets/website/css/nodetrojan/style.css">
+    <link rel="stylesheet" href="/assets/website/css/nodetrojan/responsive.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PK0RCMBM8T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PK0RCMBM8T');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- Preloader Start -->
+    <div class="preloader"></div>
+    <!-- Preloader End -->
+    <!-- header Start -->
+    <header class="header-style-two">
+        <div class="header-wrapper">
+            <div class="header-navigation-area two-layers-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                                                        <a class="navbar-brand logo f-left mrt-10 mrt-md-0" href="/">
+                                <span>NodeTrojan</span>
+                            </a>
+                                                        <div class="main-menu f-right">
+                                <nav id="mobile-menu-right">
+                                    <ul>
+                                                                                <li>
+                                            <a href="/">首页</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/free-nodes/">免费节点</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/paid-subscribe/">推荐机场</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/news/">新闻资讯</a>
+                                        </li>
+                                                                                <li><a href="#">关于</a></li>
+                                        <li><a href="#">联系</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header End -->
+    <!-- Page Title Start -->
+    <section class="page-title-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 text-center">
+                    <div class="page-title-content">
+                        <h1 class="title text-white">Django 之视图url参数获取</h1>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="/">首页</a></li>
+                                <li class="breadcrumb-item"><a href="/news/">新闻资讯</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">正文</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Page Title End -->
+    <!-- About Section Start -->
+    <section class="about-section anim-object pdt-110 pdb-50 pdb-lg-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="htmledit_views"> <div>  <span style="color:#000000;">Django </span><br />  <span style="color:#000000;">中的视图主要是负责接受 </span><br />  <span style="color:#000000;">Web </span><br />  <span style="color:#000000;">请求 </span><br />  <span style="color:#000000;">HttpRequest</span><br />  <span style="color:#000000;">，同时进行逻辑处理，并返回 </span><br />  <span style="color:#000000;">Web </span><br />  <span style="color:#000000;">响应 </span><br />  <span style="color:#000000;">HttpResponse给请求者。</span> </div> <div></div> <div>  <span style="color:#000000;">通过创建一个 webtest2 项目以及创建一个 book 应用为例进行说明</span> </div> <div> <pre><code class="language-python">#创建一个 webtest2 项目，执行如下命令：  django-admin startproject webtest2</code></pre> <div>   <span style="color:#000000;">进入 </span><br />   <span style="color:#000000;">webtest2 </span><br />   <span style="color:#000000;">项目目录，并创建 </span><br />   <span style="color:#000000;">book </span><br />   <span style="color:#000000;">应用，命令如下： </span>  </div> <div> <pre><code class="language-python">cd webtest2 python manage.py startapp book</code></pre> <div>    <span style="color:#000000;">在 </span><br />    <span style="color:#000000;">webtest2/settings.py </span><br />    <span style="color:#000000;">中 </span><br />    <span style="color:#000000;">INSTALLED_APPS </span><br />    <span style="color:#000000;">项安装应用</span>   </div> <div> <pre><code class="language-python">INSTALLED_APPS = [     'django.contrib.admin',     'django.contrib.auth',     'django.contrib.contenttypes',     'django.contrib.sessions',     'django.contrib.messages',     'django.contrib.staticfiles',     'book',  #添加book应用到项目中 ]</code></pre> <div>     <span style="color:#000000;">在 </span><br />     <span style="color:#000000;">webtest2/settings.py </span><br />     <span style="color:#000000;">中 </span><br />     <span style="color:#000000;">DATABASES </span><br />     <span style="color:#000000;">项配置使用 </span><br />     <span style="color:#000000;">MySQL </span><br />     <span style="color:#000000;">数据库 </span><br />     <span style="color:#000000;">dbtest</span>    </div> <div> <pre><code class="language-python">DATABASES = {     'default': {         'ENGINE': 'django.db.backends.mysql',         'NAME': "dbtest",    #数据名提前设置好         'HOST':"localhost",         'PORT':"3306",         'USER':"root",         'PASSWORD':"XXX", #密码自己设置     } }</code></pre> <div>      <span style="color:#000000;">创建模板目录结构 templates/book,如下:</span><br />      <img decoding="async" alt="" height="183" src="http://img.555519.xyz/uploads/20230108/a0cb808842880ccfb805068ace71f2a8.jpg"> </div> <div> <div>       <span style="color:#000000;">在 </span><br />       <span style="color:#000000;">webtest2/settings.py </span><br />       <span style="color:#000000;">中 </span><br />       <span style="color:#000000;">TEMPLATES </span><br />       <span style="color:#000000;">项配置模板查找路径:</span>      </div> <div> <pre><code class="language-python">TEMPLATES = [     {         'BACKEND': 'django.template.backends.django.DjangoTemplates',         'DIRS': [os.path.join(BASE_DIR,"templates")],  ##########填写这一条         'APP_DIRS': True,         'OPTIONS': {             'context_processors': [                 'django.template.context_processors.debug',                 'django.template.context_processors.request',                 'django.contrib.auth.context_processors.auth',                 'django.contrib.messages.context_processors.messages',             ],         },     }, ]</code></pre> <div>        <span style="color:#000000;">跳转webtest2/webtest2/__init__.py </span><br />        <span style="color:#000000;">文件，写入代码:</span>       </div> <div> <pre><code class="language-python">import pymysql pymysql.install_as_MySQLdb()</code></pre> <p>大概配置好了可以跳转了，<span style="color:#000000;">使用命令启动 </span><span style="color:#000000;">Django 服务器：python manage.py runserver</span></p> <p><span style="color:#000000;">这时候在编译器中可以看到:</span></p> <pre><code>#PS D:\Program Files (x86)\python\webtest2&gt; python manage.py runserver Performing system checks...  System check identified no issues (0 silenced). December 15, 2021 - 20:36:45 Django version 1.11.28, using settings 'webtest2.settings' Starting development server at http://127.0.0.1:8000/ Quit the server with CTRL-BREAK.</code></pre> <p>点击倒数第二行的 htto://127.0.0.1:8000/</p> <p><img fetchpriority="high" decoding="async" alt="" height="347" src="http://img.555519.xyz/uploads/20230108/854466e3deb52648e414c94178411818.jpg"></p> </p></div> </p></div> </p></div> <p>&nbsp;</p> <div>      <span style="color:#000000;">实际上，视图就是一个 </span><br />      <span style="color:#000000;">Python </span><br />      <span style="color:#000000;">函数，被定义在</span><br />      <span style="color:#000000;">"</span><br />      <span style="color:#000000;">应用</span><br />      <span style="color:#000000;">/views.py"</span><br />      <span style="color:#000000;">文件中。使用视图时需要进行两方面操作，分 别是定义视图、配置 URL</span><br />      <span style="color:#000000;">，且两个操作不分先后顺序。</span>     </div> <div>      在<br />      <span style="color:#000000;">webtest2/book/views.py </span><br />      <span style="color:#000000;">文件中定义一个视图函数：</span>     </div> <div> <pre><code class="language-python">from django.shortcuts import render from django.http import HttpResponse  # Create your views here. def index(request):     return render(request,"book/index.html")</code></pre> <p>在webtest2&gt;&gt;&gt;templates&gt;&gt;&gt;book&gt;&gt;&gt;创建一个index.html</p> </p></div> <div> <pre><code class="language-python">&lt;!DOCTYPE html&gt; &lt;html lang="en"&gt; &lt;head&gt;     &lt;meta charset="UTF-8"&gt;     &lt;title&gt;Title&lt;/title&gt; &lt;/head&gt; &lt;body&gt;     &lt;h1&gt;首页&lt;/h1&gt; &lt;/body&gt; &lt;/html&gt;</code></pre> <div>       <span style="color:#000000;">重要的一步来了，即配置 </span><br />       <span style="color:#000000;">URL</span><br />       <span style="color:#000000;">，将视图函数和 </span><br />       <span style="color:#000000;">url </span><br />       <span style="color:#000000;">对应起来，在 </span><br />       <span style="color:#000000;">webtest2/urls.py </span><br />       <span style="color:#000000;">中：</span>      </div> <div></div> </p></div> <p>&nbsp;</p> <pre><code class="language-python">from django.conf.urls import url,include from django.contrib import admin  urlpatterns = [     url(r'^admin/', admin.site.urls),     url(r"^",include("book.urls")),     #包含booktes应用中的 urls 文件 ] </code></pre> <div>      <span style="color:#000000;">在 </span><br />      <span style="color:#000000;">book </span><br />      <span style="color:#000000;">目录下创建 </span><br />      <span style="color:#000000;">urls.py </span><br />      <span style="color:#000000;">文件并编辑其内容：</span>     </div> <div> <pre><code class="language-python">from django.conf.urls import url from . import views  urlpatterns = [     url(r"^index$",views.index), #建立 url 和 views.index 视图函数的关联     url(r"^show(\d+)$",views.show) ]</code></pre> <div>       <span style="color:#000000;">启动服务器并通过浏览器访问 http://127.0.0.1:8000/index，可以看到就是打开index.html页面的样子:</span><br />       <img decoding="async" alt="" height="266" src="http://img.555519.xyz/uploads/20230108/b0d9ae546d3eb12992ed8f3c27c3b2fb.jpg"> </div> <p>当请求的 url 被看做是一个普通的 Python 字符串且进行匹配时，通常是不包括域名、get 或 post 参数的。请求地址如下： http://127.0.0.1:8000/show1?hello=666</p> <p>①若去除掉域名和参数部分，并将最前面的/去除后，只剩下如下部分与正则匹配，如下： show</p> <p>②此时，打开 book/urls.py 文件，定义与这个地址匹配的 url 如下： url(r'^show$',views.show), # 定义 url</p> <p>③在 book/views.py 中补充创建视图函数 show()</p> <pre><code class="language-python">def show(request,id):     return HttpResponse('show')</code></pre> <hr/> <p>我们可以在匹配过程中从 url 中捕获参数，并把每个捕获的参数都作为一个普通的 Python 字符串传 递给视图的。获取值需要在正则表达式中使用小括号表示，下面两种方式完成：</p> <div>       <span style="color:#000000;">(1)</span><br />       <span style="color:#000000;">位置参数； </span>      </div> <div>       <span style="color:#000000;">(2)</span><br />       <span style="color:#000000;">关键字参数。</span>      </div> <div> <hr/> <p>1：位置参数</p> </p></div> <p>此时，可以直接使用小括号，并通过位置参数传递给视图。以下是详细步骤：</p> <p>①为了提取参数值，我们可以修改上面的正则表达式如下： url(r"^show(\d+)$",views.show),</p> <p>②修改视图函数 show()，如下：</p> <pre><code class="language-python">def show(request,id):     return HttpResponse('show参数值:%s'%id)</code></pre> <p>③完成上述操作后，在地址栏输入如下地址： http://127.0.0.1:8000/show666</p> <p><img loading="lazy" decoding="async" alt="" height="169" src="http://img.555519.xyz/uploads/20230108/c7f071817fedcfff376316170c371264.jpg"></p> <hr/> <p>&nbsp;2：关键字参数</p> <p>此时，可以在正则表达式部分为组命名，这就是关键字参数，需要使用到的正则表达式为组命名</p> <table border="1" cellpadding="1" cellspacing="1" style="width:500px;"> <tbody> <tr> <td> <div>           <span style="color:#000000;">(?P&lt;name&gt;)</span>          </div> </td> <td> <div>           <span style="color:#000000;">分组起别名</span>          </div> </td> </tr> </tbody> </table> <p>①修改正则表达式，其中，?P 部分表示为这个参数定义的名称为 bid[注：后边使用时，必须写相同的名称]， 也可以是其它名称，如下： url(r"^show(?P&lt;bid&gt;\d+)$",views.show),</p> <p>②修改视图 show()函数，注意该视图函数 show()必须要有一个参数名为 bid，否则报错：</p> <pre><code class="language-python">from django.http import HttpResponse def show(request, bid):      return HttpResponse("显示关键字参数值:%s" % bid)</code></pre> <hr/> <p><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://docs.djangoproject.com/zh-hans/2.0/"  title="Django 文档 | Django 文档 | Django (djangoproject.com)" rel="nofollow">Django 文档 | Django 文档 | Django (djangoproject.com)</a></p> <p>有兴趣可以自行阅读</p> </p></div> </p></div> </p></div> </p></div> </div></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-49181.htm">中国农大动物医院营业时间 中国农大动物医院营业时间查询</a></p>
+                                        <p>下一个：<a href="/news/article-49700.htm">瑞派宠物医院全国多少家（瑞派宠物医院多少家门店）</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-32574.htm" title="猫粮品牌推荐（猫粮品牌推荐大全）">猫粮品牌推荐（猫粮品牌推荐大全）</a></li>
+                        <li class="py-2"><a href="/news/article-28315.htm" title="Java中定义和声明之间的区别。">Java中定义和声明之间的区别。</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-27-free-subscribe-node.htm" title="11月27日→21.7M/S|2024年最新免费节点SSR/V2ray/Clash/Shadowrocket订阅链接地址">11月27日→21.7M/S|2024年最新免费节点SSR/V2ray/Clash/Shadowrocket订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-25-free-subscribe-node.htm" title="10月25日→22.4M/S|2024年最新免费节点Clash/V2ray/SSR/Shadowrocket订阅链接地址">10月25日→22.4M/S|2024年最新免费节点Clash/V2ray/SSR/Shadowrocket订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-30196.htm" title="宠物领养数据库设计图片（宠物领养数据库设计图片）">宠物领养数据库设计图片（宠物领养数据库设计图片）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-1-trojan-github.htm" title="2月1日→22.3M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">2月1日→22.3M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-26001.htm" title="宠物粮食品牌起名大全图片及价格图（宠物粮食品牌都有什么）">宠物粮食品牌起名大全图片及价格图（宠物粮食品牌都有什么）</a></li>
+                        <li class="py-2"><a href="/news/article-19087.htm" title="12种最适合学生养的宠物,不会长大的（适合学生养的小宠）">12种最适合学生养的宠物,不会长大的（适合学生养的小宠）</a></li>
+                        <li class="py-2"><a href="/news/article-20918.htm" title="Java中自定义注解的使用">Java中自定义注解的使用</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-25-node-share.htm" title="11月25日→21.9M/S|2024年最新免费节点SSR/V2ray/Clash/Shadowrocket订阅链接地址">11月25日→21.9M/S|2024年最新免费节点SSR/V2ray/Clash/Shadowrocket订阅链接地址</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">6</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">77</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">32</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">25</span> <a href="/date/2024-10/" title="2024-10 归档">2024-10</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section End -->
+        <!-- Footer Area Start -->
+    <footer class="footer">
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="text-center">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                            <span class="text-light-gray">
+                                NodeTrojan节点订阅官网 版权所有
+                                <br />
+                                Powered by WordPress
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Area End -->
+    <!-- BACK TO TOP SECTION -->
+    <div class="back-to-top bg-gradient-color">
+        <i class="fab fa-angle-up"></i>
+    </div>
+    <!-- Integrated important scripts here -->
+    <script src="/assets/website/js/frontend/nodetrojan/jquery.v1.12.4.min.js"></script>
+    <script src="/assets/website/js/frontend/nodetrojan/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/nodetrojan/jquery-core-plugins.js"></script>
+    <script src="/assets/website/js/frontend/nodetrojan/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
