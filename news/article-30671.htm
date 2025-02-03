@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://nodetrojan.github.io/news/article-30671.htm" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>antd组件upload上传xlsx文件，并读取文件内容</title>
+        <meta name="description" content="xlsx包 这个包是个npm包，这里使用的版本为：  “xlsx”: “^0.14.5”  使用方式 首先，在文件中引入： importXLSXfrom'xlsx'; 然后在upload组件的befo" />
+        <link rel="icon" href="/assets/website/img/nodetrojan/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="NodeTrojan节点订阅官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://nodetrojan.github.io/news/article-30671.htm" />
+    <meta property="og:site_name" content="NodeTrojan节点订阅官网" />
+    <meta property="og:title" content="antd组件upload上传xlsx文件，并读取文件内容" />
+    <meta property="og:image" content="https://nodetrojan.github.io/uploads/20240904-1/f26ba571c795084aced057d307dc4527.webp" />
+        <meta property="og:release_date" content="2024-12-25T09:37:20" />
+    <meta property="og:updated_time" content="2024-12-25T09:37:20" />
+        <meta property="og:description" content="xlsx包 这个包是个npm包，这里使用的版本为：  “xlsx”: “^0.14.5”  使用方式 首先，在文件中引入： importXLSXfrom'xlsx'; 然后在upload组件的befo" />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="antd组件upload上传xlsx文件，并读取文件内容">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="/assets/website/css/nodetrojan/style.css">
+    <link rel="stylesheet" href="/assets/website/css/nodetrojan/responsive.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PK0RCMBM8T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PK0RCMBM8T');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- Preloader Start -->
+    <div class="preloader"></div>
+    <!-- Preloader End -->
+    <!-- header Start -->
+    <header class="header-style-two">
+        <div class="header-wrapper">
+            <div class="header-navigation-area two-layers-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                                                        <a class="navbar-brand logo f-left mrt-10 mrt-md-0" href="/">
+                                <span>NodeTrojan</span>
+                            </a>
+                                                        <div class="main-menu f-right">
+                                <nav id="mobile-menu-right">
+                                    <ul>
+                                                                                <li>
+                                            <a href="/">首页</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/free-nodes/">免费节点</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/paid-subscribe/">推荐机场</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/news/">新闻资讯</a>
+                                        </li>
+                                                                                <li><a href="#">关于</a></li>
+                                        <li><a href="#">联系</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header End -->
+    <!-- Page Title Start -->
+    <section class="page-title-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 text-center">
+                    <div class="page-title-content">
+                        <h1 class="title text-white">antd组件upload上传xlsx文件，并读取文件内容</h1>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="/">首页</a></li>
+                                <li class="breadcrumb-item"><a href="/news/">新闻资讯</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">正文</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Page Title End -->
+    <!-- About Section Start -->
+    <section class="about-section anim-object pdt-110 pdb-50 pdb-lg-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-light"> <h3><a id="xlsx_0" rel="nofollow"></a>xlsx包</h3> <p>这个包是个npm包，这里使用的版本为：</p> <blockquote> <p>“xlsx”: “^0.14.5”</p> </blockquote> <h3><a id="_3" rel="nofollow"></a>使用方式</h3> <p>首先，在文件中引入：</p> <pre><code class="prism language-js"><span class="token keyword">import</span><span class="token constant">XLSX</span><span class="token keyword">from</span><span class="token string">'xlsx'</span><span class="token punctuation">;</span></code></pre> <p>然后在upload组件的beforeUpload中使用：</p> <pre><code class="prism language-js"><span class="token function">beforeUpload</span><span class="token punctuation">(</span><span class="token parameter">files</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token keyword">const</span><span class="token function-variable function">readFile</span><span class="token operator">=</span><span class="token parameter">file</span><span class="token operator">=&gt;</span><span class="token punctuation">{<!-- --></span><span class="token keyword">const</span><span class="token punctuation">[</span>fileReader<span class="token punctuation">,</span> data1<span class="token punctuation">]</span><span class="token operator">=</span><span class="token punctuation">[</span><span class="token keyword">new</span><span class="token class-name">FileReader</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">{<!-- --></span><span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token keyword">let</span><span class="token punctuation">[</span>binaryData<span class="token punctuation">,</span> workbook<span class="token punctuation">]</span><span class="token operator">=</span><span class="token punctuation">[</span><span class="token keyword">null</span><span class="token punctuation">,</span><span class="token keyword">null</span><span class="token punctuation">]</span><span class="token punctuation">;</span>         fileReader<span class="token punctuation">.</span><span class="token function-variable function">onload</span><span class="token operator">=</span><span class="token parameter">e</span><span class="token operator">=&gt;</span><span class="token punctuation">{<!-- --></span>           binaryData<span class="token operator">=</span> e<span class="token punctuation">.</span>target<span class="token punctuation">.</span>result<span class="token punctuation">;</span>           workbook<span class="token operator">=</span><span class="token constant">XLSX</span><span class="token punctuation">.</span><span class="token function">read</span><span class="token punctuation">(</span>binaryData<span class="token punctuation">,</span><span class="token punctuation">{<!-- --></span><span class="token literal-property property">type</span><span class="token operator">:</span><span class="token string">'binary'</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>           Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>workbook<span class="token punctuation">.</span>Sheets<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">sheet</span><span class="token operator">=&gt;</span><span class="token punctuation">{<!-- --></span>             data1<span class="token punctuation">[</span>sheet<span class="token punctuation">]</span><span class="token operator">=</span><span class="token constant">XLSX</span><span class="token punctuation">.</span>utils<span class="token punctuation">.</span><span class="token function">sheet_to_json</span><span class="token punctuation">(</span>workbook<span class="token punctuation">.</span>Sheets<span class="token punctuation">[</span>sheet<span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">{<!-- --></span><span class="token literal-property property">header</span><span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>           workbook<span class="token punctuation">.</span>SheetNames<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">sheetName</span><span class="token operator">=&gt;</span><span class="token punctuation">{<!-- --></span><span class="token keyword">const</span> dataSheet<span class="token operator">=</span> data1<span class="token punctuation">[</span>sheetName<span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> index<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> index<span class="token operator">&lt;</span> dataSheet<span class="token punctuation">.</span>length<span class="token punctuation">;</span> index<span class="token operator">+=</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token keyword">const</span> row<span class="token operator">=</span> dataSheet<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token keyword">const</span> item<span class="token operator">=</span><span class="token punctuation">{<!-- --></span><span class="token literal-property property">name</span><span class="token operator">:</span> row<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">?</span> row<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">:</span><span class="token keyword">null</span><span class="token punctuation">,</span><span class="token literal-property property">snCode</span><span class="token operator">:</span> row<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">?</span> row<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">:</span><span class="token keyword">null</span><span class="token punctuation">,</span><span class="token literal-property property">macAddress</span><span class="token operator">:</span> row<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token operator">?</span> row<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token operator">:</span><span class="token keyword">null</span><span class="token punctuation">,</span><span class="token literal-property property">ipAddress</span><span class="token operator">:</span> row<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token operator">?</span> row<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token operator">:</span><span class="token keyword">null</span><span class="token punctuation">,</span><span class="token literal-property property">number</span><span class="token operator">:</span><span class="token function">Number</span><span class="token punctuation">(</span>row<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token operator">?</span> row<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token operator">:</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token literal-property property">podium</span><span class="token operator">:</span><span class="token punctuation">(</span>row<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token operator">?</span> row<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token operator">:</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token operator">===</span><span class="token string">'是'</span><span class="token operator">?</span><span class="token boolean">true</span><span class="token operator">:</span><span class="token boolean">false</span><span class="token punctuation">,</span><span class="token literal-property property">devices</span><span class="token operator">:</span><span class="token punctuation">[</span><span class="token punctuation">{<!-- --></span><span class="token literal-property property">ipAddress</span><span class="token operator">:</span> row<span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">]</span><span class="token operator">?</span> row<span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">]</span><span class="token operator">:</span><span class="token keyword">null</span><span class="token punctuation">,</span><span class="token literal-property property">location</span><span class="token operator">:</span><span class="token string">'top1'</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{<!-- --></span><span class="token literal-property property">ipAddress</span><span class="token operator">:</span> row<span class="token punctuation">[</span><span class="token number">7</span><span class="token punctuation">]</span><span class="token operator">?</span> row<span class="token punctuation">[</span><span class="token number">7</span><span class="token punctuation">]</span><span class="token operator">:</span><span class="token keyword">null</span><span class="token punctuation">,</span><span class="token literal-property property">location</span><span class="token operator">:</span><span class="token string">'side1'</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{<!-- --></span><span class="token literal-property property">ipAddress</span><span class="token operator">:</span> row<span class="token punctuation">[</span><span class="token number">8</span><span class="token punctuation">]</span><span class="token operator">?</span> row<span class="token punctuation">[</span><span class="token number">8</span><span class="token punctuation">]</span><span class="token operator">:</span><span class="token keyword">null</span><span class="token punctuation">,</span><span class="token literal-property property">location</span><span class="token operator">:</span><span class="token string">'front1'</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{<!-- --></span><span class="token literal-property property">ipAddress</span><span class="token operator">:</span> row<span class="token punctuation">[</span><span class="token number">9</span><span class="token punctuation">]</span><span class="token operator">?</span> row<span class="token punctuation">[</span><span class="token number">9</span><span class="token punctuation">]</span><span class="token operator">:</span><span class="token keyword">null</span><span class="token punctuation">,</span><span class="token literal-property property">location</span><span class="token operator">:</span><span class="token string">'front2'</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">]</span><span class="token punctuation">}</span><span class="token punctuation">;</span>               fileData<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">// fileData即为表格数据</span><span class="token keyword">if</span><span class="token punctuation">(</span>fileData<span class="token punctuation">.</span>length<span class="token operator">&gt;</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span>             that<span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{<!-- --></span><span class="token literal-property property">tables</span><span class="token operator">:</span> fileData<span class="token punctuation">,</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>             message<span class="token punctuation">.</span><span class="token function">success</span><span class="token punctuation">(</span><span class="token string">'导入成功！'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{<!-- --></span>             message<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">'导入失败！'</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">;</span>         fileReader<span class="token punctuation">.</span><span class="token function">readAsBinaryString</span><span class="token punctuation">(</span>file<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">;</span><span class="token function">readFile</span><span class="token punctuation">(</span>uploadFile<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-30670.htm">springboot的定时任务</a></p>
+                                        <p>下一个：<a href="/news/article-31128.htm">python 对论文插图制作局部放大图并在原图中相同位置加边框</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2024-12-28-free-node-subscribe.htm" title="12月28日→22.1M/S|2024年最新免费节点Clash/V2ray/SSR/Shadowrocket订阅链接地址">12月28日→22.1M/S|2024年最新免费节点Clash/V2ray/SSR/Shadowrocket订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-21-clash-meta-windows.htm" title="12月21日→19.6M/S|2024年最新免费节点SSR/Clash/V2ray/Shadowrocket订阅链接地址">12月21日→19.6M/S|2024年最新免费节点SSR/Clash/V2ray/Shadowrocket订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-22-clash-node-github.htm" title="12月22日→21.6M/S|2024年最新免费节点Clash/Shadowrocket/V2ray/SSR订阅链接地址">12月22日→21.6M/S|2024年最新免费节点Clash/Shadowrocket/V2ray/SSR订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-21831.htm" title="同安哪里有宠物医院最好（同安宠物狗店）">同安哪里有宠物医院最好（同安宠物狗店）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-15-free-clash.htm" title="12月15日→19.1M/S|2024年最新免费节点Shadowrocket/V2ray/SSR/Clash订阅链接地址">12月15日→19.1M/S|2024年最新免费节点Shadowrocket/V2ray/SSR/Clash订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-19-free-high-speed-nodes.htm" title="12月19日→21.5M/S|2024年最新免费节点Shadowrocket/V2ray/SSR/Clash订阅链接地址">12月19日→21.5M/S|2024年最新免费节点Shadowrocket/V2ray/SSR/Clash订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-24-free-clash-stash.htm" title="12月24日→20.7M/S|2024年最新免费节点Shadowrocket/V2ray/SSR/Clash订阅链接地址">12月24日→20.7M/S|2024年最新免费节点Shadowrocket/V2ray/SSR/Clash订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-18-clash-windows.htm" title="11月18日→22.2M/S|2024年最新免费节点Shadowrocket/SSR/V2ray/Clash订阅链接地址">11月18日→22.2M/S|2024年最新免费节点Shadowrocket/SSR/V2ray/Clash订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-31-free-node-subscribe.htm" title="1月31日→19.9M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">1月31日→19.9M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-31-free-subscribe-node.htm" title="12月31日→20.2M/S|2025年最新免费节点Clash/Shadowrocket/SSR/V2ray订阅链接地址">12月31日→20.2M/S|2025年最新免费节点Clash/Shadowrocket/SSR/V2ray订阅链接地址</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">6</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">77</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">28</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section End -->
+        <!-- Footer Area Start -->
+    <footer class="footer">
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="text-center">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                            <span class="text-light-gray">
+                                NodeTrojan节点订阅官网 版权所有
+                                <br />
+                                Powered by WordPress
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Area End -->
+    <!-- BACK TO TOP SECTION -->
+    <div class="back-to-top bg-gradient-color">
+        <i class="fab fa-angle-up"></i>
+    </div>
+    <!-- Integrated important scripts here -->
+    <script src="/assets/website/js/frontend/nodetrojan/jquery.v1.12.4.min.js"></script>
+    <script src="/assets/website/js/frontend/nodetrojan/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/nodetrojan/jquery-core-plugins.js"></script>
+    <script src="/assets/website/js/frontend/nodetrojan/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>

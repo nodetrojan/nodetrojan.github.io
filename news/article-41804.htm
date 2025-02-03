@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://nodetrojan.github.io/news/article-41804.htm" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>你还不知道责任链模式的使用场景吗</title>
+        <meta name="description" content="概述 在代码中我们经常会有if…else…判断，一个条件不满足就进行下一个判断，这种就类似于责任链模式，只不过责任链模式是通过对象来过滤。 场景 在物联网行业中，一个设备会以一定的频率向服务器推送数据" />
+        <link rel="icon" href="/assets/website/img/nodetrojan/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="NodeTrojan节点订阅官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://nodetrojan.github.io/news/article-41804.htm" />
+    <meta property="og:site_name" content="NodeTrojan节点订阅官网" />
+    <meta property="og:title" content="你还不知道责任链模式的使用场景吗" />
+    <meta property="og:image" content="https://nodetrojan.github.io/uploads/20240904-1/f26ba571c795084aced057d307dc4527.webp" />
+        <meta property="og:release_date" content="2025-01-17T09:29:46" />
+    <meta property="og:updated_time" content="2025-01-17T09:29:46" />
+        <meta property="og:description" content="概述 在代码中我们经常会有if…else…判断，一个条件不满足就进行下一个判断，这种就类似于责任链模式，只不过责任链模式是通过对象来过滤。 场景 在物联网行业中，一个设备会以一定的频率向服务器推送数据" />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="你还不知道责任链模式的使用场景吗">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="/assets/website/css/nodetrojan/style.css">
+    <link rel="stylesheet" href="/assets/website/css/nodetrojan/responsive.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PK0RCMBM8T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PK0RCMBM8T');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- Preloader Start -->
+    <div class="preloader"></div>
+    <!-- Preloader End -->
+    <!-- header Start -->
+    <header class="header-style-two">
+        <div class="header-wrapper">
+            <div class="header-navigation-area two-layers-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                                                        <a class="navbar-brand logo f-left mrt-10 mrt-md-0" href="/">
+                                <span>NodeTrojan</span>
+                            </a>
+                                                        <div class="main-menu f-right">
+                                <nav id="mobile-menu-right">
+                                    <ul>
+                                                                                <li>
+                                            <a href="/">首页</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/free-nodes/">免费节点</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/paid-subscribe/">推荐机场</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/news/">新闻资讯</a>
+                                        </li>
+                                                                                <li><a href="#">关于</a></li>
+                                        <li><a href="#">联系</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header End -->
+    <!-- Page Title Start -->
+    <section class="page-title-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 text-center">
+                    <div class="page-title-content">
+                        <h1 class="title text-white">你还不知道责任链模式的使用场景吗</h1>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="/">首页</a></li>
+                                <li class="breadcrumb-item"><a href="/news/">新闻资讯</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">正文</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Page Title End -->
+    <!-- About Section Start -->
+    <section class="about-section anim-object pdt-110 pdb-50 pdb-lg-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<h2 id="概述">概述</h2> <p>在代码中我们经常会有if…else…判断，一个条件不满足就进行下一个判断，这种就类似于责任链模式，只不过责任链模式是通过对象来过滤。</p> <h2 id="场景">场景</h2> <p>在物联网行业中，一个设备会以一定的频率向服务器推送数据，方便服务器对机器进行一个数据采集和监控，这个数据的类型是多种多样的。例如娃娃机来说：会有设备状态的数据、设备定位的数据、设备报警的数据等等各种数据。每一种类型的数据都由很多个字段组成，例如设备状态数据包含：当前时间、机器号、机器状态（上线、下线、离线），一般都是以二进制的形式进行传输，为了方便就假设设备以JSON的格式上报过来，我接收到数据再进行一个相应的处理。</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/d9d3faf9c9bc16fd08f3ddf773ad8082.jpg" alt="你还不知道责任链模式的使用场景吗"></p> <h2 id="普通的代码实现">普通的代码实现</h2> <p>首先能想到的就是利用if…else…，如果是设备报警的数据我就使用设备报警处理器处理，超简单的，开始编码～</p> <p>1、实体类</p> <p>DeviceAlarm类</p> <pre><code class="language-java">package com.ylc.model;  import lombok.Data;  /**  * 设备状态实体类  * @author yanglingcong  * @date 2022/4/20 21:08  */ @Data public class DeviceStatus {       /**      * 更新时间      */     private  long updateTime;      /**      * 状态      * 0 未准备      * 1 准备      * 2 正常运行      * 3 异常      */     private Integer state;      /**      * 数据类型      */     private String type;  }</code></pre> <p>DeviceGps类</p> <pre><code class="language-java">/**  * 设备GPS实体类  *  * @author yanglingcong  * @date 2022/4/20 21:08  */ @Data public class DeviceGps {      /**      * 经度      */     private Float longitude;      /**      * 纬度      */     private Float latitude;       /**      * 水平分量精度因子:      */     private Float hdop;  }</code></pre> <p>DeviceAlarm类</p> <pre><code class="language-java">package com.ylc.model;  import lombok.Data;  /**  * 设备报警实体类  *  * @author yanglingcong  * @date 2022/4/20 21:08  */ @Data public class DeviceAlarm {      /**      * 报警消息      */     private String alarmMsg;      /**      * 报警状态      */     private Integer alarmStatus; }</code></pre> <p>2、消息的枚举类型</p> <pre><code class="language-java">package com.ylc.model;  import lombok.Getter;  /**  * 设备消息枚举类型  * @author yanglingcong  * @date 2022/4/20 21:08  */ @Getter public enum eventEnum {      STATUS("10001"),      ALARM("10002"),      GPS("10003");      private String code;      eventEnum(String code){         this.code=code;     } }</code></pre> <p>3、事件接口</p> <pre><code class="language-java">/**  * 处理器接口  * @author yanglingcong  * @date 2022/4/19 22:59  */ public interface AbstractHandler {      String getEventType();      void handle(JSONObject jsonObject);  }</code></pre> <p>3、事件处理</p> <p>DeviceAlarmEvent</p> <pre><code class="language-java">/**  * 设备报警事件  * @author yanglingcong  * @date 2022/4/19 22:59  */ @Slf4j @Component public class DeviceAlarmEvent   implements  AbstractHandler{      @Override     public String getEventType() {         return eventEnum.ALARM.getCode();     }      @Override     public void handle(JSONObject jsonObject) {         DeviceAlarm deviceAlarm = jsonObject.toJavaObject(DeviceAlarm.class);         log.info("设备报警事件被处理");         //业务处理.....     } }</code></pre> <p>DeviceGpsEvent</p> <pre><code class="language-java">/**  * 设备定位事件  * @author yanglingcong  * @date 2022/4/19 22:59  */ @Component @Slf4j public class DeviceGpsEvent implements AbstractHandler{      @Override     public String getEventType() {         return eventEnum.GPS.getCode();     }      @Override     public void handle(JSONObject jsonObject) {         DeviceGps deviceGps = jsonObject.toJavaObject(DeviceGps.class);         //业务处理.....         log.info("设备定位事件被处理");     } }</code></pre> <p>DeviceStatusEvent</p> <pre><code class="language-java">/**  * 设备状态事件  * @author yanglingcong  * @date 2022/4/19 22:59  */ @Slf4j @Component public class DeviceStatusEvent implements  AbstractHandler{      @Override     public String getEventType() {         return eventEnum.STATUS.getCode();     }      @Override     public   void  handle(JSONObject jsonObject){         DeviceStatus deviceStatus = jsonObject.toJavaObject(DeviceStatus.class);         //业务处理.....         log.info("设备状态事件被处理");     } }</code></pre> <p>4、消息分发中心</p> <pre><code class="language-java">package com.ylc.handle;  import com.alibaba.fastjson.JSONObject; import com.ylc.model.eventEnum; import lombok.extern.slf4j.Slf4j; import org.springframework.stereotype.Component;  /**  * 数据事件处理类  * @author yanglingcong  */ @Slf4j @Component public class PushEvent {      /**      * 数据分发到对应的事件处理      */     public void dispatch(JSONObject jsonObject){         String code = (String) jsonObject.get("type");         //如果是设备状态数据         if(code.equals(eventEnum.STATUS.getCode())){             log.info("开始处理设备状态数据");             DeviceStatusEvent statusEvent=new DeviceStatusEvent();             statusEvent.handle(jsonObject);         }         //如果是设备定位数据         else if(code.equals(eventEnum.GPS.getCode())){             log.info("开始处理设备定位数据");             DeviceGpsEvent deviceGpsEvent=new DeviceGpsEvent();             deviceGpsEvent.handle(jsonObject);         }         //如果是设备报警数据         else if(code.equals(eventEnum.ALARM.getCode())){             log.info("开始处理设备定位数据");             DeviceStatusEvent statusEvent=new DeviceStatusEvent();             statusEvent.handle(jsonObject);         }     }  }</code></pre> <p>6、测试</p> <pre><code class="language-java">@Slf4j public class MessageHandleTest {      @Test     public void  testDeviceStatus(){         DeviceStatus deviceStatus=new DeviceStatus();         deviceStatus.setType(eventEnum.STATUS.getCode());         deviceStatus.setUpdateTime(1653532367);         deviceStatus.setState(1);         JSONObject jsonObject= JSON.parseObject(JSONObject.toJSONString(deviceStatus));         PushEvent pushEvent=new PushEvent();         log.info("开始分发消息:{}",deviceStatus.toString());         pushEvent.dispatch(jsonObject);     }  }</code></pre> <p>运行结果</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/9f941aef0c34c352127a735c6d32b09a.jpg" alt="你还不知道责任链模式的使用场景吗"></p> <p>但是这样会有很多问题，如果还有其他类型的数据那么又要增加判断，这个条件判定的顺序也是写死的，非常不灵活，接下来用责任链模式进行优化</p> <h2 id="责任链实现">责任链实现</h2> <p>1、实体类 略</p> <p>2、事件处理 略</p> <p>3、消息分发中心</p> <pre><code class="language-java">package com.ylc.handle;  import com.alibaba.fastjson.JSONObject; import lombok.extern.slf4j.Slf4j; import lombok.var; import org.springframework.beans.BeansException; import org.springframework.beans.factory.annotation.Autowired; import org.springframework.context.ApplicationContext; import org.springframework.context.ApplicationContextAware; import org.springframework.context.annotation.DependsOn; import org.springframework.stereotype.Component;  import javax.annotation.Resource; import java.util.Collection; import java.util.Comparator; import java.util.List; import java.util.Map; import java.util.stream.Collectors;   /**  * 数据事件处理类  * @author yanglingcong  */ @Slf4j @Component public class PushEvent implements ApplicationContextAware {       /**      * 实现类集合      * */     private Map&lt;String, List&lt;AbstractHandler&gt;&gt; routerMap;      @Autowired     ApplicationContext applicationContext;      @Override     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {         this.routerMap =applicationContext.getBeansOfType(AbstractHandler.class).values()                 .stream().collect(Collectors.groupingBy(AbstractHandler::getEventType));     }      /**      * 数据分发到对应的事件处理      */     public void dispatch(JSONObject jsonObject){         String code = (String) jsonObject.get("type");         List&lt;AbstractHandler&gt; pushEventHandlers= this.routerMap.get(code);         for (AbstractHandler pushEventHandler : pushEventHandlers) {             log.info("开始处理{}事件",pushEventHandler.getEventType());             pushEventHandler.handle(jsonObject);         }     } }</code></pre> <p>4、测试</p> <pre><code class="language-java">package com.ylc;  import com.alibaba.fastjson.JSON; import com.alibaba.fastjson.JSONObject; import com.ylc.handle.AbstractHandler; import com.ylc.handle.PushEvent; import com.ylc.model.DeviceStatus; import com.ylc.model.eventEnum; import lombok.extern.slf4j.Slf4j; import org.junit.Test; import org.junit.runner.RunWith; import org.springframework.beans.factory.annotation.Autowired; import org.springframework.boot.autoconfigure.SpringBootApplication; import org.springframework.boot.test.context.SpringBootTest; import org.springframework.test.context.junit4.SpringRunner;  import java.util.List;  @Slf4j @RunWith(SpringRunner.class) @SpringBootTest public class MessageHandleTest {      @Autowired     PushEvent pushEvent;      @Test     public void  testDeviceStatus(){         DeviceStatus deviceStatus=new DeviceStatus();         deviceStatus.setType(eventEnum.STATUS.getCode());         deviceStatus.setUpdateTime(1653532367);         deviceStatus.setState(1);         JSONObject jsonObject= JSON.parseObject(JSONObject.toJSONString(deviceStatus));         log.info("开始分发消息:{}",deviceStatus.toString());         pushEvent.dispatch(jsonObject);     }  }</code></pre> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/b511295a6d1e1b1d64d8f0c866590ab5.jpg" alt="你还不知道责任链模式的使用场景吗"></p> <ul> <li>如果有新的设备消息类型，只需要加一个新的事件处理类，其他代码不用变化，这样符合开放封闭原则还有单一原则，也增加了程序的灵活性。</li> <li>具体使用到哪个类型也不需要我们自己，交给程序运行时处理</li> <li>使用Map集合的方式，直接从集合里面根据特征找到对应的处理器，跟其他博客设置使用下一个处理者进行判断的方法类似，如果链条比较长那么使用下一个处理者方法不合适，需要从头遍历到尾部。</li> <li>还可以控制请求顺序，集合的话通过增加一个排序字段</li> </ul> <h2 id="总结">总结</h2> <p>责任链模式其实就是灵活的if..else..语句，将多个处理者连接成一条链。 接收到请求后， 它会 “询问” 每个处理者是否能够对其进行处理。 这样所有处理者都有机会来处理请求</p> <p><strong>使用场景</strong></p> <ul> <li><strong>当必须按顺序执行多个处理者时，可以使用该模式</strong></li> <li><strong>如果所需处理者及其顺序必须在运行时进行改变， 可以使用责任链模式</strong></li> <li><strong>当程序需要使用不同方式处理不同种类请求，而且请求类型和顺序预先未知时，可以使用责任链模式</strong></li> </ul> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-41803.htm">（九）C++对象模型和this指针基础</a></p>
+                                        <p>下一个：<a href="/news/article-42304.htm">动物医院运营管理工作内容（动物医院运营管理工作内容怎么写）</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-31617.htm" title="开宠物店投资大吗（开宠物店很赚钱吗）">开宠物店投资大吗（开宠物店很赚钱吗）</a></li>
+                        <li class="py-2"><a href="/news/article-26922.htm" title="成都宠物领养平台正规吗现在有哪些呢（成都宠物领养网免费）">成都宠物领养平台正规吗现在有哪些呢（成都宠物领养网免费）</a></li>
+                        <li class="py-2"><a href="/news/article-36869.htm" title="猫咪没有注射疫苗可以绝育吗（猫咪没有打疫苗可以做绝育手术吗）">猫咪没有注射疫苗可以绝育吗（猫咪没有打疫苗可以做绝育手术吗）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-23-free-high-speed-nodes.htm" title="11月23日→19.4M/S|2024年最新免费节点SSR/Clash/Shadowrocket/V2ray订阅链接地址">11月23日→19.4M/S|2024年最新免费节点SSR/Clash/Shadowrocket/V2ray订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-20460.htm" title="Java-Day05 函数、函数重载、递归函数">Java-Day05 函数、函数重载、递归函数</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-18-node-share.htm" title="1月18日→20.3M/S|2025年最新免费节点SSR/Clash/V2ray/Shadowrocket订阅链接地址">1月18日→20.3M/S|2025年最新免费节点SSR/Clash/V2ray/Shadowrocket订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-32575.htm" title="南京农大宠物医院（南京农大宠物医院电话）">南京农大宠物医院（南京农大宠物医院电话）</a></li>
+                        <li class="py-2"><a href="/news/article-21386.htm" title="土狗售卖（卖土狗的电话是多少）">土狗售卖（卖土狗的电话是多少）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-14-free-clash-subscribe.htm" title="12月14日→20.3M/S|2024年最新免费节点Clash/V2ray/SSR/Shadowrocket订阅链接地址">12月14日→20.3M/S|2024年最新免费节点Clash/V2ray/SSR/Shadowrocket订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-29726.htm" title="动物疫苗能放冰箱吗多久可以打疫苗（动物疫苗能放冰箱吗多久可以打疫苗针）">动物疫苗能放冰箱吗多久可以打疫苗（动物疫苗能放冰箱吗多久可以打疫苗针）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">6</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">77</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">28</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section End -->
+        <!-- Footer Area Start -->
+    <footer class="footer">
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="text-center">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                            <span class="text-light-gray">
+                                NodeTrojan节点订阅官网 版权所有
+                                <br />
+                                Powered by WordPress
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Area End -->
+    <!-- BACK TO TOP SECTION -->
+    <div class="back-to-top bg-gradient-color">
+        <i class="fab fa-angle-up"></i>
+    </div>
+    <!-- Integrated important scripts here -->
+    <script src="/assets/website/js/frontend/nodetrojan/jquery.v1.12.4.min.js"></script>
+    <script src="/assets/website/js/frontend/nodetrojan/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/nodetrojan/jquery-core-plugins.js"></script>
+    <script src="/assets/website/js/frontend/nodetrojan/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>

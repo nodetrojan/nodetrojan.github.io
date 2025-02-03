@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://nodetrojan.github.io/news/article-43295.htm" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>解决swagger文档接口404的问题</title>
+        <meta name="description" content="问题描述：swagger文件测试接口404排查和解决,遇到这样的问题如何解决和排查我们来看。  接口测试：  这个时候怎么解决呢？看日志 1，分析问题的根源，如果是加了权限控制要放行swagger 地" />
+        <link rel="icon" href="/assets/website/img/nodetrojan/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="NodeTrojan节点订阅官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://nodetrojan.github.io/news/article-43295.htm" />
+    <meta property="og:site_name" content="NodeTrojan节点订阅官网" />
+    <meta property="og:title" content="解决swagger文档接口404的问题" />
+    <meta property="og:image" content="https://nodetrojan.github.io/uploads/20240904-1/b469432312864b4de3f0ea103bff3253.webp" />
+        <meta property="og:release_date" content="2025-01-20T07:10:59" />
+    <meta property="og:updated_time" content="2025-01-20T07:10:59" />
+        <meta property="og:description" content="问题描述：swagger文件测试接口404排查和解决,遇到这样的问题如何解决和排查我们来看。  接口测试：  这个时候怎么解决呢？看日志 1，分析问题的根源，如果是加了权限控制要放行swagger 地" />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="解决swagger文档接口404的问题">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="/assets/website/css/nodetrojan/style.css">
+    <link rel="stylesheet" href="/assets/website/css/nodetrojan/responsive.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PK0RCMBM8T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PK0RCMBM8T');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- Preloader Start -->
+    <div class="preloader"></div>
+    <!-- Preloader End -->
+    <!-- header Start -->
+    <header class="header-style-two">
+        <div class="header-wrapper">
+            <div class="header-navigation-area two-layers-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                                                        <a class="navbar-brand logo f-left mrt-10 mrt-md-0" href="/">
+                                <span>NodeTrojan</span>
+                            </a>
+                                                        <div class="main-menu f-right">
+                                <nav id="mobile-menu-right">
+                                    <ul>
+                                                                                <li>
+                                            <a href="/">首页</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/free-nodes/">免费节点</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/paid-subscribe/">推荐机场</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/news/">新闻资讯</a>
+                                        </li>
+                                                                                <li><a href="#">关于</a></li>
+                                        <li><a href="#">联系</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header End -->
+    <!-- Page Title Start -->
+    <section class="page-title-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 text-center">
+                    <div class="page-title-content">
+                        <h1 class="title text-white">解决swagger文档接口404的问题</h1>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="/">首页</a></li>
+                                <li class="breadcrumb-item"><a href="/news/">新闻资讯</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">正文</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Page Title End -->
+    <!-- About Section Start -->
+    <section class="about-section anim-object pdt-110 pdb-50 pdb-lg-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="htmledit_views"> <p>问题描述：swagger文件测试接口404排查和解决,遇到这样的问题如何解决和排查我们来看。</p> <p><img fetchpriority="high" decoding="async" alt="" height="706" src="http://img.555519.xyz/uploads3/20220901/90cefc9a074746e64c05cbc649bf451d.jpg"></p> <p>接口测试：</p> <p><img decoding="async" alt="" height="650" src="http://img.555519.xyz/uploads3/20220901/07ffe41697bee6012157e42df556ebb3.jpg"></p> <p>这个时候怎么解决呢？看日志</p> <p>1，分析问题的根源，如果是加了权限控制要放行swagger 地址，显示我们这个不是swagger没有放行，那就是鉴权出了问题。</p> <p><img decoding="async" alt="" height="501" src="http://img.555519.xyz/uploads3/20220901/5ea79989be5d108dee3f172fe57c6ba9.jpg"></p> <p>日志鉴权貌似也没有问题？那是什么原因导致的呢？</p> <p><img loading="lazy" decoding="async" alt="" height="300" src="http://img.555519.xyz/uploads3/20220901/611679ae925f2e9c4b091abf6f93ecda.jpg"></p> <p><img loading="lazy" decoding="async" alt="" height="339" src="http://img.555519.xyz/uploads3/20220901/9479b18e258fdcc0c6e241ffaefcad7a.jpg"></p> <pre>GET http://localhost:11031/{GET%20/ydpw/collection/list}</pre> <p>这个地址其实很多会说是多了一个空格其实不是的，正常会转码。</p> <p>那么到底是什么问题？<img loading="lazy" decoding="async" alt="" height="321" src="http://img.555519.xyz/uploads3/20220901/487561f208f838725310c67d00ca07a5.jpg"></p> <p>原因是我们的服务名称和路由的名字都是一样这样不规范，导致地址找不到我们去掉控制器的名称就好了。</p> <p><img loading="lazy" decoding="async" alt="" height="736" src="http://img.555519.xyz/uploads3/20220901/6ee23e272f61cb4183829c87fc737e29.jpg"></p> <p>&nbsp;代码不规范，不摆烂了，所以代码要规范。。。</p> <pre><code class="language-java">/*  *      Copyright (c) 2018-2028, Chill Zhuang All rights reserved.  *  *  Redistribution and use in source and binary forms, with or without  *  modification, are permitted provided that the following conditions are met:  *  *  Redistributions of source code must retain the above copyright notice,  *  this list of conditions and the following disclaimer.  *  Redistributions in binary form must reproduce the above copyright  *  notice, this list of conditions and the following disclaimer in the  *  documentation and/or other materials provided with the distribution.  *  Neither the name of the dreamlu.net developer nor the names of its  *  contributors may be used to endorse or promote products derived from  *  this software without specific prior written permission.  *  Author: Chill 庄骞 (smallchill@163.com)  */ package cn.citms.portal.cms.controller;  import cn.citms.example.entity.cms.TblDirectoryCollection; import cn.citms.example.vo.cms.DirectoryCollectionVo; import cn.citms.portal.cms.service.DirectoryService; import com.baomidou.mybatisplus.core.metadata.IPage; import io.swagger.annotations.Api; import io.swagger.annotations.ApiOperation; import io.swagger.annotations.ApiOperationSupport; import lombok.AllArgsConstructor; import org.apache.commons.lang.StringUtils; import org.springblade.core.boot.ctrl.BladeController; import org.springblade.core.mp.support.Condition; import org.springblade.core.mp.support.Query; import org.springblade.core.tool.api.R; import org.springframework.web.bind.annotation.*;  import java.util.List; import java.util.UUID;  /**  * 答案选项 控制器  *  * @author Blade  * @since 2022-02-16  */ @RestController @AllArgsConstructor @RequestMapping("/collection") @Api(value = "目录收藏", tags = "目录收藏") public class DirectoryCollectionController extends BladeController {  	private DirectoryService directoryService;  	/** 	 * 详情 	 */ 	@GetMapping("/list") 	@ApiOperationSupport(order = 1) 	@ApiOperation(value = "当前用户所有收藏", notes = "当前用户所有收藏") 	public R  detail(DirectoryCollectionVo directoryCollection) { 		List&lt;DirectoryCollectionVo&gt; result = directoryService.list(directoryCollection); 		return R.data(result);  	}    	 }</code></pre> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-42797.htm">广州宠物猫领养中心在哪里 广州宠物猫领养中心在哪里啊</a></p>
+                                        <p>下一个：<a href="/news/article-43296.htm">宠物领养什么意思呀英文（宠物领养什么意思呀英文怎么说）</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-42796.htm" title="猫三针疫苗打完多久测抗体（猫三针打完后多久再打）">猫三针疫苗打完多久测抗体（猫三针打完后多久再打）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-18-clash-windows.htm" title="11月18日→22.2M/S|2024年最新免费节点Shadowrocket/SSR/V2ray/Clash订阅链接地址">11月18日→22.2M/S|2024年最新免费节点Shadowrocket/SSR/V2ray/Clash订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-29-clash-windows.htm" title="12月29日→19.2M/S|2024年最新免费节点SSR/Clash/V2ray/Shadowrocket订阅链接地址">12月29日→19.2M/S|2024年最新免费节点SSR/Clash/V2ray/Shadowrocket订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-30-clash-node.htm" title="11月30日→22.4M/S|2024年最新免费节点Clash/Shadowrocket/V2ray/SSR订阅链接地址">11月30日→22.4M/S|2024年最新免费节点Clash/Shadowrocket/V2ray/SSR订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-16-free-high-speed-nodes.htm" title="1月16日→22.3M/S|2025年最新免费节点SSR/Shadowrocket/Clash/V2ray订阅链接地址">1月16日→22.3M/S|2025年最新免费节点SSR/Shadowrocket/Clash/V2ray订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-25532.htm" title="Python 树表查找_千树万树梨花开，忽如一夜春风来（二叉排序树、平衡二叉树）">Python 树表查找_千树万树梨花开，忽如一夜春风来（二叉排序树、平衡二叉树）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-24-free-clash-stash.htm" title="12月24日→20.7M/S|2024年最新免费节点Shadowrocket/V2ray/SSR/Clash订阅链接地址">12月24日→20.7M/S|2024年最新免费节点Shadowrocket/V2ray/SSR/Clash订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-26002.htm" title="给动物医院的好评评语 给动物医院的好评评语怎么写">给动物医院的好评评语 给动物医院的好评评语怎么写</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-27-free-clash.htm" title="12月27日→20.4M/S|2024年最新免费节点SSR/Shadowrocket/Clash/V2ray订阅链接地址">12月27日→20.4M/S|2024年最新免费节点SSR/Shadowrocket/Clash/V2ray订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-37860.htm" title="动物防疫法的方针是什么（动物防疫法实行什么方针）">动物防疫法的方针是什么（动物防疫法实行什么方针）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">6</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">77</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">28</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section End -->
+        <!-- Footer Area Start -->
+    <footer class="footer">
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="text-center">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                            <span class="text-light-gray">
+                                NodeTrojan节点订阅官网 版权所有
+                                <br />
+                                Powered by WordPress
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Area End -->
+    <!-- BACK TO TOP SECTION -->
+    <div class="back-to-top bg-gradient-color">
+        <i class="fab fa-angle-up"></i>
+    </div>
+    <!-- Integrated important scripts here -->
+    <script src="/assets/website/js/frontend/nodetrojan/jquery.v1.12.4.min.js"></script>
+    <script src="/assets/website/js/frontend/nodetrojan/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/nodetrojan/jquery-core-plugins.js"></script>
+    <script src="/assets/website/js/frontend/nodetrojan/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>

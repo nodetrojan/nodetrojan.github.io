@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://nodetrojan.github.io/news/article-31128.htm" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>python 对论文插图制作局部放大图并在原图中相同位置加边框</title>
+        <meta name="description" content="全部代码如下： import cv2 import numpy as np  image_path = "E:\\仿真资料\\论文草稿\\监督和自监督训练定性对比图\\" save_path =  "" />
+        <link rel="icon" href="/assets/website/img/nodetrojan/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="NodeTrojan节点订阅官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://nodetrojan.github.io/news/article-31128.htm" />
+    <meta property="og:site_name" content="NodeTrojan节点订阅官网" />
+    <meta property="og:title" content="python 对论文插图制作局部放大图并在原图中相同位置加边框" />
+    <meta property="og:image" content="https://nodetrojan.github.io/uploads/20240904-1/7b9bdeaeb02e81004c1a2df9444bb5ac.webp" />
+        <meta property="og:release_date" content="2024-12-26T00:06:38" />
+    <meta property="og:updated_time" content="2024-12-26T00:06:38" />
+        <meta property="og:description" content="全部代码如下： import cv2 import numpy as np  image_path = "E:\\仿真资料\\论文草稿\\监督和自监督训练定性对比图\\" save_path =  "" />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="python 对论文插图制作局部放大图并在原图中相同位置加边框">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="/assets/website/css/nodetrojan/style.css">
+    <link rel="stylesheet" href="/assets/website/css/nodetrojan/responsive.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PK0RCMBM8T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PK0RCMBM8T');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- Preloader Start -->
+    <div class="preloader"></div>
+    <!-- Preloader End -->
+    <!-- header Start -->
+    <header class="header-style-two">
+        <div class="header-wrapper">
+            <div class="header-navigation-area two-layers-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                                                        <a class="navbar-brand logo f-left mrt-10 mrt-md-0" href="/">
+                                <span>NodeTrojan</span>
+                            </a>
+                                                        <div class="main-menu f-right">
+                                <nav id="mobile-menu-right">
+                                    <ul>
+                                                                                <li>
+                                            <a href="/">首页</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/free-nodes/">免费节点</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/paid-subscribe/">推荐机场</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/news/">新闻资讯</a>
+                                        </li>
+                                                                                <li><a href="#">关于</a></li>
+                                        <li><a href="#">联系</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header End -->
+    <!-- Page Title Start -->
+    <section class="page-title-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 text-center">
+                    <div class="page-title-content">
+                        <h1 class="title text-white">python 对论文插图制作局部放大图并在原图中相同位置加边框</h1>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="/">首页</a></li>
+                                <li class="breadcrumb-item"><a href="/news/">新闻资讯</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">正文</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Page Title End -->
+    <!-- About Section Start -->
+    <section class="about-section anim-object pdt-110 pdb-50 pdb-lg-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> </h1> <p>全部代码如下：</p> <pre><code class="prism language-python"><span class="token keyword">import</span> cv2 <span class="token keyword">import</span> numpy <span class="token keyword">as</span> np  image_path <span class="token operator">=</span> <span class="token string">"E:\\仿真资料\\论文草稿\\监督和自监督训练定性对比图\\"</span> save_path <span class="token operator">=</span>  <span class="token string">"E:\\仿真资料\\论文草稿\\监督和自监督训练定性对比图_2\\"</span> <span class="token comment">#image_path = "F:\\原始图片\yueye_2\\"</span> <span class="token comment">#save_path = "F:\\原始图片\yueye_2\\"</span> k <span class="token operator">=</span> <span class="token string">'0000000065.png'</span>  img <span class="token operator">=</span> cv2<span class="token punctuation">.</span>imdecode<span class="token punctuation">(</span>np<span class="token punctuation">.</span>fromfile<span class="token punctuation">(</span>image_path<span class="token operator">+</span>k<span class="token punctuation">,</span> dtype <span class="token operator">=</span> np<span class="token punctuation">.</span>uint8<span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span>  <span class="token comment"># 读取带有中文路径或中文文件名的图片</span> <span class="token comment">#img = cv2.imread(image_path+i, -1)  #在cv2.imread参数中加入-1，表示不改变读取图像的类型直接读取</span> <span class="token keyword">print</span><span class="token punctuation">(</span>img<span class="token punctuation">.</span>shape<span class="token punctuation">)</span> <span class="token keyword">print</span><span class="token punctuation">(</span>img<span class="token punctuation">.</span>dtype<span class="token punctuation">)</span>  i <span class="token operator">=</span> <span class="token number">30</span>  <span class="token comment">#要放大区域的左上角的 x 坐标（竖轴坐标）</span> j <span class="token operator">=</span> <span class="token number">1280</span>  <span class="token comment">#要放大区域的左上角的 y 坐标（横轴坐标）</span> h <span class="token operator">=</span> <span class="token number">130</span>  <span class="token comment">#要放大区域的高</span> w <span class="token operator">=</span> <span class="token number">140</span>  <span class="token comment">#要放大区域的宽</span> <span class="token comment">#h_2 = 300</span> <span class="token comment">#w_2 = 300</span> patch1 <span class="token operator">=</span> img<span class="token punctuation">[</span>i<span class="token punctuation">:</span>i<span class="token operator">+</span>h<span class="token punctuation">,</span> j<span class="token punctuation">:</span>j<span class="token operator">+</span>w<span class="token punctuation">]</span>  <span class="token comment"># numpy 里先x，后y，x轴沿垂直方向向下，y轴沿水平方向向右</span> <span class="token comment">#patch1 = cv2.resize(patch1, (w_2, h_2))  #(w, h)</span> cv2<span class="token punctuation">.</span>imencode<span class="token punctuation">(</span><span class="token string">'.png'</span><span class="token punctuation">,</span> patch1<span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>tofile<span class="token punctuation">(</span>save_path<span class="token operator">+</span>k<span class="token punctuation">)</span>  <span class="token comment">#也可以将 .png 改为 .jpg。</span> <span class="token comment">#cv2.imwrite(save_path+i, patch1)</span> <span class="token keyword">print</span><span class="token punctuation">(</span>patch1<span class="token punctuation">.</span>shape<span class="token punctuation">)</span> <span class="token keyword">print</span><span class="token punctuation">(</span>patch1<span class="token punctuation">.</span>dtype<span class="token punctuation">)</span>  pt1 <span class="token operator">=</span> <span class="token punctuation">(</span>j<span class="token punctuation">,</span> i<span class="token punctuation">)</span>  <span class="token comment"># 长方形框左上角坐标</span> pt2 <span class="token operator">=</span> <span class="token punctuation">(</span>j<span class="token operator">+</span>w<span class="token punctuation">,</span> i<span class="token operator">+</span>h<span class="token punctuation">)</span>  <span class="token comment"># 长方形框右下角坐标 </span> cv2<span class="token punctuation">.</span>rectangle<span class="token punctuation">(</span>img<span class="token punctuation">,</span> pt1<span class="token punctuation">,</span> pt2<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">255</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>  <span class="token comment"># cv2 里也是先x，后y，x轴沿水平方向向右，y轴沿垂直方向向下</span> cv2<span class="token punctuation">.</span>imencode<span class="token punctuation">(</span><span class="token string">'.png'</span><span class="token punctuation">,</span> img<span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>tofile<span class="token punctuation">(</span>save_path<span class="token operator">+</span>k<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token operator">+</span><span class="token string">'_带边框'</span><span class="token operator">+</span><span class="token string">'(左上角坐标：({}, {})，高：{}，宽：{})'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span>j<span class="token punctuation">,</span>h<span class="token punctuation">,</span>w<span class="token punctuation">)</span><span class="token operator">+</span><span class="token string">'.png'</span><span class="token punctuation">)</span>  <span class="token comment"># 保存带有中文路径或中文文件名的图片</span> <span class="token comment">#cv2.imwrite(save_path+i[:-4]+'_caijian'+'.png', img)</span> </code></pre> </h1> <p>1、<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://www.jb51.net/article/224873.htm"  rel="nofollow">python+opencv实现论文插图局部放大并拼接效果</a></p> </p></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-30671.htm">antd组件upload上传xlsx文件，并读取文件内容</a></p>
+                                        <p>下一个：<a href="/news/article-31129.htm">动物医院翻译英文（动物医院的英文单词）</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2025-1-19-free-clash.htm" title="1月19日→22.9M/S|2025年最新免费节点SSR/V2ray/Clash/Shadowrocket订阅链接地址">1月19日→22.9M/S|2025年最新免费节点SSR/V2ray/Clash/Shadowrocket订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-24136.htm" title="动物防疫疫苗种类有哪些（动物防疫疫苗种类有哪些名称）">动物防疫疫苗种类有哪些（动物防疫疫苗种类有哪些名称）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-7-free-subscribe-node.htm" title="12月7日→20.9M/S|2024年最新免费节点Shadowrocket/V2ray/SSR/Clash订阅链接地址">12月7日→20.9M/S|2024年最新免费节点Shadowrocket/V2ray/SSR/Clash订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-19542.htm" title="vue extend+promise封装全局弹窗组件_vue.js_">vue extend+promise封装全局弹窗组件_vue.js_</a></li>
+                        <li class="py-2"><a href="/news/article-29725.htm" title="兰州哪里有卖猫粮的（兰州哪里有卖狗粮的地方）">兰州哪里有卖猫粮的（兰州哪里有卖狗粮的地方）</a></li>
+                        <li class="py-2"><a href="/news/article-43295.htm" title="解决swagger文档接口404的问题">解决swagger文档接口404的问题</a></li>
+                        <li class="py-2"><a href="/news/article-38834.htm" title="python自动化测试工具selenium使用指南">python自动化测试工具selenium使用指南</a></li>
+                        <li class="py-2"><a href="/news/article-34001.htm" title="宠物店打疫苗多少钱一针（宠物店打疫苗多少钱一针啊）">宠物店打疫苗多少钱一针（宠物店打疫苗多少钱一针啊）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-31-free-node-subscribe.htm" title="1月31日→19.9M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">1月31日→19.9M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-15-free-clash-subscribe.htm" title="1月15日→19.8M/S|2025年最新免费节点SSR/Clash/V2ray/Shadowrocket订阅链接地址">1月15日→19.8M/S|2025年最新免费节点SSR/Clash/V2ray/Shadowrocket订阅链接地址</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">6</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">77</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">28</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section End -->
+        <!-- Footer Area Start -->
+    <footer class="footer">
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="text-center">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                            <span class="text-light-gray">
+                                NodeTrojan节点订阅官网 版权所有
+                                <br />
+                                Powered by WordPress
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Area End -->
+    <!-- BACK TO TOP SECTION -->
+    <div class="back-to-top bg-gradient-color">
+        <i class="fab fa-angle-up"></i>
+    </div>
+    <!-- Integrated important scripts here -->
+    <script src="/assets/website/js/frontend/nodetrojan/jquery.v1.12.4.min.js"></script>
+    <script src="/assets/website/js/frontend/nodetrojan/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/nodetrojan/jquery-core-plugins.js"></script>
+    <script src="/assets/website/js/frontend/nodetrojan/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>

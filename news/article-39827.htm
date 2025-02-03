@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://nodetrojan.github.io/news/article-39827.htm" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Windows环境下的NodeJS+NPM+Bower安装配置步骤</title>
+        <meta name="description" content="Windows下的NodeJS安装是比较方便的（v0.6.0版本之后，支持windows native），只需要登陆官网（http://nodejs.org/），便可以看到首页的“INSTALL”按钮" />
+        <link rel="icon" href="/assets/website/img/nodetrojan/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="NodeTrojan节点订阅官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://nodetrojan.github.io/news/article-39827.htm" />
+    <meta property="og:site_name" content="NodeTrojan节点订阅官网" />
+    <meta property="og:title" content="Windows环境下的NodeJS+NPM+Bower安装配置步骤" />
+    <meta property="og:image" content="https://nodetrojan.github.io/uploads/20240904-1/b6488611a8b2bb34d04c5816914ea919.webp" />
+        <meta property="og:release_date" content="2025-01-13T08:15:16" />
+    <meta property="og:updated_time" content="2025-01-13T08:15:16" />
+        <meta property="og:description" content="Windows下的NodeJS安装是比较方便的（v0.6.0版本之后，支持windows native），只需要登陆官网（http://nodejs.org/），便可以看到首页的“INSTALL”按钮" />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Windows环境下的NodeJS+NPM+Bower安装配置步骤">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="/assets/website/css/nodetrojan/style.css">
+    <link rel="stylesheet" href="/assets/website/css/nodetrojan/responsive.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PK0RCMBM8T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PK0RCMBM8T');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- Preloader Start -->
+    <div class="preloader"></div>
+    <!-- Preloader End -->
+    <!-- header Start -->
+    <header class="header-style-two">
+        <div class="header-wrapper">
+            <div class="header-navigation-area two-layers-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                                                        <a class="navbar-brand logo f-left mrt-10 mrt-md-0" href="/">
+                                <span>NodeTrojan</span>
+                            </a>
+                                                        <div class="main-menu f-right">
+                                <nav id="mobile-menu-right">
+                                    <ul>
+                                                                                <li>
+                                            <a href="/">首页</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/free-nodes/">免费节点</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/paid-subscribe/">推荐机场</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/news/">新闻资讯</a>
+                                        </li>
+                                                                                <li><a href="#">关于</a></li>
+                                        <li><a href="#">联系</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header End -->
+    <!-- Page Title Start -->
+    <section class="page-title-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 text-center">
+                    <div class="page-title-content">
+                        <h1 class="title text-white">Windows环境下的NodeJS+NPM+Bower安装配置步骤</h1>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="/">首页</a></li>
+                                <li class="breadcrumb-item"><a href="/news/">新闻资讯</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">正文</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Page Title End -->
+    <!-- About Section Start -->
+    <section class="about-section anim-object pdt-110 pdb-50 pdb-lg-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="htmledit_views"> <div id="cnblogs_post_body" class="blogpost-body"> <p>Windows下的NodeJS安装是比较方便的（v0.6.0版本之后，支持windows native），只需要登陆官网（http://nodejs.org/），便可以看到首页的“INSTALL”按钮，直接点击就会自动下载安装。安装过程基本直接“NEXT”就可以了。（Windows的安装msi文件在过程中会直接添加path的系统变量，变量值是你的安装路径，<span style="color:#ff0000;"><strong>建议安装在“D:\Program Files\nodejs”[C盘有权限问题需要解决]</strong><span style="color:#000000;">）</span></span></p> <p>　　废话不多说，安装完成之后，我们先检测下NodeJS是否安装成功，cmd命令行中键入：</p> <pre><a name="baidusnap0" rel="nofollow"></a><strong>node</strong>&nbsp;-v</pre> <p>　　若出现版本提示，就说明安装成功了</p> <p><strong>npm</strong>的安装。由于新版的NodeJS已经集成了<strong>npm</strong>，所以之前<strong>npm</strong>也一并安装好了。同样可以使用cmd命令行中键入：</p> <pre><strong>npm</strong>&nbsp;-v</pre> <p>　　同样，若出现版本提示，就说明安装成功了</p> <p>　　这样，常规NodeJS的搭建到现在为止已经完成了，迫不及待的话你可以在cmd命令行中键入“<strong>node</strong>”进入<strong>node</strong>开发模式下，输入你的NodeJS第一句：”hello world“ – 输入：console.log(‘hello world’)。这里就不再多作演示了。</p> <p><strong>npm</strong>作为一个NodeJS的模块管理，之前我由于没有系统地看资料所以导致安装配置模块的时候走了一大段弯路，所以现在很有必要列出来记录下。我们要先配置<strong>npm</strong>的全局模块的存放路径以及cache的路径，例如我希望将以上两个文件夹放在NodeJS的主目录下，便在NodeJs下建立“<strong>node</strong>_global”及“<strong>node</strong>_cache”两个文件夹。我们就在cmd中键入两行命令：</p> <pre><strong>npm</strong>&nbsp;config&nbsp;set&nbsp;prefix&nbsp;"D:\Program&nbsp;Files\nodejs\<strong>node</strong>_global"</pre> <p>　　和</p> <pre><strong>npm</strong>&nbsp;config&nbsp;set&nbsp;cache&nbsp;"D:\Program&nbsp;Files\nodejs\<strong>node</strong>_cache"</pre> <p>　　请大家注意，因为我事先降NodeJS安装在了“D:\Program Files\nodejs”目录下，所以大家键入命令时请正确输入你们的NodeJS目录。</p> <p>　　现在我们来装个模块试试，选择express这个比较常用的模块。同样在cmd命令行里面，输入：</p> <pre><strong>npm</strong>&nbsp;install&nbsp;express&nbsp;-g</pre> <p>　　注意，这里“-g”这个参数意思是装到global目录下，也就是上面说设置的“D:\Program Files\nodejs\<strong>node</strong>_global”里面。待cmd里面的安装过程滚动完成后，会提示“express”装在了哪、版本还有它的目录结构是怎样（<span style="color:#ff0000;"><strong>如果出现：attempt to unlock express...的错误，多半是你安装在C盘了，需要文件夹相关的权限设置，因为国内资料太少，国外资料很多看不太明白，时间有限，没有去研究...</strong></span>）。</p> <p>　　下面这一步非常关键，我们需要设置系统变量。进入我的电脑→属性→高级→环境变量。在系统变量下新建“<strong>NODE</strong>_PATH”，输入“C:\Program Files\nodejs\<strong>node</strong>_global\<strong>node</strong>_modules”。</p> <p>　　如果以上步骤都OK的话，我们可以再次开启cmd命令行，键入：</p> <pre><strong>node</strong></pre> <p>　　待出现“&gt; ”标记后，在键入：</p> <pre>require('express')</pre> <p>　　用途是测试下<strong>node</strong>的模块全局路径是否配置正确了。正确的话cmd会列出express的相关信息。</p> <p>　　如出错一般都是<strong>NODE</strong>_PATH的配置不对，可以再次检查以确保正确。</p> <p>　　好了，现在我们已经安装配置好NodeJS+<strong>npm</strong>了，那么我们现在安装<strong>Bower</strong>就显得容易得多，和安装express一样，键入一行命令：</p> <pre><strong>npm</strong>&nbsp;install<strong>bower</strong>&nbsp;-g</pre> <p>　　若检测是否安装成功方法同express一样。</p> <p>　　结束语：</p> <p>　　以上便是本人在安装配置NodeJS的时候的操作，由于新手的缘故，借助了google查阅了很多资料，希望对刚开始接触NodeJS的朋友都有点帮助。我现在用的IDE是Sublime text 2 + NodeJS的插件这个组合，能够在Sublime里面直接编译<strong>node</strong>的程序，挺方便的</p> <p>引自：http://www.360doc.com/content/14/0723/11/6807641_396479633.shtml</p> </div> <p>转载于:https://www.cnblogs.com/Denny_Yang/p/4238151.html</p> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-39334.htm">动物医院法定条件有哪些呢（动物医院归哪里管）</a></p>
+                                        <p>下一个：<a href="/news/article-39828.htm">动物疫苗接种注意问题及建议 动物疫苗接种注意问题及建议有哪些</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-35653.htm" title="数据库四大特性及数据库隔离级别（*）">数据库四大特性及数据库隔离级别（*）</a></li>
+                        <li class="py-2"><a href="/news/article-26922.htm" title="成都宠物领养平台正规吗现在有哪些呢（成都宠物领养网免费）">成都宠物领养平台正规吗现在有哪些呢（成都宠物领养网免费）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-22-node-share-links.htm" title="11月22日→21.9M/S|2024年最新免费节点SSR/Clash/V2ray/Shadowrocket订阅链接地址">11月22日→21.9M/S|2024年最新免费节点SSR/Clash/V2ray/Shadowrocket订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-25061.htm" title="义乌免费领养猫咪的地方（义乌领养宠物猫吧）">义乌免费领养猫咪的地方（义乌领养宠物猫吧）</a></li>
+                        <li class="py-2"><a href="/news/article-36386.htm" title="Java NIO 选择器 Selector_在线工具">Java NIO 选择器 Selector_在线工具</a></li>
+                        <li class="py-2"><a href="/news/article-40813.htm" title="宠物猫三针疫苗多少钱（宠物猫三针疫苗多少钱啊）">宠物猫三针疫苗多少钱（宠物猫三针疫苗多少钱啊）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-30-free-node-subscribe.htm" title="1月30日→19.1M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">1月30日→19.1M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-10-clash-windows.htm" title="1月10日→22.2M/S|2025年最新免费节点Clash/Shadowrocket/SSR/V2ray订阅链接地址">1月10日→22.2M/S|2025年最新免费节点Clash/Shadowrocket/SSR/V2ray订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-12-free-high-speed-nodes.htm" title="11月12日→22.8M/S|2024年最新免费节点Shadowrocket/V2ray/Clash/SSR订阅链接地址">11月12日→22.8M/S|2024年最新免费节点Shadowrocket/V2ray/Clash/SSR订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-11-node-share-links.htm" title="11月11日→19.2M/S|2024年最新免费节点V2ray/Shadowrocket/Clash/SSR订阅链接地址">11月11日→19.2M/S|2024年最新免费节点V2ray/Shadowrocket/Clash/SSR订阅链接地址</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">6</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">77</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">28</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section End -->
+        <!-- Footer Area Start -->
+    <footer class="footer">
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="text-center">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                            <span class="text-light-gray">
+                                NodeTrojan节点订阅官网 版权所有
+                                <br />
+                                Powered by WordPress
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Area End -->
+    <!-- BACK TO TOP SECTION -->
+    <div class="back-to-top bg-gradient-color">
+        <i class="fab fa-angle-up"></i>
+    </div>
+    <!-- Integrated important scripts here -->
+    <script src="/assets/website/js/frontend/nodetrojan/jquery.v1.12.4.min.js"></script>
+    <script src="/assets/website/js/frontend/nodetrojan/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/nodetrojan/jquery-core-plugins.js"></script>
+    <script src="/assets/website/js/frontend/nodetrojan/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>

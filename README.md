@@ -1,4 +1,4 @@
-# 2月2日→20.1M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址  更新时间 2025-02-02 09:30:00
+# 2月3日→19.1M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址  更新时间 2025-02-03 09:29:43
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://nodetrojan.github.io" target="_blank">点击跳转</a>
 
 ## clash使用教程：
@@ -9,23 +9,23 @@
 
 ### Clash订阅链接
 
-- https://nodetrojan.github.io/uploads/2025/02/0-20250202.yaml
-- https://nodetrojan.github.io/uploads/2025/02/1-20250202.yaml
-- https://nodetrojan.github.io/uploads/2025/02/2-20250202.yaml
-- https://nodetrojan.github.io/uploads/2025/02/3-20250202.yaml
-- https://nodetrojan.github.io/uploads/2025/02/4-20250202.yaml
+- https://nodetrojan.github.io/uploads/2025/02/0-20250203.yaml
+- https://nodetrojan.github.io/uploads/2025/02/1-20250203.yaml
+- https://nodetrojan.github.io/uploads/2025/02/2-20250203.yaml
+- https://nodetrojan.github.io/uploads/2025/02/3-20250203.yaml
+- https://nodetrojan.github.io/uploads/2025/02/4-20250203.yaml
 
 ### V2ray订阅链接
 
-- https://nodetrojan.github.io/uploads/2025/02/0-20250202.txt
-- https://nodetrojan.github.io/uploads/2025/02/1-20250202.txt
-- https://nodetrojan.github.io/uploads/2025/02/2-20250202.txt
-- https://nodetrojan.github.io/uploads/2025/02/3-20250202.txt
-- https://nodetrojan.github.io/uploads/2025/02/4-20250202.txt
+- https://nodetrojan.github.io/uploads/2025/02/0-20250203.txt
+- https://nodetrojan.github.io/uploads/2025/02/1-20250203.txt
+- https://nodetrojan.github.io/uploads/2025/02/2-20250203.txt
+- https://nodetrojan.github.io/uploads/2025/02/3-20250203.txt
+- https://nodetrojan.github.io/uploads/2025/02/4-20250203.txt
 
 ### Sing-box订阅链接
 
-- https://nodetrojan.github.io/uploads/2025/02/20250202.json
+- https://nodetrojan.github.io/uploads/2025/02/20250203.json
 
 ## 更多clash节点订阅 ：
 

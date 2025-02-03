@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://nodetrojan.github.io/news/article-30670.htm" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>springboot的定时任务</title>
+        <meta name="description" content="springboot的定时任务可以通过注解的方式快速开启 基于注解@Scheduled默认为单线程，开启多个任务时，任务的执行时机会受上一个任务执行时间的影响。 1、创建定时器 使用SpringBoo" />
+        <link rel="icon" href="/assets/website/img/nodetrojan/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="NodeTrojan节点订阅官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://nodetrojan.github.io/news/article-30670.htm" />
+    <meta property="og:site_name" content="NodeTrojan节点订阅官网" />
+    <meta property="og:title" content="springboot的定时任务" />
+    <meta property="og:image" content="https://nodetrojan.github.io/uploads/20240904-1/ab6b6d1b7e03d787ed283fddc0f13776.webp" />
+        <meta property="og:release_date" content="2024-12-25T09:37:20" />
+    <meta property="og:updated_time" content="2024-12-25T09:37:20" />
+        <meta property="og:description" content="springboot的定时任务可以通过注解的方式快速开启 基于注解@Scheduled默认为单线程，开启多个任务时，任务的执行时机会受上一个任务执行时间的影响。 1、创建定时器 使用SpringBoo" />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="springboot的定时任务">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="/assets/website/css/nodetrojan/style.css">
+    <link rel="stylesheet" href="/assets/website/css/nodetrojan/responsive.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PK0RCMBM8T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PK0RCMBM8T');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- Preloader Start -->
+    <div class="preloader"></div>
+    <!-- Preloader End -->
+    <!-- header Start -->
+    <header class="header-style-two">
+        <div class="header-wrapper">
+            <div class="header-navigation-area two-layers-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                                                        <a class="navbar-brand logo f-left mrt-10 mrt-md-0" href="/">
+                                <span>NodeTrojan</span>
+                            </a>
+                                                        <div class="main-menu f-right">
+                                <nav id="mobile-menu-right">
+                                    <ul>
+                                                                                <li>
+                                            <a href="/">首页</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/free-nodes/">免费节点</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/paid-subscribe/">推荐机场</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/news/">新闻资讯</a>
+                                        </li>
+                                                                                <li><a href="#">关于</a></li>
+                                        <li><a href="#">联系</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header End -->
+    <!-- Page Title Start -->
+    <section class="page-title-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 text-center">
+                    <div class="page-title-content">
+                        <h1 class="title text-white">springboot的定时任务</h1>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="/">首页</a></li>
+                                <li class="breadcrumb-item"><a href="/news/">新闻资讯</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">正文</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Page Title End -->
+    <!-- About Section Start -->
+    <section class="about-section anim-object pdt-110 pdb-50 pdb-lg-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="htmledit_views"> <p>springboot的定时任务可以通过注解的方式快速开启</p> <p>基于注解@Scheduled默认为单线程，开启多个任务时，任务的执行时机会受上一个任务执行时间的影响。</p> <p>1、创建定时器</p> <p>使用SpringBoot基于注解来创建定时任务非常简单，只需几行代码便可完成。&nbsp;代码如下：</p> <pre><code class="language-java">@Configuration      //1.主要用于标记配置类，兼备Component的效果。 @EnableScheduling   // 2.开启定时任务 public class SaticScheduleTask {     //3.添加定时任务     @Scheduled(cron = "0/5 * * * * ?")     //或直接指定时间间隔，例如：5秒     //@Scheduled(fixedRate=5000)     private void configureTasks() {         System.err.println("执行静态定时任务时间: " + LocalDateTime.now());     } }</code></pre> <p>Cron表达式参数分别表示：</p> <ul> <li>秒（0~59） 例如0/5表示每5秒</li> <li>分（0~59）</li> <li>时（0~23）</li> <li>日（0~31）的某天，需计算</li> <li>月（0~11）</li> <li>周几（ 可填1-7 或 SUN/MON/TUE/WED/THU/FRI/SAT）</li> </ul> <p>@Scheduled：除了支持灵活的参数表达式cron之外，还支持简单的延时操作，例如 fixedDelay ，fixedRate 填写相应的毫秒数即可。</p> <pre>// Cron表达式范例：  每隔5秒执行一次：*/5 * * * * ?  每隔1分钟执行一次：0 */1 * * * ?  每天23点执行一次：0 0 23 * * ?  每天凌晨1点执行一次：0 0 1 * * ?  每月1号凌晨1点执行一次：0 0 1 1 * ?  每月最后一天23点执行一次：0 0 23 L * ?  每周星期天凌晨1点实行一次：0 0 1 ? * L  在26分、29分、33分执行一次：0 26,29,33 * * * ?  每天的0点、13点、18点、21点都执行一次：0 0 0,13,18,21 * * ? </pre> <p>2、启动测试</p> <p>启动应用，可以看到控制台打印出如下信息：</p> <p><img decoding="async" alt="在这里插入图片描述" src="http://img.555519.xyz/uploads/20230109/39c6911287065fc0c73e9967cd062d4c.jpg">&nbsp;</p> <p>显然，使用@Scheduled 注解很方便，但缺点是当我们调整了执行周期的时候，需要重启应用才能生效</p> </p></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-30197.htm">重庆宠物领养机构电话（重庆宠物领养机构电话号码）</a></p>
+                                        <p>下一个：<a href="/news/article-30671.htm">antd组件upload上传xlsx文件，并读取文件内容</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2024-12-11-node-share-links.htm" title="12月11日→22.2M/S|2024年最新免费节点Clash/SSR/Shadowrocket/V2ray订阅链接地址">12月11日→22.2M/S|2024年最新免费节点Clash/SSR/Shadowrocket/V2ray订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-37359.htm" title="Mybatis学习之程序编译后在target/classes目录下找不到主配置文件或sql映射文件（sql mapper）">Mybatis学习之程序编译后在target/classes目录下找不到主配置文件或sql映射文件（sql mapper）</a></li>
+                        <li class="py-2"><a href="/news/article-36387.htm" title="全国动物疫苗生产厂家名单查询电话（动物疫苗经销商）">全国动物疫苗生产厂家名单查询电话（动物疫苗经销商）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-15-free-clash-subscribe.htm" title="1月15日→19.8M/S|2025年最新免费节点SSR/Clash/V2ray/Shadowrocket订阅链接地址">1月15日→19.8M/S|2025年最新免费节点SSR/Clash/V2ray/Shadowrocket订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-23663.htm" title="动物医院诊疗许可证办理程序规定最新版（动物医院办理条件）">动物医院诊疗许可证办理程序规定最新版（动物医院办理条件）</a></li>
+                        <li class="py-2"><a href="/news/article-42305.htm" title="十大品牌内衣有哪些牌子(十大品牌内衣有哪些)">十大品牌内衣有哪些牌子(十大品牌内衣有哪些)</a></li>
+                        <li class="py-2"><a href="/news/article-32574.htm" title="猫粮品牌推荐（猫粮品牌推荐大全）">猫粮品牌推荐（猫粮品牌推荐大全）</a></li>
+                        <li class="py-2"><a href="/news/article-40318.htm" title="动物疫苗保存条件是什么样的（动物疫苗在常温下能放多久）">动物疫苗保存条件是什么样的（动物疫苗在常温下能放多久）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-7-free-subscribe-node.htm" title="12月7日→20.9M/S|2024年最新免费节点Shadowrocket/V2ray/SSR/Clash订阅链接地址">12月7日→20.9M/S|2024年最新免费节点Shadowrocket/V2ray/SSR/Clash订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-4-free-subscribe-node.htm" title="1月4日→19.5M/S|2025年最新免费节点SSR/Shadowrocket/Clash/V2ray订阅链接地址">1月4日→19.5M/S|2025年最新免费节点SSR/Shadowrocket/Clash/V2ray订阅链接地址</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">6</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">77</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">28</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section End -->
+        <!-- Footer Area Start -->
+    <footer class="footer">
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="text-center">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                            <span class="text-light-gray">
+                                NodeTrojan节点订阅官网 版权所有
+                                <br />
+                                Powered by WordPress
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Area End -->
+    <!-- BACK TO TOP SECTION -->
+    <div class="back-to-top bg-gradient-color">
+        <i class="fab fa-angle-up"></i>
+    </div>
+    <!-- Integrated important scripts here -->
+    <script src="/assets/website/js/frontend/nodetrojan/jquery.v1.12.4.min.js"></script>
+    <script src="/assets/website/js/frontend/nodetrojan/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/nodetrojan/jquery-core-plugins.js"></script>
+    <script src="/assets/website/js/frontend/nodetrojan/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>

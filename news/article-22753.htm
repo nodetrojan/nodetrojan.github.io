@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://nodetrojan.github.io/news/article-22753.htm" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>如何从JavaScript对象中删除属性</title>
+        <meta name="description" content="The semantically correct way to remove a property from an object is to use the delete keyword.  从对象上" />
+        <link rel="icon" href="/assets/website/img/nodetrojan/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="NodeTrojan节点订阅官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://nodetrojan.github.io/news/article-22753.htm" />
+    <meta property="og:site_name" content="NodeTrojan节点订阅官网" />
+    <meta property="og:title" content="如何从JavaScript对象中删除属性" />
+    <meta property="og:image" content="https://nodetrojan.github.io/uploads/20240904-1/ce993ae2aec63edc299c6aa2fdee8b90.webp" />
+        <meta property="og:release_date" content="2024-12-08T07:14:20" />
+    <meta property="og:updated_time" content="2024-12-08T07:14:20" />
+        <meta property="og:description" content="The semantically correct way to remove a property from an object is to use the delete keyword.  从对象上" />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="如何从JavaScript对象中删除属性">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="/assets/website/css/nodetrojan/style.css">
+    <link rel="stylesheet" href="/assets/website/css/nodetrojan/responsive.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PK0RCMBM8T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PK0RCMBM8T');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- Preloader Start -->
+    <div class="preloader"></div>
+    <!-- Preloader End -->
+    <!-- header Start -->
+    <header class="header-style-two">
+        <div class="header-wrapper">
+            <div class="header-navigation-area two-layers-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                                                        <a class="navbar-brand logo f-left mrt-10 mrt-md-0" href="/">
+                                <span>NodeTrojan</span>
+                            </a>
+                                                        <div class="main-menu f-right">
+                                <nav id="mobile-menu-right">
+                                    <ul>
+                                                                                <li>
+                                            <a href="/">首页</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/free-nodes/">免费节点</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/paid-subscribe/">推荐机场</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/news/">新闻资讯</a>
+                                        </li>
+                                                                                <li><a href="#">关于</a></li>
+                                        <li><a href="#">联系</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header End -->
+    <!-- Page Title Start -->
+    <section class="page-title-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 text-center">
+                    <div class="page-title-content">
+                        <h1 class="title text-white">如何从JavaScript对象中删除属性</h1>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="/">首页</a></li>
+                                <li class="breadcrumb-item"><a href="/news/">新闻资讯</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">正文</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Page Title End -->
+    <!-- About Section Start -->
+    <section class="about-section anim-object pdt-110 pdb-50 pdb-lg-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="htmledit_views"> <div style="font-size: 16px;"> <p>The semantically correct way to remove a property from an object is to use the <code>delete</code> keyword.</p> <p> 从对象上删除属性的语义正确方法是使用<code>delete</code>关键字。 </p> <p>Given the object</p> <p> 给定对象 </p> <div> <pre class="has"><code class="language-js">const car = {   color: 'blue',   brand: 'Ford' }</code></pre> </p></div> <p>you can delete a property from this object using</p> <p> 您可以使用以下命令从此对象中删除属性 </p> <div> <pre class="has"><code class="language-js">delete car.brand</code></pre> </p></div> <div style="text-align: center;">   <img decoding="async" src="0" alt="Delete a property from an object in JavaScript" style="outline: none;"/> </div> <p>It works also expressed as:</p> <p> 它的工作方式还表示为： </p> <div> <pre class="has"><code class="language-js">delete car['brand'] delete car.brand delete newCar['brand']</code></pre> </p></div> <h2 id="setting-a-property-to-undefined"> 将属性设置为undefined <span style="font-weight: bold;">(</span>Setting a property to undefined<span style="font-weight: bold;">)</span><br /> </h2> <p>If you need to perform this operation in a very optimized way, for example when you’re operating on a large number of objects in loops, another option is to set the property to <code>undefined</code>.</p> <p> 如果您需要以非常优化的方式执行此操作，例如在循环中对大量对象进行操作时，另一种选择是将属性设置为<code>undefined</code> 。 </p> <p>Due to its nature, the performance of <code>delete</code> is a <a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://jsperf.com/delete-vs-undefined-vs-null/16"  rel="nofollow">lot slower</a> than a simple reassignment to <code>undefined</code>, more than 50x times slower.</p> <p> 由于其性质， <code>delete</code>的性能要比简单地重新分配给<code>undefined</code> <a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://jsperf.com/delete-vs-undefined-vs-null/16"  rel="nofollow">慢很多</a> ，比慢得多50倍。 </p> <p>However, keep in mind that the property is not deleted from the object. Its value is wiped, but it’s still there if you iterate the object:</p> <p> 但是，请记住，该属性不会从对象中删除。 它的值被擦除了，但是如果您迭代该对象，它仍然存在： </p> <div style="text-align: center;">   <img decoding="async" src="http://img.555519.xyz/uploads/20230223/2de44d0a5619375c6e155ef984767fbb.jpg" alt="如何从JavaScript对象中删除属性"> </div> <p>Using <code>delete</code> is still very fast, you should only look into this kind of performance issues if you have a very good reason to do so, otherwise it’s always preferred to have a more clear semantic and functionality.</p> <p> 使用<code>delete</code>仍然非常快，只有在您有充分理由这样做时，才应研究此类性能问题，否则始终首选具有更清晰的语义和功能。 </p> <h2 id="remove-a-property-without-mutating-the-object"> 删除属性而不更改对象 <span style="font-weight: bold;">(</span>Remove a property without mutating the object<span style="font-weight: bold;">)</span><br /> </h2> <p>If mutability is a concern, you can create a completely new object by copying all the properties from the old, except the one you want to remove:</p> <p> 如果需要考虑可变性，则可以通过复制旧属性中的所有属性来创建一个全新的对象，但要删除的属性除外： </p> <div> <pre class="has"><code class="language-js">const car = {   color: 'blue',   brand: 'Ford' } const prop = 'color'  const newCar = Object.keys(car).reduce((object, key) =&gt; {   if (key !== prop) {     object[key] = car[key]   }   return object }, {})</code></pre> </p></div> <p>(see <a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://flaviocopes.com/javascript-object-keys/"  rel="nofollow"><code>Object.keys()</code></a>)</p> <p> (请参阅<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://flaviocopes.com/javascript-object-keys/"  rel="nofollow"><code>Object.keys()</code></a> ) </p> <div style="text-align: center;">   <img decoding="async" src="http://img.555519.xyz/uploads/20230223/78a0da602b54a4f4d3515a304dacf4b5.jpg" alt="如何从JavaScript对象中删除属性"> </div> <blockquote> <p>翻译自: <a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://flaviocopes.com/how-to-remove-object-property-javascript/"  rel="nofollow">https://flaviocopes.com/how-to-remove-object-property-javascript/</a></p> </blockquote> </div></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-22294.htm">附近宠物领养基地（附近宠物领养基地电话）</a></p>
+                                        <p>下一个：<a href="/news/article-22754.htm">猫咪抓伤轻微出血要***吗多久（猫轻微抓伤有一点渗血要***吗?）</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-20919.htm" title="Citus 分布式 PostgreSQL 集群 &#8211; SQL Reference(SQL支持和变通方案)">Citus 分布式 PostgreSQL 集群 &#8211; SQL Reference(SQL支持和变通方案)</a></li>
+                        <li class="py-2"><a href="/news/article-36869.htm" title="猫咪没有注射疫苗可以绝育吗（猫咪没有打疫苗可以做绝育手术吗）">猫咪没有注射疫苗可以绝育吗（猫咪没有打疫苗可以做绝育手术吗）</a></li>
+                        <li class="py-2"><a href="/news/article-29726.htm" title="动物疫苗能放冰箱吗多久可以打疫苗（动物疫苗能放冰箱吗多久可以打疫苗针）">动物疫苗能放冰箱吗多久可以打疫苗（动物疫苗能放冰箱吗多久可以打疫苗针）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-29-clash-windows.htm" title="12月29日→19.2M/S|2024年最新免费节点SSR/Clash/V2ray/Shadowrocket订阅链接地址">12月29日→19.2M/S|2024年最新免费节点SSR/Clash/V2ray/Shadowrocket订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-26460.htm" title="动物疫苗的重要性和意义作文（动物疫苗的重要性和意义作文题目）">动物疫苗的重要性和意义作文（动物疫苗的重要性和意义作文题目）</a></li>
+                        <li class="py-2"><a href="/news/article-44782.htm" title="合肥哪里能领养宠物猫 合肥哪里能领养宠物猫的">合肥哪里能领养宠物猫 合肥哪里能领养宠物猫的</a></li>
+                        <li class="py-2"><a href="/news/article-22293.htm" title="JAVA 实现websocket作为客户端（自动断线重连）">JAVA 实现websocket作为客户端（自动断线重连）</a></li>
+                        <li class="py-2"><a href="/news/article-42797.htm" title="广州宠物猫领养中心在哪里 广州宠物猫领养中心在哪里啊">广州宠物猫领养中心在哪里 广州宠物猫领养中心在哪里啊</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-22-clash-meta-node-share.htm" title="1月22日→20.2M/S|2025年最新免费节点Shadowrocket/V2ray/Clash/SSR订阅链接地址">1月22日→20.2M/S|2025年最新免费节点Shadowrocket/V2ray/Clash/SSR订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-22-clash-node-github.htm" title="12月22日→21.6M/S|2024年最新免费节点Clash/Shadowrocket/V2ray/SSR订阅链接地址">12月22日→21.6M/S|2024年最新免费节点Clash/Shadowrocket/V2ray/SSR订阅链接地址</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">6</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">77</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">28</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section End -->
+        <!-- Footer Area Start -->
+    <footer class="footer">
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="text-center">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                            <span class="text-light-gray">
+                                NodeTrojan节点订阅官网 版权所有
+                                <br />
+                                Powered by WordPress
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Area End -->
+    <!-- BACK TO TOP SECTION -->
+    <div class="back-to-top bg-gradient-color">
+        <i class="fab fa-angle-up"></i>
+    </div>
+    <!-- Integrated important scripts here -->
+    <script src="/assets/website/js/frontend/nodetrojan/jquery.v1.12.4.min.js"></script>
+    <script src="/assets/website/js/frontend/nodetrojan/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/nodetrojan/jquery-core-plugins.js"></script>
+    <script src="/assets/website/js/frontend/nodetrojan/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
