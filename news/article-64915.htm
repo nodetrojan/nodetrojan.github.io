@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://nodetrojan.github.io/news/article-64915.htm" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>docker安装elastic search和kibana的实现_docker_</title>
+        <meta name="description" content="目录  安装目标 安装es  1. docker pull 2. 临时安装生成文件 3. 设置外部数据卷 4. 停止并删除临时容器 5. 重新起容器并挂载外部文件夹  安装kibana  1. 运行临" />
+        <link rel="icon" href="/assets/website/img/nodetrojan/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="NodeTrojan节点订阅官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://nodetrojan.github.io/news/article-64915.htm" />
+    <meta property="og:site_name" content="NodeTrojan节点订阅官网" />
+    <meta property="og:title" content="docker安装elastic search和kibana的实现_docker_" />
+    <meta property="og:image" content="https://nodetrojan.github.io/uploads/20240904-1/ab6b6d1b7e03d787ed283fddc0f13776.webp" />
+        <meta property="og:release_date" content="2025-03-01T06:58:16" />
+    <meta property="og:updated_time" content="2025-03-01T06:58:16" />
+        <meta property="og:description" content="目录  安装目标 安装es  1. docker pull 2. 临时安装生成文件 3. 设置外部数据卷 4. 停止并删除临时容器 5. 重新起容器并挂载外部文件夹  安装kibana  1. 运行临" />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="docker安装elastic search和kibana的实现_docker_">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="/assets/website/css/nodetrojan/style.css">
+    <link rel="stylesheet" href="/assets/website/css/nodetrojan/responsive.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PK0RCMBM8T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PK0RCMBM8T');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- Preloader Start -->
+    <div class="preloader"></div>
+    <!-- Preloader End -->
+    <!-- header Start -->
+    <header class="header-style-two">
+        <div class="header-wrapper">
+            <div class="header-navigation-area two-layers-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <a class="navbar-brand logo f-left mrt-10 mrt-md-0" href="/">
+                                                        <span>Node Trojan</span>
+                                                        </a>
+                            <div class="main-menu f-right">
+                                <nav id="mobile-menu-right">
+                                    <ul>
+                                                                                <li>
+                                            <a href="/">首页</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/free-nodes/">免费节点</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/paid-subscribe/">推荐机场</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/client.htm">客户端</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/news/">新闻资讯</a>
+                                        </li>
+                                                                            </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header End -->
+    <!-- Page Title Start -->
+    <section class="page-title-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 text-center">
+                    <div class="page-title-content">
+                        <h1 class="title text-white">docker安装elastic search和kibana的实现_docker_</h1>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="/">首页</a></li>
+                                <li class="breadcrumb-item"><a href="/news/">新闻资讯</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">正文</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Page Title End -->
+    <!-- About Section Start -->
+    <section class="about-section anim-object pdt-110 pdb-50 pdb-lg-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="navCategory"> <h5 class="catalogue">目录</h5> <ul class="first_class_ul"> <li><a href="#_label0" rel="nofollow">安装目标</a></li> <li><a href="#_label1" rel="nofollow">安装es</a></li> <ul class="second_class_ul"> <li><a href="#_lab2_1_0" rel="nofollow">1. docker pull</a></li> <li><a href="#_lab2_1_1" rel="nofollow">2. 临时安装生成文件</a></li> <li><a href="#_lab2_1_2" rel="nofollow">3. 设置外部数据卷</a></li> <li><a href="#_lab2_1_3" rel="nofollow">4. 停止并删除临时容器</a></li> <li><a href="#_lab2_1_4" rel="nofollow">5. 重新起容器并挂载外部文件夹</a></li> </ul> <li><a href="#_label2" rel="nofollow">安装kibana</a></li> <ul class="second_class_ul"> <li><a href="#_lab2_2_5" rel="nofollow">1. 运行临时容器</a></li> <li><a href="#_lab2_2_6" rel="nofollow">2. 创建本地挂载文件</a></li> <li><a href="#_lab2_2_7" rel="nofollow">3. 停掉临时容器并重新启动</a></li> <li><a href="#_lab2_2_8" rel="nofollow">4. 进入elasticsearch容器获取token#</a></li> <li><a href="#_lab2_2_9" rel="nofollow">5. 进入kibana容器获取验证码#</a></li> <li><a href="#_lab2_2_10" rel="nofollow">6. 重置elastic密码</a></li> </ul> <li><a href="#_label3" rel="nofollow">为es和kibana设置密码</a></li> <ul class="second_class_ul"></ul> <li><a href="#_label4" rel="nofollow">修改kibana的密码</a></li> <ul class="second_class_ul"></ul> <li><a href="#_label5" rel="nofollow">安装elastic-head</a></li> <ul class="second_class_ul"></ul> </ul> </div> <p class="maodian"><a name="_label0" rel="nofollow"></a></p> <h2>安装目标</h2> <p>使用docker安装elastic search和kibana，版本均为7.17.1</p> <p class="maodian"><a name="_label1" rel="nofollow"></a></p> <h2>安装es</h2> <p class="maodian"><a name="_lab2_1_0" rel="nofollow"></a></p> <h3>1. docker pull</h3> <p>去dockerhub看具体版本，这里用7.17.1</p> <div class="ay1code"> <pre class="brush:bash;">docker pull elasticsearch:7.17.1  docker pull kibana:7.17.1</pre> </div> <p class="maodian"><a name="_lab2_1_1" rel="nofollow"></a></p> <h3>2. 临时安装生成文件</h3> <div class="ay1code"> <pre class="brush:bash;"> docker run -d --name elasticsearch  -p 9200:9200 -p 9300:9300 -e  "discovery.type=single-node" -e ES_JAVA_OPTS="-Xms256m -Xmx256m" elasticsearch:7.17.1  </pre> </div> <p>参数说明</p> <ul> <li>-d 后台启动</li> <li>–name 起别名即：NAMES</li> <li>-p 9200:9200 将端口映射出来</li> <li>elasticsearch的9200端口是供外部访问使用；9300端口是供内部访问使用集群间通讯</li> <li>-e "discovery.type=single-node"单节点启动</li> <li>-e ES_JAVA_OPTS="-Xms256m -Xmx256m" 限制内存大小</li> </ul> <p>确保成功启动</p> <div class="ay1code"> <pre class="brush:bash;">docker ps  </pre> </div> <p class="maodian"><a name="_lab2_1_2" rel="nofollow"></a></p> <h3>3. 设置外部数据卷</h3> <p>执行</p> <div class="ay1code"> <pre class="brush:bash;">mkdir -p /data/elasticsearch/{config,data,logs,plugins}  yml  </pre> </div> <p>将容器内文件拷贝出来</p> <div class="ay1code"> <pre class="brush:bash;">docker cp elasticsearch:/usr/share/elasticsearch/config /data/elasticsearch  docker cp elasticsearch:/usr/share/elasticsearch/logs /data/elasticsearch  docker cp elasticsearch:/usr/share/elasticsearch/data /data/elasticsearch  docker cp elasticsearch:/usr/share/elasticsearch/plugins /data/elasticsearch  </pre> </div> <p>设置elasticsearch.yml的内容</p> <div class="ay1code"> <pre class="brush:plain;">vi /data/elasticsearch/config/elasticsearch.yml  </pre> </div> <p>确保有以下几个配置，原有的配置可以不改动</p> <div class="ay1code"> <pre class="brush:bash;">cluster.name: "docker-cluster"  network.hosts:0.0.0.0  # 跨域  http.cors.allow-origin: "*"  http.cors.enabled: true  http.cors.allow-headers: Authorization,X-Requested-With,Content-Length,Content-Type  </pre> </div> <p class="maodian"><a name="_lab2_1_3" rel="nofollow"></a></p> <h3>4. 停止并删除临时容器</h3> <div class="ay1code"> <pre class="brush:bash;">docker stop elasticsearch  docker rm elasticsearch  </pre> </div> <p class="maodian"><a name="_lab2_1_4" rel="nofollow"></a></p> <h3>5. 重新起容器并挂载外部文件夹</h3> <div class="ay1code"> <pre class="brush:bash;">docker run -d --name elasticsearch \  -p 9200:9200 \  -p 9300:9300 \  -e "discovery.type=single-node" \  -e ES_JAVA_OPTS="-Xms256m -Xmx256m" \  -v /data/elasticsearch/logs:/usr/share/elasticsearch/logs \  -v /data/elasticsearch/data:/usr/share/elasticsearch/data \  -v /data/elasticsearch/plugins:/usr/share/elasticsearch/plugins \  -v /data/elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml \  elasticsearch:7.17.1  </pre> </div> <p>等docker容器起来一分钟左右，再访问9200 端口，会返回</p> <p>因为安装的是V7版本的，默认没开启x-pack(v8默认开启)，所以能直接访问</p> <div class="ay1code"> <pre class="brush:bash;">[root@iZuf6ai62xce7wexx4wwi9Z config]# curl "http://localhost:9200"  {    "name" : "6a1036c69d59",    "cluster_name" : "docker-cluster",    "cluster_uuid" : "0zgLiGhESGKQYTYy9gH4iA",    "version" : {      "number" : "7.17.1",      "build_flavor" : "default",      "build_type" : "docker",      "build_hash" : "e5acb99f822233d62d6444ce45a4543dc1c8059a",      "build_date" : "2022-02-23T22:20:54.153567231Z",      "build_snapshot" : false,      "lucene_version" : "8.11.1",      "minimum_wire_compatibility_version" : "6.8.0",      "minimum_index_compatibility_version" : "6.0.0-beta1"    },    "tagline" : "You Know, for Search"  }  [root@iZuf6ai62xce7wexx4wwi9Z config]#  </pre> </div> <p class="maodian"><a name="_label2" rel="nofollow"></a></p> <h2>安装kibana</h2> <p class="maodian"><a name="_lab2_2_5" rel="nofollow"></a></p> <h3>1. 运行临时容器</h3> <div class="ay1code"> <pre class="brush:bash;">docker run -d --name kibana -p 5601:5601 kibana:7.17.1  </pre> </div> <p class="maodian"><a name="_lab2_2_6" rel="nofollow"></a></p> <h3>2. 创建本地挂载文件</h3> <div class="ay1code"> <pre class="brush:bash;">mkdir -p /data/kibana/config  docker cp kibana:/usr/share/kibana/config /data/kibana/  </pre> </div> <p>在本地就能看到拷贝出来的kibana.yml文件，</p> <div class="ay1code"> <pre class="brush:plain;">vim /data/kibana/config/kibana.yml  </pre> </div> <p>修改配置为</p> <div class="ay1code"> <pre class="brush:plain;">#  # ** THIS IS AN AUTO-GENERATED FILE **  #    # Default Kibana configuration for docker target  server.host: "0"  server.shutdownTimeout: "5s"  elasticsearch.hosts: [ "http://localhost:9100" ] # 记得修改ip  monitoring.ui.container.elasticsearch.enabled: true  i18n.locale: "zh-CN"</pre> </div> <p class="maodian"><a name="_lab2_2_7" rel="nofollow"></a></p> <h3>3. 停掉临时容器并重新启动</h3> <p>停掉旧的</p> <div class="ay1code"> <pre class="brush:bash;">docker stop kibana  docker rm kibana  </pre> </div> <p>重新启动挂载了地址的新的容器</p> <div class="ay1code"> <pre class="brush:bash;">docker run -d --name kibana -p 5601:5601 -v /data/kibana/config:/usr/share/kibana/config kibana:7.17.1  </pre> </div> <p class="maodian"><a name="_lab2_2_8" rel="nofollow"></a></p> <h3>4. 进入elasticsearch容器获取token#</h3> <p>访问kibana发现需要token</p> <p>进入es容器获取token</p> <div class="ay1code"> <pre class="brush:bash;">docker exec -it {elastic_search_container_id} /bin/bash  bin/elasticsearch-create-enrollment-token --scope kibana  </pre> </div> <p>拷贝token到kibana的ui上输入</p> <p class="maodian"><a name="_lab2_2_9" rel="nofollow"></a></p> <h3>5. 进入kibana容器获取验证码#</h3> <p>进入kibana容器获取token</p> <div class="ay1code"> <pre class="brush:bash;">docker exec -it kibana /bin/bash    # 执行生成验证码命令  bin/kibana-verification-code </pre> </div> <p class="maodian"><a name="_lab2_2_10" rel="nofollow"></a></p> <h3>6. 重置elastic密码</h3> <p>进入es容器</p> <div class="ay1code"> <pre class="brush:bash;">docker exec -it {elastic_search_container_id} /bin/bash  bin/elasticsearch-reset-password --username elastic -i  </pre> </div> <p>后面就使用elastic账户和密码登录kibana</p> <p class="maodian"><a name="_label3" rel="nofollow"></a></p> <h2>为es和kibana设置密码</h2> <p>es开启x-pack</p> <div class="ay1code"> <pre class="brush:plain;">vim /data/elasticsearch/config/elasticsearch.yml  </pre> </div> <p>增加以下xpack.security.enabled</p> <div class="ay1code"> <pre class="brush:plain;">cluster.name: "docker-cluster-01"  network.host: 0.0.0.0  http.cors.enabled: true  http.cors.allow-origin: "*"  http.cors.allow-headers: Authorization,X-Requested-With,Content-Length,Content-Type    # 此处开启xpack  xpack.security.enabled: true</pre> </div> <p>重启es容器</p> <div class="ay1code"> <pre class="brush:bash;">docker restart elasticsearch  </pre> </div> <p>进入es容器修改密码</p> <div class="ay1code"> <pre class="brush:bash;">docker exec -ti elasticsearch /bin/bash  /usr/share/elasticsearch/bin/elasticsearch-setup-passwords interactive  </pre> </div> <p>然后会分别让重置以下的密码，这里重置成123456</p> <div class="ay1code"> <pre class="brush:plain;">Initiating the setup of passwords for reserved users elastic,apm_system,kibana,kibana_system,logstash_system,beats_system,remote_monitoring_user.  You will be prompted to enter passwords as the process progresses.  Please confirm that you would like to continue [y/N]y      Enter password for [elastic]:  passwords must be at least [6] characters long  Try again.  Enter password for [elastic]:  Reenter password for [elastic]:  Enter password for [apm_system]:  Reenter password for [apm_system]:  Enter password for [kibana_system]:  Reenter password for [kibana_system]:  Enter password for [logstash_system]:  Reenter password for [logstash_system]:  Enter password for [beats_system]:  Reenter password for [beats_system]:  Enter password for [remote_monitoring_user]:  Reenter password for [remote_monitoring_user]:  Changed password for user [apm_system]  Changed password for user [kibana_system]  Changed password for user [kibana]  Changed password for user [logstash_system]  Changed password for user [beats_system]  Changed password for user [remote_monitoring_user]  Changed password for user [elastic]</pre> </div> <p>重置完毕之后带上用户就可以访问了</p> <div class="ay1code"> <pre class="brush:bash;">[root@k8s-master ~]# curl localhost:9200 -u elastic  Enter host password for user 'elastic':  {    "name" : "cd52e7fbacd1",    "cluster_name" : "docker-cluster",    "cluster_uuid" : "0S-V9zElSie_zXtcDRssAQ",    "version" : {      "number" : "8.1.2",      "build_flavor" : "default",      "build_type" : "docker",      "build_hash" : "31df9689e80bad366ac20176aa7f2371ea5eb4c1",      "build_date" : "2022-03-29T21:18:59.991429448Z",      "build_snapshot" : false,      "lucene_version" : "9.0.0",      "minimum_wire_compatibility_version" : "7.17.0",      "minimum_index_compatibility_version" : "7.0.0"    },    "tagline" : "You Know, for Search"  }  [root@k8s-master ~]#</pre> </div> <p class="maodian"><a name="_label4" rel="nofollow"></a></p> <h2>修改kibana的密码</h2> <p>修改配置文件</p> <p>vi /data/kibana/config/kibana.yml</p> <div class="ay1code"> <pre class="brush:plain;">#  # ** THIS IS AN AUTO-GENERATED FILE **  #    # Default Kibana configuration for docker target  server.host: "0"  server.shutdownTimeout: "5s"  elasticsearch.hosts: [ "http://172.17.0.3:9200" ]  monitoring.ui.container.elasticsearch.enabled: true  i18n.locale: "zh-CN"  # 此处设置elastic的用户名和密码  elasticsearch.username: elastic  elasticsearch.password: "123456"</pre> </div> <p>重启容器</p> <div class="ay1code"> <pre class="brush:bash;">docker restart kibana</pre> </div> <p class="maodian"><a name="_label5" rel="nofollow"></a></p> <h2>安装elastic-head</h2> <div class="ay1code"> <pre class="brush:bash;">docker run -d \  --name=elasticsearch-head \  -p 9100:9100 \  mobz/elasticsearch-head:5-alpine</pre> </div> <p>连接集群 不能连localhost:9200，而是</p> <blockquote> <p>http://{ip}:9200/</p> </blockquote> <p>后续带x-pack的认证信息的访问</p> <p>url上带上用户名密码</p> <blockquote> <p>http://{ip}:9100/?auth_user=elastic&auth_password=123456</p> </blockquote> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-64301.htm">宠物粮公司排名榜 宠物粮公司排名榜前十名</a></p>
+                                        <p>下一个：<a href="/news/article-64916.htm">同城免费领养宠物狗的平台（同城领养狗狗）</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-31618.htm" title="领养宠物须知图片大全（领养宠物需要什么条件和费用）">领养宠物须知图片大全（领养宠物需要什么条件和费用）</a></li>
+                        <li class="py-2"><a href="/news/article-42305.htm" title="十大品牌内衣有哪些牌子(十大品牌内衣有哪些)">十大品牌内衣有哪些牌子(十大品牌内衣有哪些)</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-16-clash-node.htm" title="11月16日→21.7M/S|2024年最新免费节点Shadowrocket/Clash/V2ray/SSR订阅链接地址">11月16日→21.7M/S|2024年最新免费节点Shadowrocket/Clash/V2ray/SSR订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-20918.htm" title="Java中自定义注解的使用">Java中自定义注解的使用</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-12-clash-node-github.htm" title="1月12日→22.8M/S|2025年最新免费节点Clash/SSR/Shadowrocket/V2ray订阅链接地址">1月12日→22.8M/S|2025年最新免费节点Clash/SSR/Shadowrocket/V2ray订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-26923.htm" title="宠物领养软件下载免费 宠物领养软件下载免费大全">宠物领养软件下载免费 宠物领养软件下载免费大全</a></li>
+                        <li class="py-2"><a href="/news/article-45282.htm" title="动物诊所英语怎么写（动物医院英语短语）">动物诊所英语怎么写（动物医院英语短语）</a></li>
+                        <li class="py-2"><a href="/news/article-19542.htm" title="vue extend+promise封装全局弹窗组件_vue.js_">vue extend+promise封装全局弹窗组件_vue.js_</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-22-clash-node-github.htm" title="12月22日→21.6M/S|2024年最新免费节点Clash/Shadowrocket/V2ray/SSR订阅链接地址">12月22日→21.6M/S|2024年最新免费节点Clash/Shadowrocket/V2ray/SSR订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-5-node-share.htm" title="11月5日→22.1M/S|2024年最新免费节点SSR/Clash/Shadowrocket/V2ray订阅链接地址">11月5日→22.1M/S|2024年最新免费节点SSR/Clash/Shadowrocket/V2ray订阅链接地址</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">3</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">81</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">77</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">28</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section End -->
+        <!-- Footer Area Start -->
+    <footer class="footer">
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="text-center">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                            <span class="text-light-gray">
+                                NodeTrojan节点订阅官网 版权所有
+                                <br />
+                                Powered by WordPress
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Area End -->
+    <!-- BACK TO TOP SECTION -->
+    <div class="back-to-top bg-gradient-color">
+        <i class="fab fa-angle-up"></i>
+    </div>
+    <!-- Integrated important scripts here -->
+    <script src="/assets/website/js/frontend/nodetrojan/jquery.v1.12.4.min.js"></script>
+    <script src="/assets/website/js/frontend/nodetrojan/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/nodetrojan/jquery-core-plugins.js"></script>
+    <script src="/assets/website/js/frontend/nodetrojan/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
