@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://nodetrojan.github.io/news/article-65534.htm" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SpringBoot2.3应用制作Docker镜像详解</title>
+        <meta name="description" content="本篇简介  本篇的主题是动手实战，力求最快速度体验官方的镜像制作方案； 本篇不会涉及理论知识，这些留给下一章； 一通操作后可能会产生诸多疑问，文末留下了几个典型问题，您可以先思考再进入下一章揭晓；  " />
+        <link rel="icon" href="/assets/website/img/nodetrojan/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="NodeTrojan节点订阅官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://nodetrojan.github.io/news/article-65534.htm" />
+    <meta property="og:site_name" content="NodeTrojan节点订阅官网" />
+    <meta property="og:title" content="SpringBoot2.3应用制作Docker镜像详解" />
+    <meta property="og:image" content="https://nodetrojan.github.io/uploads/20240904-1/5bab02dfb78c0109a017684802780c43.webp" />
+        <meta property="og:release_date" content="2025-03-02T09:35:10" />
+    <meta property="og:updated_time" content="2025-03-02T09:35:10" />
+        <meta property="og:description" content="本篇简介  本篇的主题是动手实战，力求最快速度体验官方的镜像制作方案； 本篇不会涉及理论知识，这些留给下一章； 一通操作后可能会产生诸多疑问，文末留下了几个典型问题，您可以先思考再进入下一章揭晓；  " />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="SpringBoot2.3应用制作Docker镜像详解">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="/assets/website/css/nodetrojan/style.css">
+    <link rel="stylesheet" href="/assets/website/css/nodetrojan/responsive.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PK0RCMBM8T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PK0RCMBM8T');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- Preloader Start -->
+    <div class="preloader"></div>
+    <!-- Preloader End -->
+    <!-- header Start -->
+    <header class="header-style-two">
+        <div class="header-wrapper">
+            <div class="header-navigation-area two-layers-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <a class="navbar-brand logo f-left mrt-10 mrt-md-0" href="/">
+                                                        <span>Node Trojan</span>
+                                                        </a>
+                            <div class="main-menu f-right">
+                                <nav id="mobile-menu-right">
+                                    <ul>
+                                                                                <li>
+                                            <a href="/">首页</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/free-nodes/">免费节点</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/paid-subscribe/">推荐机场</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/client.htm">客户端</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/news/">新闻资讯</a>
+                                        </li>
+                                                                            </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header End -->
+    <!-- Page Title Start -->
+    <section class="page-title-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 text-center">
+                    <div class="page-title-content">
+                        <h1 class="title text-white">SpringBoot2.3应用制作Docker镜像详解</h1>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="/">首页</a></li>
+                                <li class="breadcrumb-item"><a href="/news/">新闻资讯</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">正文</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Page Title End -->
+    <!-- About Section Start -->
+    <section class="about-section anim-object pdt-110 pdb-50 pdb-lg-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> <h3>本篇简介<br /><a id="SpringBoot23_0" rel="nofollow"></a></h3> <ol> <li>本篇的主题是动手实战，力求最快速度体验官方的镜像制作方案；</li> <li>本篇不会涉及理论知识，这些留给下一章；</li> <li>一通操作后可能会产生诸多疑问，文末留下了几个典型问题，您可以先思考再进入下一章揭晓；</li> </ol> <h3><a id="SpringBoot_16" rel="nofollow"></a>SpringBoot应用源码</h3> <ol> <li>本次实战用的是普通的SpringBoot工程，如果您不想写代码，源码可在GitHub下载到，地址和链接信息如下表所示(https://github.com/zq2599/blog_demos)：</li> </ol> <table> <thead> <tr> <th align="left">名称</th> <th align="left">链接</th> <th align="left">备注</th> </tr> </thead> <tbody> <tr> <td align="left">项目主页</td> <td align="left">https://github.com/zq2599/blog_demos</td> <td align="left">该项目在GitHub上的主页</td> </tr> <tr> <td align="left">git仓库地址(https)</td> <td align="left">https://github.com/zq2599/blog_demos.git</td> <td align="left">该项目源码的仓库地址，https协议</td> </tr> <tr> <td align="left">git仓库地址(ssh)</td> <td align="left">git@github.com:zq2599/blog_demos.git</td> <td align="left">该项目源码的仓库地址，ssh协议</td> </tr> </tbody> </table> <ol start="2"> <li>这个git项目中有多个文件夹，本章的应用在<font color="blue">dockerlayerdemo</font>文件夹下，如下图红框所示：<br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220602/ace2456d6fbfa3562f55962134a5a424.jpg" alt="SpringBoot2.3应用制作Docker镜像详解"></li> </ol> <h3><a id="_27" rel="nofollow"></a>版本信息</h3> <ol> <li>SpringBoot：2.3.0.RELEASE</li> <li>JDK：1.8.0_121</li> <li>Maven：3.3.9</li> <li>Docker：19.03.8</li> <li>操作系统：MacBook pro 13寸，macOS Catalina 10.15.4</li> </ol> <h3><a id="_33" rel="nofollow"></a>构建镜像实战</h3> <ol> <li>修改pom.xml，给<font color="blue">spring-boot-maven-plugin</font>插件的配置增加子节点，<font color="blue">enabled</font>的值为<font color="red">true</font>，如下图红框所示：<br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220602/65530e3de86c321384a6a611231e7521.jpg" alt="SpringBoot2.3应用制作Docker镜像详解"></li> <li>在pom.xml文件所在目录新增<font color="blue">Dockerfile</font>文件，内容如下：</li> </ol> <pre><code class="prism language-shell"><span class="token comment"># 指定基础镜像，这是分阶段构建的前期阶段</span> FROM openjdk:8u212-jdk-stretch as builder<span class="token comment"># 执行工作目录</span> WORKDIR application<span class="token comment"># 配置参数</span> ARG JAR_FILE<span class="token operator">=</span>target/*.jar<span class="token comment"># 将编译构建得到的jar文件复制到镜像空间中</span> COPY<span class="token variable">${JAR_FILE}</span> application.jar<span class="token comment"># 通过工具spring-boot-jarmode-layertools从application.jar中提取拆分后的构建结果</span> RUN java -Djarmode<span class="token operator">=</span>layertools -jar application.jar extract<span class="token comment"># 正式构建镜像</span> FROM openjdk:8u212-jdk-stretch WORKDIR application<span class="token comment"># 前一阶段从jar中提取除了多个文件，这里分别执行COPY命令复制到镜像空间中，每次COPY都是一个layer</span> COPY --from<span class="token operator">=</span>builder application/dependencies/ ./ COPY --from<span class="token operator">=</span>builder application/spring-boot-loader/ ./ COPY --from<span class="token operator">=</span>builder application/snapshot-dependencies/ ./ COPY --from<span class="token operator">=</span>builder application/application/ ./ ENTRYPOINT<span class="token punctuation">[</span><span class="token string">"java"</span>,<span class="token string">"org.springframework.boot.loader.JarLauncher"</span><span class="token punctuation">]</span></code></pre> <ol start="3"> <li>执行以下命令编译构建工程：</li> </ol> <pre><code class="prism language-shell">mvn clean package -U -DskipTests</code></pre> <ol start="4"> <li>编译构建完成后确保target目录有<font color="red">jar</font>文件生成；</li> <li>在Dockerfile所在目录执行以下命令构建镜像(请按照您的实际情况调整镜像名)：</li> </ol> <pre><code class="prism language-shell">docker build -t dockerlayerdemo:0.0.1<span class="token keyword">.</span></code></pre> <ol start="6"> <li>镜像构建成功的提示如下：<br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220602/d25df19db0b28779f83ae2ea9b26a50a.jpg" alt="SpringBoot2.3应用制作Docker镜像详解"></li> </ol> <h3><a id="_70" rel="nofollow"></a>验证</h3> <ol> <li>执行以下命令创建并启动容器：</li> </ol> <pre><code class="prism language-shell">docker run --rm -p 8080:8080 dockerlayerdemo:0.0.1</code></pre> <ol start="2"> <li>启动成功的控制台信息：<br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220602/2337983a25260100b7aa7cce9780539b.jpg" alt="SpringBoot2.3应用制作Docker镜像详解"></li> <li>浏览器访问：http://localhost:8080/hello ，如下图，一切正常：<br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220602/349793ab97dab608e1bc9fc2c279f63d.jpg" alt="SpringBoot2.3应用制作Docker镜像详解"></li> <li>看看镜像的分层信息，执行命令：</li> </ol> <pre><code class="prism language-shell">docker<span class="token function">history</span> dockerlayerdemo:0.0.1</code></pre> <ol start="5"> <li>如下图，整个jar的内容，例如class、依赖库、依赖资源等，分多次COPY到镜像空间中，所以今后如果只改了class，在更新镜像的时候，只需要下载class的layer即可（其他layer可以直接用之前缓存到本地的）：<br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220602/b65e11c6cbc09ecae9993699deb18efc.jpg" alt="SpringBoot2.3应用制作Docker镜像详解"></li> </ol> <h3><a id="_87" rel="nofollow"></a>留下的问题</h3> <p>至此，SpringBoot-2.3.0.RELEASE官方推荐的镜像构建方式就实践完成了，但是也留下了一些疑问：</p> <ol> <li>2.3版本推荐的镜像构建方案，和旧版本比有什么不同？</li> <li>pom.xml中spring-boot-maven-plugin插件新增的参数，到底做了什么？</li> <li>Dockerfile中，<font color="blue">java -Djarmode=layertools -jar application.jar extract</font>这个操作啥意思?</li> </ol> <p>这些问题留待<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://blog.csdn.net/boling_cavalry/article/details/106598189"  rel="nofollow">下一篇文章</a>一起深入研究。</p> <h3><a id="_95" rel="nofollow"></a>参考信息</h3> <p>官方文档地址：<br /> https://docs.spring.io/spring-boot/docs/2.3.0.RELEASE/reference/pdf/spring-boot-reference.pdf ，4.31章节</p> <h3><a id="GitHub_99" rel="nofollow"></a></h3> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-64916.htm">同城免费领养宠物狗的平台（同城领养狗狗）</a></p>
+                                        <p>下一个：<a href="/news/article-65535.htm">测试开发该如何在团队中推广新工具和新技术</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2025-1-21-free-node-subscribe-links.htm" title="1月21日→19.9M/S|2025年最新免费节点V2ray/Clash/Shadowrocket/SSR订阅链接地址">1月21日→19.9M/S|2025年最新免费节点V2ray/Clash/Shadowrocket/SSR订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-31-free-subscribe-node.htm" title="12月31日→20.2M/S|2025年最新免费节点Clash/Shadowrocket/SSR/V2ray订阅链接地址">12月31日→20.2M/S|2025年最新免费节点Clash/Shadowrocket/SSR/V2ray订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-35652.htm" title="C++引用及其底层原理">C++引用及其底层原理</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-17-clash-node-github.htm" title="1月17日→19.3M/S|2025年最新免费节点Clash/V2ray/Shadowrocket/SSR订阅链接地址">1月17日→19.3M/S|2025年最新免费节点Clash/V2ray/Shadowrocket/SSR订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-57263.htm" title="宠物领养中心在哪（宠物领养去哪里领养）">宠物领养中心在哪（宠物领养去哪里领养）</a></li>
+                        <li class="py-2"><a href="/news/article-33530.htm" title="k8s入门之pod">k8s入门之pod</a></li>
+                        <li class="py-2"><a href="/news/article-26922.htm" title="成都宠物领养平台正规吗现在有哪些呢（成都宠物领养网免费）">成都宠物领养平台正规吗现在有哪些呢（成都宠物领养网免费）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-2-trojan-windows.htm" title="3月2日→18.3M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">3月2日→18.3M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-35653.htm" title="数据库四大特性及数据库隔离级别（*）">数据库四大特性及数据库隔离级别（*）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-5-node-share-links.htm" title="2月5日→21.1M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">2月5日→21.1M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">12</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">81</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">77</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">87</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section End -->
+        <!-- Footer Area Start -->
+    <footer class="footer">
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="text-center">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                            <span class="text-light-gray">
+                                NodeTrojan节点订阅官网 版权所有
+                                <br />
+                                Powered by WordPress
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Area End -->
+    <!-- BACK TO TOP SECTION -->
+    <div class="back-to-top bg-gradient-color">
+        <i class="fab fa-angle-up"></i>
+    </div>
+    <!-- Integrated important scripts here -->
+    <script src="/assets/website/js/frontend/nodetrojan/jquery.v1.12.4.min.js"></script>
+    <script src="/assets/website/js/frontend/nodetrojan/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/nodetrojan/jquery-core-plugins.js"></script>
+    <script src="/assets/website/js/frontend/nodetrojan/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
