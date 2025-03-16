@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://nodetrojan.github.io/news/article-73273.htm" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>c++引用折叠</title>
+        <meta name="description" content="目录  一、引用折叠 二、示例解析 三、参考：   &nbsp; &nbsp; &nbsp;由于存在T&amp;&amp;这种万能引用类型，当它作为参数时，有可能被一个左值引用或右值引用的参数初始化，" />
+        <link rel="icon" href="/assets/website/img/nodetrojan/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="NodeTrojan节点订阅官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://nodetrojan.github.io/news/article-73273.htm" />
+    <meta property="og:site_name" content="NodeTrojan节点订阅官网" />
+    <meta property="og:title" content="c++引用折叠" />
+    <meta property="og:image" content="https://nodetrojan.github.io/uploads/20240904-1/2504dbf8e6e06dd80e3ce506c43569af.webp" />
+        <meta property="og:release_date" content="2025-03-14T07:04:04" />
+    <meta property="og:updated_time" content="2025-03-14T07:04:04" />
+        <meta property="og:description" content="目录  一、引用折叠 二、示例解析 三、参考：   &nbsp; &nbsp; &nbsp;由于存在T&amp;&amp;这种万能引用类型，当它作为参数时，有可能被一个左值引用或右值引用的参数初始化，" />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="c++引用折叠">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="/assets/website/css/nodetrojan/style.css">
+    <link rel="stylesheet" href="/assets/website/css/nodetrojan/responsive.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PK0RCMBM8T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PK0RCMBM8T');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- Preloader Start -->
+    <div class="preloader"></div>
+    <!-- Preloader End -->
+    <!-- header Start -->
+    <header class="header-style-two">
+        <div class="header-wrapper">
+            <div class="header-navigation-area two-layers-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <a class="navbar-brand logo f-left mrt-10 mrt-md-0" href="/">
+                                                        <span>Node Trojan</span>
+                                                        </a>
+                            <div class="main-menu f-right">
+                                <nav id="mobile-menu-right">
+                                    <ul>
+                                                                                <li>
+                                            <a href="/">首页</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/free-nodes/">免费节点</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/paid-subscribe/">推荐机场</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/client.htm">客户端</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/news/">新闻资讯</a>
+                                        </li>
+                                                                            </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header End -->
+    <!-- Page Title Start -->
+    <section class="page-title-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 text-center">
+                    <div class="page-title-content">
+                        <h1 class="title text-white">c++引用折叠</h1>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="/">首页</a></li>
+                                <li class="breadcrumb-item"><a href="/news/">新闻资讯</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">正文</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Page Title End -->
+    <!-- About Section Start -->
+    <section class="about-section anim-object pdt-110 pdb-50 pdb-lg-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="htmledit_views"> </h1> <p id="main-toc"><strong>目录</strong></p> <p id="-toc" style="margin-left:0px;"> <p id="%E4%B8%80%E3%80%81%E5%BC%95%E7%94%A8%E6%8A%98%E5%8F%A0-toc" style="margin-left:0px;"><a href="#%E4%B8%80%E3%80%81%E5%BC%95%E7%94%A8%E6%8A%98%E5%8F%A0" title="一、引用折叠" rel="nofollow">一、引用折叠</a></p> <p id="%E4%BA%8C%E3%80%81%E7%A4%BA%E4%BE%8B%E8%A7%A3%E6%9E%90-toc" style="margin-left:0px;"><a href="#%E4%BA%8C%E3%80%81%E7%A4%BA%E4%BE%8B%E8%A7%A3%E6%9E%90" title="二、示例解析" rel="nofollow">二、示例解析</a></p> <p id="%E4%B8%89%E3%80%81%E5%8F%82%E8%80%83%EF%BC%9A-toc" style="margin-left:0px;"><a href="#%E4%B8%89%E3%80%81%E5%8F%82%E8%80%83%EF%BC%9A" title="三、参考：" rel="nofollow">三、参考：</a></p> <hr id="hr-toc"/> </h1> <p>&nbsp; &nbsp; &nbsp;由于存在T&amp;&amp;这种万能引用类型，当它作为参数时，有可能被一个左值引用或右值引用的参数初始化，这是经过类型推导的T&amp;&amp;类型，相比右值引用(&amp;&amp;)会发生类型的变化，这种变化就称为引用折叠。</p> <p>1.所有右值引用折叠到右值引用上仍然是一个右值引用。（A&amp;&amp; &amp;&amp; 变成 A&amp;&amp;）<br /> 2.所有的其他引用类型之间的折叠都将变成左值引用。 （A&amp; &amp; 变成 A&amp;; A&amp; &amp;&amp; 变成 A&amp;; A&amp;&amp; &amp; 变成 A&amp;）</p> </h1> <p>&nbsp; &nbsp; &nbsp; &nbsp;要说引用折叠，首先得说右值引用(在看这个之前需要了解C++11中左值，右值的概念)。它是C++11出现的新概念，声明类型的方法是：T&amp;&amp;，具体信息可以看下面的代码：</p> <pre><code>Class A {     A()     {// do something} };  A GetA() {     return A(); }  int main() {     A a1 = GetA();   // a1是左值     A&amp;&amp; a2 = GetA(); // a2是右值引用     return 0; } </code></pre> <p>&nbsp; &nbsp; &nbsp; a1是左值，在构造时使用了GetA() 产生的临时对象，之后GetA()产生的临时对象会销毁。</p> <p>&nbsp; &nbsp; &nbsp; a2是右值引用，其指向的就是GetA()所产生的对象，这个对象的声明周期是和a2的声明周期是一致的。即少了临时对象，从而省去了临时对象的构造和析构。</p> <p>&nbsp; &nbsp; &nbsp;由此可见右值引用的好处，在新代码中，右值引用是值得大力使用的。但是，在使用的时候，有例外情况了:T&amp;&amp;并不是一定表示右值，比如，如果它绑定的类型是未知的话，既可能是左值，又可能是右值。比如：</p> <pre><code>template&lt;typename T&gt; void f(T&amp;&amp; param) {   std::cout&lt;&lt;param; }  f(10); // 10是右值   int &amp;&amp; int x = 10; f(x);  // x是左值   int &amp; </code></pre> <p>&nbsp; &nbsp; &nbsp; 以上这种万能引用类型(param的类型)能万能引用不同类型的参数,这种类型必须被初始化,而它是左值还是右值则取决于它的初始化，如果被左值初始化，那么它就是左值，反之亦然。那么什么时候是左值，什么时候是右值，就需要进行类型推导才知道。</p> <p>&nbsp; &nbsp; &nbsp; &nbsp;有的人会问，我传入的是一个左值a,并不是一个左值引用，为什么编译器会推导出T 为int &amp;呢。首先，模板函数参数为 T&amp;&amp; param,也就是说，不管T是什么类型，T&amp;&amp;的最终结果必然是一个引用类型。如果T是int, 那么T&amp;&amp; 就是 int &amp;&amp;；如果T为 int &amp;，那么 T &amp;&amp;(int&amp; &amp;&amp;) 就是&amp;，如果T为&amp;&amp;,那么T &amp;&amp;(&amp;&amp; &amp;&amp;) 就是&amp;&amp;。很明显，接受左值的话，T只能推导为int &amp;。</p> <p>&nbsp; &nbsp; &nbsp;总结一下，万能引用就是利用模板推导和引用折叠的相关规则，生成不同的实例化模板来接收传进来的参数。</p> </h1> <p>https://www.zhihu.com/question/40346748/answer/88672920</p> <p><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://zhuanlan.zhihu.com/p/50816420"  title="引用折叠和完美转发 - 知乎" rel="nofollow">引用折叠和完美转发 - 知乎</a></p> </p></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-72612.htm">2021年国考公务员报考网站（2021国考公务员考试报名入口）</a></p>
+                                        <p>下一个：<a href="/news/article-73274.htm">宠物疫苗可以空运吗现在（宠物疫苗可以空运吗现在多少钱）</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-68044.htm" title="中国宠物用品市场规模（国内宠物用品市场）">中国宠物用品市场规模（国内宠物用品市场）</a></li>
+                        <li class="py-2"><a href="/news/article-52848.htm" title="数据库分片(Sharding):分表+分库+分片+分区">数据库分片(Sharding):分表+分库+分片+分区</a></li>
+                        <li class="py-2"><a href="/news/article-68687.htm" title="义乌领养宠物的地方在哪里（义乌领养宠物的地方在哪里有）">义乌领养宠物的地方在哪里（义乌领养宠物的地方在哪里有）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-1-trojan-github.htm" title="2月1日→22.3M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">2月1日→22.3M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-36386.htm" title="Java NIO 选择器 Selector_在线工具">Java NIO 选择器 Selector_在线工具</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-13-free-node-subscribe-links.htm" title="3月13日→22.9M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">3月13日→22.9M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-50214.htm" title="哪有免费领养宠物的附近（免费领养宠物的地方）">哪有免费领养宠物的附近（免费领养宠物的地方）</a></li>
+                        <li class="py-2"><a href="/news/article-74616.htm" title="Java中的守护程序线程和用户线程之间的区别">Java中的守护程序线程和用户线程之间的区别</a></li>
+                        <li class="py-2"><a href="/news/article-42304.htm" title="动物医院运营管理工作内容（动物医院运营管理工作内容怎么写）">动物医院运营管理工作内容（动物医院运营管理工作内容怎么写）</a></li>
+                        <li class="py-2"><a href="/news/article-49180.htm" title="PYTHON select in">PYTHON select in</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">48</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">81</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">68</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section End -->
+        <!-- Footer Area Start -->
+    <footer class="footer">
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="text-center">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                            <span class="text-light-gray">
+                                NodeTrojan节点订阅官网 版权所有
+                                <br />
+                                Powered by WordPress
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Area End -->
+    <!-- BACK TO TOP SECTION -->
+    <div class="back-to-top bg-gradient-color">
+        <i class="fab fa-angle-up"></i>
+    </div>
+    <!-- Integrated important scripts here -->
+    <script src="/assets/website/js/frontend/nodetrojan/jquery.v1.12.4.min.js"></script>
+    <script src="/assets/website/js/frontend/nodetrojan/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/nodetrojan/jquery-core-plugins.js"></script>
+    <script src="/assets/website/js/frontend/nodetrojan/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
