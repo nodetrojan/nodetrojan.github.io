@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://nodetrojan.github.io/news/article-78698.htm" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>pytorch定义新的自动求导函数</title>
+        <meta name="description" content="在pytorch中想自定义求导函数，通过实现torch.autograd.Function并重写forward和backward函数，来定义自己的自动求导运算。参考官网上的demo：传送门  直接上代" />
+        <link rel="icon" href="/assets/website/img/nodetrojan/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="NodeTrojan节点订阅官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://nodetrojan.github.io/news/article-78698.htm" />
+    <meta property="og:site_name" content="NodeTrojan节点订阅官网" />
+    <meta property="og:title" content="pytorch定义新的自动求导函数" />
+    <meta property="og:image" content="https://nodetrojan.github.io/uploads/20240904-1/1c1e9a1eb693b08d49a52d26e86c1175.webp" />
+        <meta property="og:release_date" content="2025-03-22T08:45:14" />
+    <meta property="og:updated_time" content="2025-03-22T08:45:14" />
+        <meta property="og:description" content="在pytorch中想自定义求导函数，通过实现torch.autograd.Function并重写forward和backward函数，来定义自己的自动求导运算。参考官网上的demo：传送门  直接上代" />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="pytorch定义新的自动求导函数">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="/assets/website/css/nodetrojan/style.css">
+    <link rel="stylesheet" href="/assets/website/css/nodetrojan/responsive.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PK0RCMBM8T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PK0RCMBM8T');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- Preloader Start -->
+    <div class="preloader"></div>
+    <!-- Preloader End -->
+    <!-- header Start -->
+    <header class="header-style-two">
+        <div class="header-wrapper">
+            <div class="header-navigation-area two-layers-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <a class="navbar-brand logo f-left mrt-10 mrt-md-0" href="/">
+                                                        <span>Node Trojan</span>
+                                                        </a>
+                            <div class="main-menu f-right">
+                                <nav id="mobile-menu-right">
+                                    <ul>
+                                                                                <li>
+                                            <a href="/">首页</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/free-nodes/">免费节点</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/paid-subscribe/">推荐机场</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/client.htm">客户端</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/news/">新闻资讯</a>
+                                        </li>
+                                                                            </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header End -->
+    <!-- Page Title Start -->
+    <section class="page-title-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 text-center">
+                    <div class="page-title-content">
+                        <h1 class="title text-white">pytorch定义新的自动求导函数</h1>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="/">首页</a></li>
+                                <li class="breadcrumb-item"><a href="/news/">新闻资讯</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">正文</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Page Title End -->
+    <!-- About Section Start -->
+    <section class="about-section anim-object pdt-110 pdb-50 pdb-lg-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> <ol> <li>在pytorch中想自定义求导函数，通过实现torch.autograd.Function并重写forward和backward函数，来定义自己的自动求导运算。参考官网上的demo：<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://pytorch.org/tutorials/beginner/examples_autograd/two_layer_net_custom_function.html"  rel="nofollow">传送门</a> </li> <li>直接上代码，定义一个ReLu来实现自动求导</li> </ol> <pre><code class="prism language-python"><span class="token keyword">import</span> torch   <span class="token keyword">class</span> <span class="token class-name">MyRelu</span><span class="token punctuation">(</span>torch<span class="token punctuation">.</span>autograd<span class="token punctuation">.</span>Function<span class="token punctuation">)</span><span class="token punctuation">:</span>     @<span class="token builtin">staticmethod</span>     <span class="token keyword">def</span> <span class="token function">forward</span><span class="token punctuation">(</span>ctx<span class="token punctuation">,</span> <span class="token builtin">input</span><span class="token punctuation">)</span><span class="token punctuation">:</span>         <span class="token comment"># 我们使用ctx上下文对象来缓存，以便在反向传播中使用，ctx存储时候只能存tensor</span>         <span class="token comment"># 在正向传播中，我们接收一个上下文对象ctx和一个包含输入的张量input；</span>         <span class="token comment"># 我们必须返回一个包含输出的张量，</span>         <span class="token comment"># input.clamp(min = 0)表示讲输入中所有值范围规定到0到正无穷，如input=[-1,-2,3]则被转换成input=[0,0,3]</span>         ctx<span class="token punctuation">.</span>save_for_backward<span class="token punctuation">(</span><span class="token builtin">input</span><span class="token punctuation">)</span>                  <span class="token comment"># 返回几个值，backward接受参数则包含ctx和这几个值</span>         <span class="token keyword">return</span> <span class="token builtin">input</span><span class="token punctuation">.</span>clamp<span class="token punctuation">(</span><span class="token builtin">min</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">)</span>      @<span class="token builtin">staticmethod</span>     <span class="token keyword">def</span> <span class="token function">backward</span><span class="token punctuation">(</span>ctx<span class="token punctuation">,</span> grad_output<span class="token punctuation">)</span><span class="token punctuation">:</span>         <span class="token comment"># 把ctx中存储的input张量读取出来</span>         <span class="token builtin">input</span><span class="token punctuation">,</span> <span class="token operator">=</span> ctx<span class="token punctuation">.</span>saved_tensors                  <span class="token comment"># grad_output存放反向传播过程中的梯度</span>         grad_input <span class="token operator">=</span> grad_output<span class="token punctuation">.</span>clone<span class="token punctuation">(</span><span class="token punctuation">)</span>                  <span class="token comment"># 这儿就是ReLu的规则，表示原始数据小于0，则relu为0，因此对应索引的梯度都置为0</span>         grad_input<span class="token punctuation">[</span><span class="token builtin">input</span> <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0</span>         <span class="token keyword">return</span> grad_input </code></pre> <ol start="3"> <li>进行输入数据并测试</li> </ol> <pre><code class="prism language-python">dtype <span class="token operator">=</span> torch<span class="token punctuation">.</span><span class="token builtin">float</span> device <span class="token operator">=</span> torch<span class="token punctuation">.</span>device<span class="token punctuation">(</span><span class="token string">'cuda'</span> <span class="token keyword">if</span> torch<span class="token punctuation">.</span>cuda<span class="token punctuation">.</span>is_available<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">else</span> <span class="token string">'cpu'</span><span class="token punctuation">)</span> <span class="token comment"># 使用torch的generator定义随机数，注意产生的是cpu随机数还是gpu随机数</span> generator<span class="token operator">=</span>torch<span class="token punctuation">.</span>Generator<span class="token punctuation">(</span>device<span class="token punctuation">)</span><span class="token punctuation">.</span>manual_seed<span class="token punctuation">(</span><span class="token number">42</span><span class="token punctuation">)</span>  <span class="token comment"># N是Batch, H is hidden dimension，</span> <span class="token comment"># D_in is input dimension;D_out is output dimension.</span> N<span class="token punctuation">,</span> D_in<span class="token punctuation">,</span> H<span class="token punctuation">,</span> D_out <span class="token operator">=</span> <span class="token number">64</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">10</span>  x <span class="token operator">=</span> torch<span class="token punctuation">.</span>randn<span class="token punctuation">(</span>N<span class="token punctuation">,</span> D_in<span class="token punctuation">,</span> device<span class="token operator">=</span>device<span class="token punctuation">,</span> dtype<span class="token operator">=</span>dtype<span class="token punctuation">,</span>generator<span class="token operator">=</span>generator<span class="token punctuation">)</span> y <span class="token operator">=</span> torch<span class="token punctuation">.</span>randn<span class="token punctuation">(</span>N<span class="token punctuation">,</span> D_out<span class="token punctuation">,</span> device<span class="token operator">=</span>device<span class="token punctuation">,</span> dtype<span class="token operator">=</span>dtype<span class="token punctuation">,</span> generator<span class="token operator">=</span>generator<span class="token punctuation">)</span>  w1 <span class="token operator">=</span> torch<span class="token punctuation">.</span>randn<span class="token punctuation">(</span>D_in<span class="token punctuation">,</span> H<span class="token punctuation">,</span> device<span class="token operator">=</span>device<span class="token punctuation">,</span> dtype<span class="token operator">=</span>dtype<span class="token punctuation">,</span> requires_grad<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span> generator<span class="token operator">=</span>generator<span class="token punctuation">)</span> w2 <span class="token operator">=</span> torch<span class="token punctuation">.</span>randn<span class="token punctuation">(</span>H<span class="token punctuation">,</span> D_out<span class="token punctuation">,</span> device<span class="token operator">=</span>device<span class="token punctuation">,</span> dtype<span class="token operator">=</span>dtype<span class="token punctuation">,</span> requires_grad<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span> generator<span class="token operator">=</span>generator<span class="token punctuation">)</span>  learning_rate <span class="token operator">=</span> <span class="token number">1e</span><span class="token operator">-</span><span class="token number">6</span> <span class="token keyword">for</span> t <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">500</span><span class="token punctuation">)</span><span class="token punctuation">:</span>     relu <span class="token operator">=</span> MyRelu<span class="token punctuation">.</span><span class="token builtin">apply</span>     <span class="token comment"># 使用函数传入参数运算 </span>     y_pred <span class="token operator">=</span> relu<span class="token punctuation">(</span>x<span class="token punctuation">.</span>mm<span class="token punctuation">(</span>w1<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span>mm<span class="token punctuation">(</span>w2<span class="token punctuation">)</span> 	<span class="token comment"># 计算损失</span>     loss <span class="token operator">=</span> <span class="token punctuation">(</span>y_pred <span class="token operator">-</span> y<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token builtin">pow</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span><span class="token punctuation">)</span>     <span class="token keyword">if</span> t <span class="token operator">%</span> <span class="token number">100</span> <span class="token operator">==</span> <span class="token number">99</span><span class="token punctuation">:</span>         <span class="token keyword">print</span><span class="token punctuation">(</span>t<span class="token punctuation">,</span> loss<span class="token punctuation">.</span>item<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>     <span class="token comment"># 传播</span>     loss<span class="token punctuation">.</span>backward<span class="token punctuation">(</span><span class="token punctuation">)</span>     <span class="token keyword">with</span> torch<span class="token punctuation">.</span>no_grad<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>         w1 <span class="token operator">-=</span> learning_rate <span class="token operator">*</span> w1<span class="token punctuation">.</span>grad         w2 <span class="token operator">-=</span> learning_rate <span class="token operator">*</span> w2<span class="token punctuation">.</span>grad        	         w1<span class="token punctuation">.</span>grad<span class="token punctuation">.</span>zero_<span class="token punctuation">(</span><span class="token punctuation">)</span>         w2<span class="token punctuation">.</span>grad<span class="token punctuation">.</span>zero_<span class="token punctuation">(</span><span class="token punctuation">)</span> </code></pre> <ol start="4"> <li>暂时先做这些测试，如有问题，恳请指正</li> </ol> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-78012.htm">Android基础——动态加载so库</a></p>
+                                        <p>下一个：<a href="/news/article-78699.htm">猫咪踩奶是什么行为（猫咪踩奶是什么行为图片）</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-60702.htm" title="高端猫粮品牌（最高端猫粮）">高端猫粮品牌（最高端猫粮）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-15-free-node-subscribe.htm" title="3月15日→19M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">3月15日→19M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-9-free-high-speed-nodes.htm" title="2月9日→22.8M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">2月9日→22.8M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-51262.htm" title="附近免费领养狗猫咪的地方在哪里（附近有没有免费的狗狗领）">附近免费领养狗猫咪的地方在哪里（附近有没有免费的狗狗领）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-2-trojan-windows.htm" title="3月2日→18.3M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">3月2日→18.3M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-49700.htm" title="瑞派宠物医院全国多少家（瑞派宠物医院多少家门店）">瑞派宠物医院全国多少家（瑞派宠物医院多少家门店）</a></li>
+                        <li class="py-2"><a href="/news/article-61893.htm" title="vue 预览 Excel 表格">vue 预览 Excel 表格</a></li>
+                        <li class="py-2"><a href="/news/article-67407.htm" title="宠物粮批发网站大全免费（宠物粮网店）">宠物粮批发网站大全免费（宠物粮网店）</a></li>
+                        <li class="py-2"><a href="/news/article-38336.htm" title="昆明免费领养狗狗的地方在哪里（昆明哪里可以免费领养狗狗）">昆明免费领养狗狗的地方在哪里（昆明哪里可以免费领养狗狗）</a></li>
+                        <li class="py-2"><a href="/news/article-49181.htm" title="中国农大动物医院营业时间 中国农大动物医院营业时间查询">中国农大动物医院营业时间 中国农大动物医院营业时间查询</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">65</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">81</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">68</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section End -->
+        <!-- Footer Area Start -->
+    <footer class="footer">
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="text-center">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                            <span class="text-light-gray">
+                                NodeTrojan节点订阅官网 版权所有
+                                <br />
+                                Powered by WordPress
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Area End -->
+    <!-- BACK TO TOP SECTION -->
+    <div class="back-to-top bg-gradient-color">
+        <i class="fab fa-angle-up"></i>
+    </div>
+    <!-- Integrated important scripts here -->
+    <script src="/assets/website/js/frontend/nodetrojan/jquery.v1.12.4.min.js"></script>
+    <script src="/assets/website/js/frontend/nodetrojan/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/nodetrojan/jquery-core-plugins.js"></script>
+    <script src="/assets/website/js/frontend/nodetrojan/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
