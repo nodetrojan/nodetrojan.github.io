@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://nodetrojan.github.io/news/article-80078.htm" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Vue v-for更新监测/虚拟DOM/watch侦听器</title>
+        <meta name="description" content="1.v-for更新监测 数组变更方法, 就会导致v-for更新, 页面更新 数组非变更方法, 返回新数组, 就不会导致v-for更新, 可采用覆盖数组或this.         s         " />
+        <link rel="icon" href="/assets/website/img/nodetrojan/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="NodeTrojan节点订阅官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://nodetrojan.github.io/news/article-80078.htm" />
+    <meta property="og:site_name" content="NodeTrojan节点订阅官网" />
+    <meta property="og:title" content="Vue v-for更新监测/虚拟DOM/watch侦听器" />
+    <meta property="og:image" content="https://nodetrojan.github.io/uploads/20240904-1/6dedac2bc7e399ff54433af16cb59f58.webp" />
+        <meta property="og:release_date" content="2025-03-24T08:15:14" />
+    <meta property="og:updated_time" content="2025-03-24T08:15:14" />
+        <meta property="og:description" content="1.v-for更新监测 数组变更方法, 就会导致v-for更新, 页面更新 数组非变更方法, 返回新数组, 就不会导致v-for更新, 可采用覆盖数组或this.         s         " />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Vue v-for更新监测/虚拟DOM/watch侦听器">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="/assets/website/css/nodetrojan/style.css">
+    <link rel="stylesheet" href="/assets/website/css/nodetrojan/responsive.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PK0RCMBM8T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PK0RCMBM8T');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- Preloader Start -->
+    <div class="preloader"></div>
+    <!-- Preloader End -->
+    <!-- header Start -->
+    <header class="header-style-two">
+        <div class="header-wrapper">
+            <div class="header-navigation-area two-layers-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <a class="navbar-brand logo f-left mrt-10 mrt-md-0" href="/">
+                                                        <span>Node Trojan</span>
+                                                        </a>
+                            <div class="main-menu f-right">
+                                <nav id="mobile-menu-right">
+                                    <ul>
+                                                                                <li>
+                                            <a href="/">首页</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/free-nodes/">免费节点</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/paid-subscribe/">推荐机场</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/client.htm">客户端</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/news/">新闻资讯</a>
+                                        </li>
+                                                                            </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header End -->
+    <!-- Page Title Start -->
+    <section class="page-title-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 text-center">
+                    <div class="page-title-content">
+                        <h1 class="title text-white">Vue v-for更新监测/虚拟DOM/watch侦听器</h1>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="/">首页</a></li>
+                                <li class="breadcrumb-item"><a href="/news/">新闻资讯</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">正文</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Page Title End -->
+    <!-- About Section Start -->
+    <section class="about-section anim-object pdt-110 pdb-50 pdb-lg-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> <h3><a id="1vfor_0" rel="nofollow"></a>1.v-for更新监测</h3> <p>数组变更方法, 就会导致v-for更新, 页面更新<br /> 数组非变更方法, 返回新数组, 就不会导致v-for更新, 可采用覆盖数组或this.<span class="katex--inline"><span class="katex"><span class="katex-mathml"></p> <p>        s</p> <p>        e</p> <p>        t</p> <p>        (</p> <p>        )</p> <p>        /</p> <p>        /</p> <p>        V</p> <p>        u</p> <p>        e</p> <p>        解</p> <p>        决</p> <p>        −</p> <p>        t</p> <p>        h</p> <p>        i</p> <p>        s</p> <p>        .</p> <p>       set() // Vue解决-this.</span><span class="katex-html"><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord mathdefault">s</span><span class="mord mathdefault">e</span><span class="mord mathdefault">t</span><span class="mopen">(</span><span class="mclose">)</span><span class="mord">/</span><span class="mord">/</span><span class="mord mathdefault" style="margin-right: 0.22222em;">V</span><span class="mord mathdefault">u</span><span class="mord mathdefault">e</span><span class="mord cjk_fallback">解</span><span class="mord cjk_fallback">决</span><span class="mspace" style="margin-right: 0.222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right: 0.222222em;"></span></span><span class="base"><span class="strut" style="height: 0.69444em; vertical-align: 0em;"></span><span class="mord mathdefault">t</span><span class="mord mathdefault">h</span><span class="mord mathdefault">i</span><span class="mord mathdefault">s</span><span class="mord">.</span></span></span></span></span>set(参数1,参数2,参数3)<br /> // 参数1: 更新目标结构<br /> // 参数2: 更新位置<br /> // 参数3: 更新值<br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220603/8a970a62268967b6297df7073f106f59.jpg" alt="Vue v-for更新监测/虚拟DOM/watch侦听器"></p> <pre><code class="prism language-javascript"><span class="token operator">&lt;</span>template<span class="token operator">&gt;</span><span class="token operator">&lt;</span>div<span class="token operator">&gt;</span><span class="token operator">&lt;</span>ul<span class="token operator">&gt;</span><span class="token operator">&lt;</span>li v<span class="token operator">-</span><span class="token keyword">for</span><span class="token operator">=</span><span class="token string">"(item, index) in arr"</span><span class="token operator">:</span>key<span class="token operator">=</span><span class="token string">"index"</span><span class="token operator">&gt;</span><span class="token punctuation">{<!-- --></span><span class="token punctuation">{<!-- --></span> item<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>ul<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 结果<span class="token operator">:</span> 会更新页面<span class="token operator">--</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>button @click<span class="token operator">=</span><span class="token string">"rev"</span><span class="token operator">&gt;</span>数组翻转<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 结果<span class="token operator">:</span> 不会更新页面<span class="token operator">--</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>button @click<span class="token operator">=</span><span class="token string">"sli"</span><span class="token operator">&gt;</span>数组截取<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 结果<span class="token operator">:</span> 不会更新页面<span class="token operator">--</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>button @click<span class="token operator">=</span><span class="token string">"updateVal"</span><span class="token operator">&gt;</span>更新值<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">&gt;</span><span class="token operator">&lt;</span>script<span class="token operator">&gt;</span><span class="token keyword">export</span><span class="token keyword">default</span><span class="token punctuation">{<!-- --></span>   name<span class="token operator">:</span><span class="token string">'VuecliDemoApp'</span><span class="token punctuation">,</span><span class="token comment">// Date</span><span class="token comment">// 组件中的 data 都是函数, 函数中返回一个对象</span><span class="token comment">// 为了保证多个组件复用时, 内部的 data 相互独立</span><span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token keyword">return</span><span class="token punctuation">{<!-- --></span><span class="token comment">// 对象字面量: new Object()</span>       arr<span class="token operator">:</span><span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span><span class="token string">'b'</span><span class="token punctuation">,</span><span class="token string">'c'</span><span class="token punctuation">]</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">,</span>   methods<span class="token operator">:</span><span class="token punctuation">{<!-- --></span><span class="token function">rev</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token comment">// 1. 数组翻转可以让v-for更新</span><span class="token keyword">this</span><span class="token punctuation">.</span>arr<span class="token punctuation">.</span><span class="token function">reverse</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token function">sli</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token comment">// 2. 数组slice方法不会造成v-for更新</span><span class="token comment">// slice不会改变原始数组</span><span class="token comment">// this.arr.slice(0, 3)</span><span class="token comment">// 解决v-for更新 - 覆盖原始数组</span><span class="token keyword">let</span> newArr<span class="token operator">=</span><span class="token keyword">this</span><span class="token punctuation">.</span>arr<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token keyword">this</span><span class="token punctuation">.</span>arr<span class="token operator">=</span> newArr<span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token function">updateVal</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token comment">// Vue 2 响应式的原理是使用 Object.defineProperty 方法实现的数据劫持</span><span class="token comment">// 有一个小缺陷, 无法劫持直接修改数组元素的值</span><span class="token comment">// 它除了数据劫持, 还对数组的大部分方法进行了重写, 手动劫持了方法</span><span class="token comment">// 结论: 在 Vue 2 中不要直接使用 数组[索引] 的方式修改数据, 会导致无法更新的情况</span><span class="token comment">// this.arr[0] = '张三' // 不要这样干</span><span class="token comment">// Vue 也提供了解决方案: $set</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$set</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>arr<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token string">'张三'</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span><span class="token operator">&lt;</span>style lang<span class="token operator">=</span><span class="token string">"scss"</span> scoped<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>style<span class="token operator">&gt;</span></code></pre> <h3><a id="2DOM_65" rel="nofollow"></a>2.虚拟DOM</h3> <p>.vue文件中的template里写的标签, 都是模板, 都要被vue处理成虚拟DOM对象, 在生成真实DOM片段, 才会渲染显示到真实DOM页面上</p> <p>● 虚拟DOM是什么? ---- 保存节点信息的一个js虚拟对象<br /> ● 虚拟DOM的好处?----- 提高性能 , 不用频繁操作真实DOM , 在内存中比较变化部分,然后给真实DOM更新<br /> 1.内存中生成一样的虚拟DOM结构(<mark>本质是个JS对象</mark>)<br /> 因为真实的DOM属性好几百个, 没办法快速的知道哪个属性改变了<br /> 比如template里标签结构</p> <pre><code class="prism language-javascript"><span class="token operator">&lt;</span>template<span class="token operator">&gt;</span><span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"box"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>p<span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"my_p"</span><span class="token operator">&gt;</span><span class="token number">123</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">&gt;</span><span class="token comment">//对应的虚拟DOM结构</span><span class="token keyword">const</span> dom<span class="token operator">=</span><span class="token punctuation">{<!-- --></span>     type<span class="token operator">:</span><span class="token string">'div'</span><span class="token punctuation">,</span>     attributes<span class="token operator">:</span><span class="token punctuation">[</span><span class="token punctuation">{<!-- --></span>id<span class="token operator">:</span><span class="token string">'box'</span><span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>     children<span class="token operator">:</span><span class="token punctuation">{<!-- --></span>         type<span class="token operator">:</span><span class="token string">'p'</span><span class="token punctuation">,</span>         attributes<span class="token operator">:</span><span class="token punctuation">[</span><span class="token punctuation">{<!-- --></span><span class="token keyword">class</span><span class="token operator">:</span><span class="token string">'my_p'</span><span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>         text<span class="token operator">:</span><span class="token string">'123'</span><span class="token punctuation">}</span><span class="token punctuation">}</span></code></pre> <p>2.以后vue数据更新<br /> ● 生成新的虚拟DOM结构<br /> ● 和旧的虚拟DOM结构对比<br /> ● 找不不同, 只更新变化的部分(重绘/回流)到页面 - 也叫打补丁</p> <h4><a id="21_97" rel="nofollow"></a>2.1重绘与回流</h4> <p>频繁操作DOM会触发重绘与回流: 影响性能<br /> 回流(重排):元素的几何信息(高度/位置)发生变化时,浏览器需要重新计算位置,并重新绘制<br /> 重绘:元素的颜色/透明度等属性变化时,浏览器重新渲染<br /> 回流一定会触发重绘,而重绘不一定会触发回流<br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220603/a8cc99f227a553989a2e3a7a53e53895.jpg" alt="Vue v-for更新监测/虚拟DOM/watch侦听器"></p> <h3><a id="3vforkey__103" rel="nofollow"></a>3.v-for中key值的作用: 提高性能</h3> <p>v-for 无key 就地更新<br /> v-for key 为索引 根据key比较 还是就地更新<br /> v-for key 为id 基于 key 来比较新旧虚拟DOM, 移除key不存在元素<br /> 要求: key 值为 唯一不重复 的 字符串或数字<br /> 如何使用? 有id用id,无id用索引</p> <p>v-for不会移动DOM, 而是尝试复用, 就地更新，如果需要v-for移动DOM, 你需要用特殊 attribute key 来提供一个排序提示<br /> ● 新DOM里数据的key存在, 去旧的虚拟DOM结构里找到key标记的标签, 复用标签<br /> ● 新DOM里数据的key存在, 去旧的虚拟DOM结构里没有找到key标签的标签, 创建<br /> ● 旧DOM结构的key, 在新的DOM结构里没有了, 则<mark>移除key所在的标签</mark><br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220603/c55f1fa672e5d45374e77aeabc2741df.jpg" alt="Vue v-for更新监测/虚拟DOM/watch侦听器"></p> <h3><a id="4watch_115" rel="nofollow"></a>4.watch侦听器(深度监听)(重要):</h3> <p>作用:可以侦听data/computed属性值的改变</p> <pre><code class="prism language-javascript"><span class="token comment">//语法1:</span>   watch<span class="token operator">:</span><span class="token punctuation">{<!-- --></span><span class="token string">'被监听的属性名'</span><span class="token punctuation">(</span>newVal<span class="token punctuation">,</span>oldVal<span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token comment">//函数写法 只能侦听基本数据类型的变化</span><span class="token comment">//newVal 修改后的值 oldVal 修改前的值</span><span class="token function">log</span><span class="token punctuation">(</span>newVal<span class="token punctuation">,</span>oldVal<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">}</span></code></pre> <pre><code class="prism language-javascript"><span class="token comment">//语法2:   //对象写法   侦听复杂类型</span>   watch<span class="token operator">:</span><span class="token punctuation">{<!-- --></span><span class="token string">'被监听的属性名'</span><span class="token operator">:</span><span class="token punctuation">{<!-- --></span>    deep<span class="token operator">:</span><span class="token boolean">true</span><span class="token punctuation">,</span><span class="token comment">//深度侦听,可以侦听到引用数据类型</span><span class="token function">handler</span><span class="token punctuation">(</span><span class="token parameter">newVal<span class="token punctuation">,</span>oldVal</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token comment">//深度侦听对象的属性时,  oldVal将失效,和newVal的值一样 (Vue bug)</span><span class="token comment">// 不影响开发</span><span class="token function">log</span><span class="token punctuation">(</span>newVal<span class="token punctuation">,</span>oldVal<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">}</span></code></pre> <p>侦听器实现数据缓存<br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220603/ed343a7491457ba1b0ef46b8022e8c0d.jpg" alt="Vue v-for更新监测/虚拟DOM/watch侦听器"></p> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-79386.htm">凯锐思狗粮质量怎么样（十大狗粮品牌排行榜）</a></p>
+                                        <p>下一个：<a href="/news/article-80079.htm">做宠物粮的机器多少钱一台 做宠物粮的机器多少钱一台啊</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-49699.htm" title="Django 之视图url参数获取">Django 之视图url参数获取</a></li>
+                        <li class="py-2"><a href="/news/article-60119.htm" title="CentOS 8迁移Rocky Linux 8手记_在线工具">CentOS 8迁移Rocky Linux 8手记_在线工具</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-19-free-node-subscribe-links.htm" title="2月19日→22.7M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">2月19日→22.7M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-38834.htm" title="python自动化测试工具selenium使用指南">python自动化测试工具selenium使用指南</a></li>
+                        <li class="py-2"><a href="/news/article-55581.htm" title="开宠物店不会美容怎么办呀（开宠物店不会美容怎么办呀女生）">开宠物店不会美容怎么办呀（开宠物店不会美容怎么办呀女生）</a></li>
+                        <li class="py-2"><a href="/news/article-78698.htm" title="pytorch定义新的自动求导函数">pytorch定义新的自动求导函数</a></li>
+                        <li class="py-2"><a href="/news/article-38337.htm" title="动物疫苗经销商资格要求（动物疫苗经销商资格要求是什么）">动物疫苗经销商资格要求（动物疫苗经销商资格要求是什么）</a></li>
+                        <li class="py-2"><a href="/news/article-54474.htm" title="妙三多猫三联价格怎么差这么多（妙三多和猫三联价格是多少）">妙三多猫三联价格怎么差这么多（妙三多和猫三联价格是多少）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-12-free-node-subscribe.htm" title="2月12日→20.2M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">2月12日→20.2M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-43795.htm" title="java利用RestTemplate 发送post请求">java利用RestTemplate 发送post请求</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">74</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">81</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">68</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section End -->
+        <!-- Footer Area Start -->
+    <footer class="footer">
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="text-center">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                            <span class="text-light-gray">
+                                NodeTrojan节点订阅官网 版权所有
+                                <br />
+                                Powered by WordPress
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Area End -->
+    <!-- BACK TO TOP SECTION -->
+    <div class="back-to-top bg-gradient-color">
+        <i class="fab fa-angle-up"></i>
+    </div>
+    <!-- Integrated important scripts here -->
+    <script src="/assets/website/js/frontend/nodetrojan/jquery.v1.12.4.min.js"></script>
+    <script src="/assets/website/js/frontend/nodetrojan/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/nodetrojan/jquery-core-plugins.js"></script>
+    <script src="/assets/website/js/frontend/nodetrojan/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
