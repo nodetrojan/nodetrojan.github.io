@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://nodetrojan.github.io/news/article-83583.htm" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Uniapp-远离回调callback请使用await、async</title>
+        <meta name="description" content="今天要实现一个功能，在搜索完课程及句子之后判断是否有结果，因为需要对课程和句子的结果统一判断，所以要使用async, await来将两种搜索的异步方法可以顺序调用。  来看下如何得到课程： searc" />
+        <link rel="icon" href="/assets/website/img/nodetrojan/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="NodeTrojan节点订阅官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://nodetrojan.github.io/news/article-83583.htm" />
+    <meta property="og:site_name" content="NodeTrojan节点订阅官网" />
+    <meta property="og:title" content="Uniapp-远离回调callback请使用await、async" />
+    <meta property="og:image" content="https://nodetrojan.github.io/uploads/20240904-1/522e99c526594039a42095c20b8f387b.webp" />
+        <meta property="og:release_date" content="2025-03-29T08:58:02" />
+    <meta property="og:updated_time" content="2025-03-29T08:58:02" />
+        <meta property="og:description" content="今天要实现一个功能，在搜索完课程及句子之后判断是否有结果，因为需要对课程和句子的结果统一判断，所以要使用async, await来将两种搜索的异步方法可以顺序调用。  来看下如何得到课程： searc" />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Uniapp-远离回调callback请使用await、async">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="/assets/website/css/nodetrojan/style.css">
+    <link rel="stylesheet" href="/assets/website/css/nodetrojan/responsive.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PK0RCMBM8T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PK0RCMBM8T');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- Preloader Start -->
+    <div class="preloader"></div>
+    <!-- Preloader End -->
+    <!-- header Start -->
+    <header class="header-style-two">
+        <div class="header-wrapper">
+            <div class="header-navigation-area two-layers-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <a class="navbar-brand logo f-left mrt-10 mrt-md-0" href="/">
+                                                        <span>Node Trojan</span>
+                                                        </a>
+                            <div class="main-menu f-right">
+                                <nav id="mobile-menu-right">
+                                    <ul>
+                                                                                <li>
+                                            <a href="/">首页</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/free-nodes/">免费节点</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/paid-subscribe/">推荐机场</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/client.htm">客户端</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/news/">新闻资讯</a>
+                                        </li>
+                                                                            </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header End -->
+    <!-- Page Title Start -->
+    <section class="page-title-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 text-center">
+                    <div class="page-title-content">
+                        <h1 class="title text-white">Uniapp-远离回调callback请使用await、async</h1>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="/">首页</a></li>
+                                <li class="breadcrumb-item"><a href="/news/">新闻资讯</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">正文</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Page Title End -->
+    <!-- About Section Start -->
+    <section class="about-section anim-object pdt-110 pdb-50 pdb-lg-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-light"> <p>今天要实现一个功能，在搜索完课程及句子之后判断是否有结果，因为需要对课程和句子的结果统一判断，所以要使用async, await来将两种搜索的异步方法可以顺序调用。</p> </h1> <p>来看下如何得到课程：</p> <pre><code class="prism language-javascript"><span class="token function">searchLessonsFromServer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>no_more_lessons<span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token keyword">return</span><span class="token punctuation">}</span><span class="token keyword">let</span> self<span class="token operator">=</span><span class="token keyword">this</span><span class="token keyword">let</span> page<span class="token operator">=</span> self<span class="token punctuation">.</span>searchMeResult<span class="token punctuation">.</span>pth_lessons<span class="token punctuation">.</span>page<span class="token comment">//</span><span class="token keyword">let</span> per_page<span class="token operator">=</span><span class="token number">10</span><span class="token comment">//每页5个记录</span><span class="token keyword">let</span> toServerUrl<span class="token operator">=</span><span class="token template-string"><span class="token string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${<!-- --></span><span class="token keyword">this</span><span class="token punctuation">.</span>$backHost<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">/api/v1/users/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${<!-- --></span><span class="token keyword">this</span><span class="token punctuation">.</span>$user<span class="token punctuation">.</span>id<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">/lessons/search_me/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${<!-- --></span>self<span class="token punctuation">.</span>latestSearchValue<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${<!-- --></span>per_page<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${<!-- --></span>page<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span><span class="token keyword">return</span><span class="token keyword">new</span><span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span>resolve<span class="token punctuation">,</span> reject<span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{<!-- --></span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$request</span><span class="token punctuation">(</span><span class="token punctuation">{<!-- --></span>             url<span class="token punctuation">:</span> toServerUrl<span class="token punctuation">,</span>             success<span class="token punctuation">:</span><span class="token punctuation">(</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{<!-- --></span>                 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'lessons#searchLessonsFromServer in Promise():'</span><span class="token punctuation">,</span> res<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">if</span><span class="token punctuation">(</span>res<span class="token punctuation">.</span>pth_lessons<span class="token punctuation">.</span>length<span class="token operator">!=</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span>                     self<span class="token punctuation">.</span>searchMeResult<span class="token punctuation">.</span>pth_lessons<span class="token punctuation">.</span>data<span class="token operator">=</span><span class="token punctuation">[</span><span class="token operator">...</span>self<span class="token punctuation">.</span>searchMeResult<span class="token punctuation">.</span>pth_lessons<span class="token punctuation">.</span>data<span class="token punctuation">,</span><span class="token operator">...</span>res<span class="token punctuation">.</span>pth_lessons<span class="token punctuation">]</span><span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{<!-- --></span>                     self<span class="token punctuation">.</span>no_more_lessons<span class="token operator">=</span><span class="token boolean">true</span><span class="token punctuation">}</span><span class="token function">resolve</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">,</span></code></pre> <p>异步方法最后返回一个Promise，这样就可以在其它函数中将其用同步的办法来调用searchLessonsFromServer函数。</p> <p>这里实现的课程搜索是有翻页功能的，得到服务器返回的数据res之后，用三点扩展符将其添加到前端的数据中，</p> <pre><code class="prism language-javascript">self<span class="token punctuation">.</span>searchMeResult<span class="token punctuation">.</span>pth_lessons<span class="token punctuation">.</span>data<span class="token operator">=</span><span class="token punctuation">[</span><span class="token operator">...</span>self<span class="token punctuation">.</span>searchMeResult<span class="token punctuation">.</span>pth_lessons<span class="token punctuation">.</span>data<span class="token punctuation">,</span><span class="token operator">...</span>res<span class="token punctuation">.</span>pth_lessons<span class="token punctuation">]</span></code></pre> <p>搜索句子也是类似的将异步方法放到new Promise之中， 然后在其它函数中这样调用：</p> <pre><code class="prism language-javascript"><span class="token comment">//服务器搜索课程名称</span><span class="token keyword">async</span><span class="token function">search_me</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token operator">...</span><span class="token keyword">await</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">searchLessonsFromServer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token keyword">await</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">searchSentencesFromServer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">haveSearchResult</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token keyword">let</span> errMsg<span class="token operator">=</span><span class="token string">"搜索不到:"</span><span class="token operator">+</span><span class="token keyword">this</span><span class="token punctuation">.</span>latestSearchValue         uni<span class="token punctuation">.</span><span class="token function">showModal</span><span class="token punctuation">(</span><span class="token punctuation">{<!-- --></span>             title<span class="token punctuation">:</span><span class="token string">'提示'</span><span class="token punctuation">,</span>             content<span class="token punctuation">:</span> errMsg<span class="token punctuation">,</span>             showCancel<span class="token punctuation">:</span><span class="token boolean">false</span><span class="token punctuation">,</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">this</span><span class="token punctuation">.</span>search_focus<span class="token operator">=</span><span class="token boolean">true</span><span class="token keyword">return</span><span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{<!-- --></span><span class="token keyword">this</span><span class="token punctuation">.</span>searchValue<span class="token operator">=</span><span class="token keyword">this</span><span class="token punctuation">.</span>latestSearchValue<span class="token punctuation">}</span><span class="token punctuation">}</span></code></pre> <p>即在调用函数search_me前面加上async, 使用异步方法时，前面加上await即可！这样，后续的haveSearchResult就肯定是在前面两个异步的搜索函数完成之后才会执行！</p> <p>[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-QzDYdHGz-1646640234157)(https://dw.gsenglish.cn:5543/uploads/2022/03/clipboard-202203011734-0lebb.png)]</p> </h1> <p>更多async,await 相关知识可以参考：https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/Asynchronous/Async_await</p> <blockquote> <p>我是@爱玩的安哥，关注我获取更多有用知识</p> </blockquote> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-82867.htm">vue 动态组件组件复用_真正的动态声明性组件</a></p>
+                                        <p>下一个：<a href="/news/article-83585.htm">面试必问的8个CSS响应式单位,你知道几个？</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-37359.htm" title="Mybatis学习之程序编译后在target/classes目录下找不到主配置文件或sql映射文件（sql mapper）">Mybatis学习之程序编译后在target/classes目录下找不到主配置文件或sql映射文件（sql mapper）</a></li>
+                        <li class="py-2"><a href="/news/article-78011.htm" title="在MySQL中，如何将FROM_UNIXTIME()函数与格式字符串一起使用？">在MySQL中，如何将FROM_UNIXTIME()函数与格式字符串一起使用？</a></li>
+                        <li class="py-2"><a href="/news/article-57833.htm" title="养猫的人容易得15种病吗为什么呢（养猫的人得病多吗）">养猫的人容易得15种病吗为什么呢（养猫的人得病多吗）</a></li>
+                        <li class="py-2"><a href="/news/article-63079.htm" title="Python中位置参数、关键字参数、默认参数和不定长参数(非固定参数)的简介">Python中位置参数、关键字参数、默认参数和不定长参数(非固定参数)的简介</a></li>
+                        <li class="py-2"><a href="/news/article-49174.htm" title="全日粮饲料混合搅拌机生产厂家（全日制饲料混合搅拌机）">全日粮饲料混合搅拌机生产厂家（全日制饲料混合搅拌机）</a></li>
+                        <li class="py-2"><a href="/news/article-36174.htm" title="宠物粮生产需要什么证件 宠物粮生产需要什么证件和手续">宠物粮生产需要什么证件 宠物粮生产需要什么证件和手续</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-22-free-subscribe-node.htm" title="2月22日→22.7M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">2月22日→22.7M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-23-free-trojan-node.htm" title="2月23日→18M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">2月23日→18M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-18-free-node-subscribe-links.htm" title="3月18日→19.5M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">3月18日→19.5M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-80778.htm" title="宠物粮的上市公司排名（国内宠物粮食品牌）">宠物粮的上市公司排名（国内宠物粮食品牌）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">90</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">81</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">68</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section End -->
+        <!-- Footer Area Start -->
+    <footer class="footer">
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="text-center">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                            <span class="text-light-gray">
+                                NodeTrojan节点订阅官网 版权所有
+                                <br />
+                                Powered by WordPress
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Area End -->
+    <!-- BACK TO TOP SECTION -->
+    <div class="back-to-top bg-gradient-color">
+        <i class="fab fa-angle-up"></i>
+    </div>
+    <!-- Integrated important scripts here -->
+    <script src="/assets/website/js/frontend/nodetrojan/jquery.v1.12.4.min.js"></script>
+    <script src="/assets/website/js/frontend/nodetrojan/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/nodetrojan/jquery-core-plugins.js"></script>
+    <script src="/assets/website/js/frontend/nodetrojan/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
