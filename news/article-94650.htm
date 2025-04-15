@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://nodetrojan.github.io/news/article-94650.htm" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>springboot整合SpringSecurity实现认证、授权功能简单入门案例</title>
+        <meta name="description" content="目录    一、SpringSecurity介绍 二、springboot整合Spring Security 三、自定义登录逻辑和权限 四、自定义成功和失败处理器 五、自定义403状态码错误页面 六、" />
+        <link rel="icon" href="/assets/website/img/nodetrojan/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="NodeTrojan节点订阅官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://nodetrojan.github.io/news/article-94650.htm" />
+    <meta property="og:site_name" content="NodeTrojan节点订阅官网" />
+    <meta property="og:title" content="springboot整合SpringSecurity实现认证、授权功能简单入门案例" />
+    <meta property="og:image" content="https://nodetrojan.github.io/uploads/20240904-1/ce993ae2aec63edc299c6aa2fdee8b90.webp" />
+        <meta property="og:release_date" content="2025-04-13T07:17:51" />
+    <meta property="og:updated_time" content="2025-04-13T07:17:51" />
+        <meta property="og:description" content="目录    一、SpringSecurity介绍 二、springboot整合Spring Security 三、自定义登录逻辑和权限 四、自定义成功和失败处理器 五、自定义403状态码错误页面 六、" />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="springboot整合SpringSecurity实现认证、授权功能简单入门案例">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="/assets/website/css/nodetrojan/style.css">
+    <link rel="stylesheet" href="/assets/website/css/nodetrojan/responsive.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PK0RCMBM8T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PK0RCMBM8T');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- Preloader Start -->
+    <div class="preloader"></div>
+    <!-- Preloader End -->
+    <!-- header Start -->
+    <header class="header-style-two">
+        <div class="header-wrapper">
+            <div class="header-navigation-area two-layers-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <a class="navbar-brand logo f-left mrt-10 mrt-md-0" href="/">
+                                                        <span>Node Trojan</span>
+                                                        </a>
+                            <div class="main-menu f-right">
+                                <nav id="mobile-menu-right">
+                                    <ul>
+                                                                                <li>
+                                            <a href="/">首页</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/free-nodes/">免费节点</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/paid-subscribe/">推荐机场</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/client.htm">客户端</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/news/">新闻资讯</a>
+                                        </li>
+                                                                            </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header End -->
+    <!-- Page Title Start -->
+    <section class="page-title-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 text-center">
+                    <div class="page-title-content">
+                        <h1 class="title text-white">springboot整合SpringSecurity实现认证、授权功能简单入门案例</h1>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="/">首页</a></li>
+                                <li class="breadcrumb-item"><a href="/news/">新闻资讯</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">正文</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Page Title End -->
+    <!-- About Section Start -->
+    <section class="about-section anim-object pdt-110 pdb-50 pdb-lg-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="markdown_views prism-tomorrow-night"> <div class="toc"> <h3>目录</h3> <ul> <li> <ul> <li><a href="#SpringSecurity_1" rel="nofollow">一、SpringSecurity介绍</a></li> <li><a href="#springbootSpring_Security_3" rel="nofollow">二、springboot整合Spring Security</a></li> <li><a href="#_34" rel="nofollow">三、自定义登录逻辑和权限</a></li> <li><a href="#_179" rel="nofollow">四、自定义成功和失败处理器</a></li> <li><a href="#403_214" rel="nofollow">五、自定义403状态码错误页面</a></li> <li><a href="#_250" rel="nofollow">六、注解配置</a></li> </ul> </li> </ul> </div> <h2><a id="SpringSecurity_1" rel="nofollow"></a>一、SpringSecurity介绍</h2> <p>Spring Security是一个能够为基于Spring的企业应用系统提供声明式的安全访问控制解决方案的安全框架。它提供了一组可以在Spring应用上下文中配置的Bean，充分利用了Spring IoC，DI（控制反转Inversion of Control ,DI:Dependency Injection 依赖注入）和AOP（面向切面编程）功能，为应用系统提供声明式的安全访问控制功能，减少了为企业系统安全控制编写大量重复代码的工作。</p> <h2><a id="springbootSpring_Security_3" rel="nofollow"></a>二、springboot整合Spring Security</h2> <p>1、新建<br /> 使用spring initializr 新建springboot项目<br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220823/497793bb8b0ce61faaa6f702a10a844f.jpg" alt="springboot整合SpringSecurity实现认证、授权功能简单入门案例"><br /> 记得勾选<strong>Spring Security</strong></p> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-94155.htm">内蒙古旅游攻略必玩的景点介绍(内蒙旅游景点推荐)</a></p>
+                                        <p>下一个：<a href="/news/article-94651.htm">中国宠物粮生产企业排名榜（中国宠物粮食公司）</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-73938.htm" title="动物怎么办理疫苗证 动物怎么办理疫苗证明">动物怎么办理疫苗证 动物怎么办理疫苗证明</a></li>
+                        <li class="py-2"><a href="/news/article-80079.htm" title="做宠物粮的机器多少钱一台 做宠物粮的机器多少钱一台啊">做宠物粮的机器多少钱一台 做宠物粮的机器多少钱一台啊</a></li>
+                        <li class="py-2"><a href="/news/article-68687.htm" title="义乌领养宠物的地方在哪里（义乌领养宠物的地方在哪里有）">义乌领养宠物的地方在哪里（义乌领养宠物的地方在哪里有）</a></li>
+                        <li class="py-2"><a href="/news/article-84297.htm" title="宠物零食工厂都需要什么手续和证件（做宠物食品厂赚钱吗?）">宠物零食工厂都需要什么手续和证件（做宠物食品厂赚钱吗?）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-5-free-subscribe-node.htm" title="3月5日→21.9M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">3月5日→21.9M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-89345.htm" title="上海领养狗狗机构电话（上海领养狗狗机构电话号码）">上海领养狗狗机构电话（上海领养狗狗机构电话号码）</a></li>
+                        <li class="py-2"><a href="/news/article-94155.htm" title="内蒙古旅游攻略必玩的景点介绍(内蒙旅游景点推荐)">内蒙古旅游攻略必玩的景点介绍(内蒙旅游景点推荐)</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-14-trojan-node-github.htm" title="4月14日→19.6M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">4月14日→19.6M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-65534.htm" title="SpringBoot2.3应用制作Docker镜像详解">SpringBoot2.3应用制作Docker镜像详解</a></li>
+                        <li class="py-2"><a href="/news/article-70628.htm" title="怀孕了被猫咪抓破一点血（孕妇被自家猫抓伤出血没事吧）">怀孕了被猫咪抓破一点血（孕妇被自家猫抓伤出血没事吧）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">42</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">87</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section End -->
+        <!-- Footer Area Start -->
+    <footer class="footer">
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="text-center">
+                                                <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                            <span class="text-light-gray">
+                                NodeTrojan节点订阅官网 版权所有
+                                <br />
+                                Powered by WordPress
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Area End -->
+    <!-- BACK TO TOP SECTION -->
+    <div class="back-to-top bg-gradient-color">
+        <i class="fab fa-angle-up"></i>
+    </div>
+    <!-- Integrated important scripts here -->
+    <script src="/assets/website/js/frontend/nodetrojan/jquery.v1.12.4.min.js"></script>
+    <script src="/assets/website/js/frontend/nodetrojan/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/nodetrojan/jquery-core-plugins.js"></script>
+    <script src="/assets/website/js/frontend/nodetrojan/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
