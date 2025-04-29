@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://nodetrojan.github.io/news/article-104408.htm" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SDS-redis动态字符串</title>
+        <meta name="description" content="与C语言类似，redis自己创建了简单动态字符串SDS(Simple Dynamic String)即简单动态字符串，创建字符串类型的键值对，SDS表示字符串值，键值对的值为字符串对象 SDS用途可以" />
+        <link rel="icon" href="/assets/website/img/nodetrojan/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="NodeTrojan节点订阅官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://nodetrojan.github.io/news/article-104408.htm" />
+    <meta property="og:site_name" content="NodeTrojan节点订阅官网" />
+    <meta property="og:title" content="SDS-redis动态字符串" />
+    <meta property="og:image" content="https://nodetrojan.github.io/uploads/20240904-1/c868e42107f27f2cc801faea5d16f7b5.webp" />
+        <meta property="og:release_date" content="2025-04-26T07:38:33" />
+    <meta property="og:updated_time" content="2025-04-26T07:38:33" />
+        <meta property="og:description" content="与C语言类似，redis自己创建了简单动态字符串SDS(Simple Dynamic String)即简单动态字符串，创建字符串类型的键值对，SDS表示字符串值，键值对的值为字符串对象 SDS用途可以" />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="SDS-redis动态字符串">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="/assets/website/css/nodetrojan/style.css">
+    <link rel="stylesheet" href="/assets/website/css/nodetrojan/responsive.css">
+    <link rel="stylesheet" href="/assets/website/css/G.css" />
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PK0RCMBM8T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PK0RCMBM8T');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- Preloader Start -->
+    <div class="preloader"></div>
+    <!-- Preloader End -->
+    <!-- header Start -->
+    <header class="header-style-two">
+        <div class="header-wrapper">
+            <div class="header-navigation-area two-layers-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <a class="navbar-brand logo f-left mrt-10 mrt-md-0" href="/">
+                                                        <span>Node Trojan</span>
+                                                        </a>
+                            <div class="main-menu f-right">
+                                <nav id="mobile-menu-right">
+                                    <ul>
+                                                                                <li>
+                                            <a href="/">首页</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/free-nodes/">免费节点</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/paid-subscribe/">推荐机场</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/client.htm">客户端</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/news/">新闻资讯</a>
+                                        </li>
+                                                                            </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header End -->
+    <!-- Page Title Start -->
+    <section class="page-title-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 text-center">
+                    <div class="page-title-content">
+                        <h1 class="title text-white">SDS-redis动态字符串</h1>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="/">首页</a></li>
+                                <li class="breadcrumb-item"><a href="/news/">新闻资讯</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">正文</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Page Title End -->
+    <!-- About Section Start -->
+    <section class="about-section anim-object pdt-110 pdb-50 pdb-lg-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="" data-url="">
+                <div class="xcblog-blog-detail xcblog-blog-detail-defined">
+                      				  				  				<p>与C语言类似，redis自己创建了简单动态字符串SDS(Simple Dynamic String)即简单动态字符串，创建字符串类型的键值对，SDS表示字符串值，键值对的值为字符串对象</p> <p>SDS用途可以做缓冲区，客户端状态输入缓冲，AOF持久化缓冲区等。</p> <h2>SDS结构及定义</h2> <div class="cnblogs_code"> <pre><span style="color: rgba(0, 0, 255, 1)">struct</span><span style="color: rgba(0, 0, 0, 1)"> sdshdr{</span><span style="color: rgba(0, 0, 255, 1)">int</span><span style="color: rgba(0, 0, 0, 1)"> len;</span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">sds字符串的长度</span><span style="color: rgba(0, 0, 255, 1)">int</span><span style="color: rgba(0, 0, 255, 1)">free</span><span style="color: rgba(0, 0, 0, 1)">;</span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)"> 记录buff数组未使用的数组长度，为0则表示</span><span style="color: rgba(0, 0, 255, 1)">char</span><span style="color: rgba(0, 0, 0, 1)"> buff[];</span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)"> 字节数组，保存字符串,最后一个字节保存'\0'</span> }</pre> </div> <p>最后一个空字符不在SDS的len 属性。</p> <h2>SDS和C字符串区别</h2> <ol> <li>o(1)复杂度获取字符串长度。与C不同（O(N)），C不计入字符串长度需要遍历，而SDS有自己的len属性记录长度且有自己的api更新设置。</li> <li>缓冲区不会溢出。C的字符串不计入自身长度，所以分配内存都假设分配足够多内存，但是如果要修改更长的字符串就会溢出。之所以SDS为动态的就体现在这，在分配资源时，会检查空间是否满足修改的要求，不满足会扩展SDS修改要的大小，再进行修改。</li> <li>减少内存重分配。增长字符串C如果不重分配会缓冲区溢出，减少会内存重分配释放空间，造成内存泄漏。对于redis来说，这两操作较多，重分配次数多了性能会收到制约。</li> </ol> <ul> <li style="margin-left: 30px">空间先分配。修改扩展时会预分配额外未使用的空间。分两种情况。</li> </ul> <ol> <li style="margin-left: 60px">SDS修改之后长度小于1MB，free分配与len值相同的空间，总长度=len+len+1</li> <li style="margin-left: 60px">修改后的len大于1MB，则会分配1MB的未使用空间，实际总长度=len+1MB+1byte</li> </ol> <p style="margin-left: 60px">这样下次再修改会有足够的空间存储不用再重分配</p> <ul> <li style="margin-left: 30px">惰性空间释放。用于缩短字符串操作。当缩短字符串时，先不内存重分配回收多出的字节，用free记录这些字节属性，以便后续使用，比如增长字符串操作。</li> </ul> <p>　　SDS的buff数组保存二进制数据，文本数据以及二进制流。SDS还兼容部分c函数</p> <h2>SDS相关操作API</h2> <table class="reference"> <tbody> <tr> <td>1</td> <td>SET key value<br />设置指定 key 的值。</td> </tr> <tr> <td>2</td> <td>GET key<br />获取指定 key 的值。</td> </tr> <tr> <td>3</td> <td>GETRANGE key start end<br />返回 key 中字符串值的子字符</td> </tr> <tr> <td>4</td> <td>GETSET key value<br />将给定 key 的值设为 value ，并返回 key 的旧值(old value)。</td> </tr> <tr> <td>5</td> <td>GETBIT key offset<br />对 key 所储存的字符串值，获取指定偏移量上的位(bit)。</td> </tr> <tr> <td>6</td> <td>MGET key1 [key2..]<br />获取所有(一个或多个)给定 key 的值。</td> </tr> <tr> <td>7</td> <td>SETBIT key offset value<br />对 key 所储存的字符串值，设置或清除指定偏移量上的位(bit)。</td> </tr> <tr> <td>8</td> <td>SETEX key seconds value<br />将值 value 关联到 key ，并将 key 的过期时间设为 seconds (以秒为单位)。</td> </tr> <tr> <td>9</td> <td>SETNX key value<br />只有在 key 不存在时设置 key 的值。</td> </tr> <tr> <td>10</td> <td>SETRANGE key offset value<br />用 value 参数覆写给定 key 所储存的字符串值，从偏移量 offset 开始。</td> </tr> <tr> <td>11</td> <td>STRLEN key<br />返回 key 所储存的字符串值的长度。</td> </tr> <tr> <td>12</td> <td>MSET key value [key value ...]<br />同时设置一个或多个 key-value 对。</td> </tr> <tr> <td>13</td> <td>MSETNX key value [key value ...]<br />同时设置一个或多个 key-value 对，当且仅当所有给定 key 都不存在。</td> </tr> <tr> <td>14</td> <td>PSETEX key milliseconds value<br />这个命令和 SETEX 命令相似，但它以毫秒为单位设置 key 的生存时间，而不是像 SETEX 命令那样，以秒为单位。</td> </tr> <tr> <td>15</td> <td>INCR key<br />将 key 中储存的数字值增一。</td> </tr> <tr> <td>16</td> <td>INCRBY key increment<br />将 key 所储存的值加上给定的增量值（increment） 。</td> </tr> <tr> <td>17</td> <td>INCRBYFLOAT key increment<br />将 key 所储存的值加上给定的浮点增量值（increment） 。</td> </tr> <tr> <td>18</td> <td>DECR key<br />将 key 中储存的数字值减一。</td> </tr> <tr> <td>19</td> <td>DECRBY key decrement<br />key 所储存的值减去给定的减量值（decrement） 。</td> </tr> <tr> <td>20</td> <td>APPEND key value<br />如果 key 已经存在并且是一个字符串， APPEND 命令将指定的 value 追加到该 key 原来值（value）的末尾。</td> </tr> </tbody> </table> <h2>应用场景：</h2> <p>&nbsp;一般常用在需要计数的场景，比如用户的访问次数、热点文章的点赞转发数量等等。</p> <div class="cnblogs_code"> <pre><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">计数器</span><span style="color: rgba(128, 0, 128, 1)">127.0</span>.<span style="color: rgba(128, 0, 128, 1)">0.1</span>:<span style="color: rgba(128, 0, 128, 1)">6379</span>&gt;<span style="color: rgba(0, 0, 255, 1)">set</span> number<span style="color: rgba(128, 0, 128, 1)">1</span><span style="color: rgba(0, 0, 0, 1)"> OK</span><span style="color: rgba(128, 0, 128, 1)">127.0</span>.<span style="color: rgba(128, 0, 128, 1)">0.1</span>:<span style="color: rgba(128, 0, 128, 1)">6379</span>&gt;<span style="color: rgba(0, 0, 0, 1)"> incr number # 将 key 中储存的数字值增一 (integer)</span><span style="color: rgba(128, 0, 128, 1)">2</span><span style="color: rgba(128, 0, 128, 1)">127.0</span>.<span style="color: rgba(128, 0, 128, 1)">0.1</span>:<span style="color: rgba(128, 0, 128, 1)">6379</span>&gt;<span style="color: rgba(0, 0, 255, 1)">get</span><span style="color: rgba(0, 0, 0, 1)"> number</span><span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">2</span><span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 128, 1)">127.0</span>.<span style="color: rgba(128, 0, 128, 1)">0.1</span>:<span style="color: rgba(128, 0, 128, 1)">6379</span>&gt;<span style="color: rgba(0, 0, 0, 1)"> decr number # 将 key 中储存的数字值减一 (integer)</span><span style="color: rgba(128, 0, 128, 1)">1</span><span style="color: rgba(128, 0, 128, 1)">127.0</span>.<span style="color: rgba(128, 0, 128, 1)">0.1</span>:<span style="color: rgba(128, 0, 128, 1)">6379</span>&gt;<span style="color: rgba(0, 0, 255, 1)">get</span><span style="color: rgba(0, 0, 0, 1)"> number</span><span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">1</span><span style="color: rgba(128, 0, 0, 1)">"</span></pre> </div> <p>参考：redis设计与实现</p> 			                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-104406.htm">python hdfs模块使用</a></p>
+                                        <p>下一个：<a href="/news/article-105216.htm">动物疫苗管理法律法规最新版本全文（动物疫苗政策）</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-97602.htm" title="56个民族鄂伦春族(中国少数民族鄂伦春族)">56个民族鄂伦春族(中国少数民族鄂伦春族)</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-13-free-node-subscribe-links.htm" title="3月13日→22.9M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">3月13日→22.9M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-81486.htm" title="聊斋志异之田七郎（顾佳）一看就会，">聊斋志异之田七郎（顾佳）一看就会，</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-9-free-subscribe-node.htm" title="4月9日→20.7M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">4月9日→20.7M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-28-free-subscribe-node.htm" title="3月28日→18.5M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">3月28日→18.5M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-83583.htm" title="Uniapp-远离回调callback请使用await、async">Uniapp-远离回调callback请使用await、async</a></li>
+                        <li class="py-2"><a href="/news/article-80079.htm" title="做宠物粮的机器多少钱一台 做宠物粮的机器多少钱一台啊">做宠物粮的机器多少钱一台 做宠物粮的机器多少钱一台啊</a></li>
+                        <li class="py-2"><a href="/news/article-74617.htm" title="沧州的宠物医院有哪些（沧州市区宠物店）">沧州的宠物医院有哪些（沧州市区宠物店）</a></li>
+                        <li class="py-2"><a href="/news/article-99052.htm" title="宠物领养app下载苹果版安装（宠物领养app下载苹果版安装最新）">宠物领养app下载苹果版安装（宠物领养app下载苹果版安装最新）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-6-free-trojan-node.htm" title="3月6日→18.1M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">3月6日→18.1M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">80</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">87</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section End -->
+        <!-- Footer Area Start -->
+    <footer class="footer">
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="text-center">
+                                                <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                            <span class="text-light-gray">
+                                NodeTrojan节点订阅官网 版权所有
+                                <br />
+                                Powered by WordPress
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Area End -->
+    <!-- BACK TO TOP SECTION -->
+    <div class="back-to-top bg-gradient-color">
+        <i class="fab fa-angle-up"></i>
+    </div>
+    <!-- Integrated important scripts here -->
+    <script src="/assets/website/js/frontend/nodetrojan/jquery.v1.12.4.min.js"></script>
+    <script src="/assets/website/js/frontend/nodetrojan/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/nodetrojan/jquery-core-plugins.js"></script>
+    <script src="/assets/website/js/frontend/nodetrojan/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>

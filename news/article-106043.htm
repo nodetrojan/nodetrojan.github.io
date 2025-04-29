@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://nodetrojan.github.io/news/article-106043.htm" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>vue中excel导入功能</title>
+        <meta name="description" content="批量导入信息的时候就需要excel导入功能,可以大大提高工作效率,但是这个功能应该如何实现呢. 1.excel导入思路 1.1前端为主导 &nbsp; &nbsp; &nbsp; &nbsp; 用户上" />
+        <link rel="icon" href="/assets/website/img/nodetrojan/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="NodeTrojan节点订阅官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://nodetrojan.github.io/news/article-106043.htm" />
+    <meta property="og:site_name" content="NodeTrojan节点订阅官网" />
+    <meta property="og:title" content="vue中excel导入功能" />
+    <meta property="og:image" content="https://nodetrojan.github.io/uploads/20240904-1/a6a90a5c9f5cefca2948fa022f2f6ac9.webp" />
+        <meta property="og:release_date" content="2025-04-28T09:40:53" />
+    <meta property="og:updated_time" content="2025-04-28T09:40:53" />
+        <meta property="og:description" content="批量导入信息的时候就需要excel导入功能,可以大大提高工作效率,但是这个功能应该如何实现呢. 1.excel导入思路 1.1前端为主导 &nbsp; &nbsp; &nbsp; &nbsp; 用户上" />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="vue中excel导入功能">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="/assets/website/css/nodetrojan/style.css">
+    <link rel="stylesheet" href="/assets/website/css/nodetrojan/responsive.css">
+    <link rel="stylesheet" href="/assets/website/css/G.css" />
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PK0RCMBM8T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PK0RCMBM8T');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- Preloader Start -->
+    <div class="preloader"></div>
+    <!-- Preloader End -->
+    <!-- header Start -->
+    <header class="header-style-two">
+        <div class="header-wrapper">
+            <div class="header-navigation-area two-layers-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <a class="navbar-brand logo f-left mrt-10 mrt-md-0" href="/">
+                                                        <span>Node Trojan</span>
+                                                        </a>
+                            <div class="main-menu f-right">
+                                <nav id="mobile-menu-right">
+                                    <ul>
+                                                                                <li>
+                                            <a href="/">首页</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/free-nodes/">免费节点</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/paid-subscribe/">推荐机场</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/client.htm">客户端</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/news/">新闻资讯</a>
+                                        </li>
+                                                                            </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header End -->
+    <!-- Page Title Start -->
+    <section class="page-title-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 text-center">
+                    <div class="page-title-content">
+                        <h1 class="title text-white">vue中excel导入功能</h1>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="/">首页</a></li>
+                                <li class="breadcrumb-item"><a href="/news/">新闻资讯</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">正文</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Page Title End -->
+    <!-- About Section Start -->
+    <section class="about-section anim-object pdt-110 pdb-50 pdb-lg-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="" data-url="">
+                <div class="xcblog-blog-detail xcblog-blog-detail-defined">
+                      				  				  				<div id="content_views" class="htmledit_views"> <p>批量导入信息的时候就需要excel导入功能,可以大大提高工作效率,但是这个功能应该如何实现呢.</p> <h2>1.excel导入思路</h2> <h3>1.1前端为主导</h3> <p>&nbsp; &nbsp; &nbsp; &nbsp; 用户上传excel文件,前端将excel文件读取,然后还原成最基本的行列样式,按照后端给出的接口上传给服务器.</p> <p style="text-align:center;"><img decoding="async" alt="" src="http://img.555519.xyz/uploads3/20220604/5a3a1c2d6e53896b6f900f07d7587f5c.jpg"></p> <h3>&nbsp;1.2后端为主导</h3> <p>&nbsp; &nbsp; &nbsp; &nbsp; 前端只负责接收excel文件,将文件直接发给后端,后端处理数据.</p> <p style="text-align:center;"><img decoding="async" alt="" src="http://img.555519.xyz/uploads3/20220604/c251e71ea329f3a221db4485f40d8ca2.jpg"></p> <h2>&nbsp;2.前端数据处理数据</h2> <p>&nbsp; &nbsp; &nbsp; &nbsp; 因为经常会有excel上传数据的功能,所有现在已经有成熟的解决方案,直接使用便可以.vue-admin-element中已经有了成熟的解决方案,寻找文件夹src/components/UploadExcel/index.vue,</p> <p>将其复制到自己vue项目中.</p> <pre><code class="language-javascript">&lt;template&gt;   .... &lt;/template&gt;  &lt;script&gt; import XLSX from 'xlsx'  export default {   props: {     beforeUpload: Function, // eslint-disable-line     onSuccess: Function// eslint-disable-line   } } &lt;/script&gt;</code></pre> <p>&nbsp; &nbsp; &nbsp; &nbsp; 这个组件使用了XLSX包,需要自行下载.命令为:npm install xlsx -S.</p> <p>将其定义为组件(全局或者局部随意),在项目中引用该组件并且传入两个属性</p> <pre><code class="language-javascript">&lt;upload-excel-component        :on-success="handleSuccess"        :before-upload="beforeUpload"      /&gt;</code></pre> <p>核心代码</p> <pre><code class="language-javascript">methods: {     beforeUpload(file) {       const isLt1M = file.size / 1024 / 1024 &lt; 1       if (isLt1M) {         return true       }       this.$message({         message: 'Please do not upload files larger than 1m in size.',         type: 'warning'       })       return false     },     handleSuccess({ results, header }) {       this.tableData = results       this.tableHeader = header     }   }</code></pre> <p>可以观察下handleSuccess的返回值 header返回值为excel中的标题, results的返回值为excel中的内容.</p> <p>思路</p> <p style="text-align:center;"><img decoding="async" alt="" src="http://img.555519.xyz/uploads3/20220604/ad35bcb2517e4a4ff34f870437d1939e.jpg"></p> <p>&nbsp;调用接口进行excel上传的<strong>重点其实是数据的处理</strong>，我们需要按照接口的要求，把excel表格中经过插件处理好的数据处理成后端接口要求的格式</p> <pre><code class="language-javascript">/**      * results excel表格的内容       // [           {'姓名'：'小张'， '手机号': '13712345678'}         , {.....}         ]        // 目标       // [ {'username'：'小张'，'mobile': '13712345678'}, {.....} ]      */     // 把一个对象数组中的每个对象的属性名，从中文改成英文     // 思路：对于原数组每个对象来说     //    （1） 找出所有的中文key     //     (2)  得到对应的英文key     //     (3)  拼接一个新对象： 英文key:值     transExcel(results) {       const mapInfo = {         '入职日期': 'timeOfEntry',         '手机号': 'mobile',         '姓名': 'username',         '转正日期': 'correctionTime',         '工号': 'workNumber',         '部门': 'departmentName',         '聘用形式': 'formOfEmployment'       }       return results.map(zhObj =&gt; {         const enObj = {}         const zhKeys = Object.keys(zhObj) // ['姓名', '手机号']          zhKeys.forEach(zhKey =&gt; {           const enKey = mapInfo[zhKey]            enObj[enKey] = zhObj[zhKey]         })          return enObj       })     }</code></pre> <p>转换完成后发现问题从excel中读入的日期时间“<strong>变形</strong>”了</p> <p>原因:excel内部时间编码与其他文件中的不同</p> <h3>解决</h3> <p>需要借助公式来进行还原。在utils/index.js中定义如下</p> <pre><code class="language-javascript">// 把excel文件中的日期格式的内容转回成标准时间 // https://blog.csdn.net/qq_15054679/article/details/107712966 export function formatExcelDate(numb, format = '/') {   const time = new Date((numb - 25567) * 24 * 3600000 - 5 * 60 * 1000 - 43 * 1000 - 24 * 3600000 - 8 * 3600000)   time.setYear(time.getFullYear())   const year = time.getFullYear() + ''   const month = time.getMonth() + 1 + ''   const date = time.getDate() + ''   if (format &amp;&amp; format.length === 1) {     return year + format + month + format + date   }   return year + (month &lt; 10 ? '0' + month : month) + (date &lt; 10 ? '0' + date : date) }</code></pre> <p>所以上方整理格式代码需要更新</p> <pre><code class="language-javascript">import { formatExcelDate } from '@/utils/index.js'  // 更新格式转换函数 transExcel(results) {       const mapInfo = {         '入职日期': 'timeOfEntry',         '手机号': 'mobile',         '姓名': 'username',         '转正日期': 'correctionTime',         '工号': 'workNumber',         '部门': 'departmentName',         '聘用形式': 'formOfEmployment'       }       return results.map(zhObj =&gt; {         const enObj = {}         const zhKeys = Object.keys(zhObj) // ['姓名', '手机号']          zhKeys.forEach(zhKey =&gt; {           const enKey = mapInfo[zhKey] +          if (enKey === 'timeOfEntry' || enKey === 'correctionTime') {             // 后端需要的日期格式是标准时间 +            enObj[enKey] = new Date(formatExcelDate(zhObj[zhKey]))           } else {             enObj[enKey] = zhObj[zhKey]           }         })          return enObj       })     }</code></pre> <h2>3.数据上传</h2> <p>导入API</p> <p>封装doImport</p> <pre><code class="language-javascript">  async doImport(data) {       try {         const res = await importEmployee(data)         console.log('importEmployee', res)         this.$message.success('导入成功')          // 页面后退         this.$router.back()       } catch (err) {         console.log('importEmployee', err)         this.$message.error('导入失败')       }     },     //  1. 把数据从excel文件读入到浏览器内存     handleSuccess({ header, results }) {       console.log(header, results)        // 2. 按接口要求 组装数据       const data = this.transExcel(results)       console.log('按接口要求 组装数据', data)       // 3. 调用接口做上传       this.doImport(data)     },</code></pre> </div> 			                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-105217.htm">现在卖狗粮前景如何（卖狗粮怎么样）</a></p>
+                                        <p>下一个：<a href="/news/article-106044.htm">宠物医院好评评语100字 宠物医院好评评语100字怎么写</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-81485.htm" title="兽用疫苗放一晚上还能用吗 兽用疫苗放一晚上还能用吗有毒吗">兽用疫苗放一晚上还能用吗 兽用疫苗放一晚上还能用吗有毒吗</a></li>
+                        <li class="py-2"><a href="/news/article-75972.htm" title="动物疫苗多少钱一支啊图片大全集高清（动物疫苗多少钱一支啊图片大全集高清图）">动物疫苗多少钱一支啊图片大全集高清（动物疫苗多少钱一支啊图片大全集高清图）</a></li>
+                        <li class="py-2"><a href="/news/article-93131.htm" title="动物医院管理软件系统有哪些功能（动物医院管理制度文本怎么写）">动物医院管理软件系统有哪些功能（动物医院管理制度文本怎么写）</a></li>
+                        <li class="py-2"><a href="/news/article-66777.htm" title="动物疫苗多少钱一支啊图片及价格大全（动物疫苗法最新消息2019）">动物疫苗多少钱一支啊图片及价格大全（动物疫苗法最新消息2019）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-18-free-node-subscribe-links.htm" title="3月18日→19.5M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">3月18日→19.5M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-100597.htm" title="宠物领养有哪些平台可靠点（宠物领养软件推荐）">宠物领养有哪些平台可靠点（宠物领养软件推荐）</a></li>
+                        <li class="py-2"><a href="/news/article-88618.htm" title="为什么养猫家里阴气重（什么属相的人养猫最旺）">为什么养猫家里阴气重（什么属相的人养猫最旺）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-3-free-high-speed-nodes.htm" title="4月3日→20.4M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">4月3日→20.4M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-2-trojan-windows.htm" title="3月2日→18.3M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">3月2日→18.3M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-76650.htm" title="RestTemplate微服务调用捕捉服务端异常">RestTemplate微服务调用捕捉服务端异常</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">80</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">87</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section End -->
+        <!-- Footer Area Start -->
+    <footer class="footer">
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="text-center">
+                                                <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                            <span class="text-light-gray">
+                                NodeTrojan节点订阅官网 版权所有
+                                <br />
+                                Powered by WordPress
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Area End -->
+    <!-- BACK TO TOP SECTION -->
+    <div class="back-to-top bg-gradient-color">
+        <i class="fab fa-angle-up"></i>
+    </div>
+    <!-- Integrated important scripts here -->
+    <script src="/assets/website/js/frontend/nodetrojan/jquery.v1.12.4.min.js"></script>
+    <script src="/assets/website/js/frontend/nodetrojan/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/nodetrojan/jquery-core-plugins.js"></script>
+    <script src="/assets/website/js/frontend/nodetrojan/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
