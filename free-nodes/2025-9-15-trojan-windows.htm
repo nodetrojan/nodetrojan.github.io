@@ -64,7 +64,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <a class="navbar-brand logo f-left mrt-10 mrt-md-0" href="/">
-                                                        <span>Node Trojan</span>
+                                                        <span>Node Trojan 免费节点</span>
                                                         </a>
                             <div class="main-menu f-right">
                                 <nav id="mobile-menu-right">
@@ -100,7 +100,7 @@
             <div class="row">
                 <div class="col-xl-12 text-center">
                     <div class="page-title-content">
-                        <h1 class="title text-white">9月15日→21.6M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</h1>
+                        <h1 class="title text-white">9月15日→21.6M/S|2025年最新免费节点Clash节点/V2ray节点/Singbox/Trojan订阅链接地址</h1>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="/">首页</a></li>
@@ -147,8 +147,8 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
 <p style="margin-bottom:3rem;color:#999;font-style:italic;">注：跳转链接可能会 <b style="color:red;">被墙</b> ，如多次打开失败，请先使用下面不稳定免费订阅后，再尝试点击链接</p><p>&nbsp;</p><p></p><h2>订阅链接</h2><p>&nbsp;</p><p><strong>clash订阅链接</strong></p><p>https://nodetrojan.github.io/uploads/2025/09/2-20250915.yaml</p><p>https://nodetrojan.github.io/uploads/2025/09/3-20250915.yaml</p><p>https://nodetrojan.github.io/uploads/2025/09/4-20250915.yaml</p><p>&nbsp;</p><p><strong>v2ray订阅链接:</strong></p><p>https://nodetrojan.github.io/uploads/2025/09/0-20250915.txt</p><p>https://nodetrojan.github.io/uploads/2025/09/2-20250915.txt</p><p>https://nodetrojan.github.io/uploads/2025/09/4-20250915.txt</p><p><strong>sing-box订阅链接</strong></p><p>https://nodetrojan.github.io/uploads/2025/09/20250915.json</p><p>&nbsp;</p><p>如果您需要高质量的付费服务,我们强烈推荐您试试「<a href="javascript:;" class="js_to" data-url="https://xianyuwangluo.top/#/register?code=" data-type="Xianyu" data-code="j5kX2iZI" rel="nofollow noopener" style="color:#c00;">闲鱼网络</a> 」。提供全球范围内快速稳定的高速节点,轻松处理8K高清视频流量,并可解锁流媒体网站和chatGPT。其服务器性能出色,确保您享受到高品质的体验。</p><h2>掌握V2Ray：从零开始构建你的安全网络通道</h2>  <h2>引言：数字时代的隐私盾牌</h2>  <p>在当今互联网环境中，网络隐私和安全已成为每个数字公民的核心关切。V2Ray作为新一代代理工具中的佼佼者，以其高度可定制性和强大的抗检测能力，正在重塑安全上网的边界。本文将带您深入探索V2Ray的完整生态，从基础原理到实战配置，打造属于您的"网络隐形斗篷"。</p>  <hr />  <h2>第一章 V2Ray技术解析：不只是简单的代理工具</h2>  <h3>1.1 架构设计的革命性突破</h3>  <p>与传统代理工具不同，V2Ray采用模块化设计，其核心优势体现在：<br /> - <strong>多协议支持</strong>：原生集成VMess、Shadowsocks、Socks等协议，支持动态切换<br /> - <strong>流量混淆技术</strong>：通过TLS+WebSocket实现流量伪装，有效对抗深度包检测(DPI)<br /> - <strong>智能路由系统</strong>：可基于域名、IP、地理位置等20余种条件进行精细化分流  </p>  <h3>1.2 性能基准测试数据</h3>  <p>在第三方测试中，V2Ray表现出色：<br /> - 单线程吞吐量可达300Mbps（i5-8250U测试环境）<br /> - 连接建立时间平均仅120ms<br /> - 内存占用控制在30MB以内（基础配置）  </p>  <hr />  <h2>第二章 全平台部署实战手册</h2>  <h3>2.1 Windows系统深度配置</h3>  <p><strong>推荐使用V2RayN图形化客户端</strong>：<br /> 1. 下载最新release包时注意校验SHA256哈希值<br /> 2. 配置核心技巧：<br />    <code>json    "inbound": {      "port": 10808,      "protocol": "socks",      "settings": {        "auth": "noauth",        "udp": true  // 启用UDP转发支持游戏加速      }    }</code> 3. 设置系统代理时建议配合Proxifier实现应用级分流  </p>  <h3>2.2 Linux服务器专业部署</h3>  <p><strong>生产环境推荐方案</strong>：<br /> ```bash</p>  <h1>使用官方脚本安装后必须进行的加固操作  <p>sudo chown -R v2ray:v2ray /etc/v2ray sudo setcap 'cap<em>net</em>bind_service=+ep' /usr/bin/v2ray ```</p>  <p><strong>Systemd服务优化配置</strong>：<br /> <code>[Service] LimitNOFILE=65535 Restart=on-failure RestartSec=5s</code></p>  <hr />  <h2>第三章 高级配置艺术</h2>  <h3>3.1 多入口多出口架构</h3>  <p>示例配置实现国内外流量智能分流：<br /> <code>json "routing": {   "domainStrategy": "IPIfNonMatch",   "rules": [     {       "type": "field",       "domains": ["geosite:cn"],       "outboundTag": "direct"     },     {       "type": "field",       "ip": ["geoip:private"],       "outboundTag": "block"     }   ] }</code></p>  <h3>3.2 传输层优化方案</h3>  <ul> <li><strong>WebSocket+TLS最佳实践</strong>：    <ul> <li>建议搭配Nginx反向代理实现443端口复用  </li> <li>启用TLS1.3与HTTP/2提升性能  </li> </ul></li> <li><strong>mKCP加速配置</strong>：<br /> <code>json "streamSettings": { "network": "kcp", "kcpSettings": {   "mtu": 1350,   "tti": 20,   "uplinkCapacity": 50,   "downlinkCapacity": 100,   "congestion": true } }</code></li> </ul>  <hr />  <h2>第四章 安全防护与疑难排错</h2>  <h3>4.1 安全加固清单</h3>  <ul> <li>定期更换UUID（建议每月更新）  </li> <li>启用动态端口功能防止端口封锁  </li> <li>配置iptables防火墙规则：<br /> <code>bash iptables -A INPUT -p tcp --dport 你的端口 -j ACCEPT iptables -A INPUT -p udp --dport 你的端口 -j ACCEPT</code></li> </ul>  <h3>4.2 典型故障处理指南</h3>  <p>| 故障现象 | 排查步骤 | 解决方案 | |---------|----------|----------| | 连接超时 | 1. 测试服务器ICMP连通性<br>2. 检查本地时间误差 | 调整系统时间误差<300ms | 速度骤降 1. 使用tcping测试延迟<br>2. 检查QoS设置 | 更换传输协议为mKCP | | 频繁断连 | 1. 检查系统日志<br>2. 监控内存占用 | 调整"alterId"值为0 |</p>  <hr />  <h2>第五章 生态扩展与未来展望</h2>  <h3>5.1 周边工具推荐</h3>  <ul> <li><strong>流量分析</strong>：V2Ray-Stats可视化监控面板  </li> <li><strong>规则生成</strong>：Qv2ray配置生成器  </li> <li><strong>移动端</strong>：Shadowrocket（iOS）、V2RayNG（Android）  </li> </ul>  <h3>5.2 技术演进趋势</h3>  <p>随着QUIC协议的逐步支持，V2Ray 5.0版本预计将实现：<br /> - 0-RTT快速重连技术<br /> - 基于机器学习的自适应路由<br /> - 硬件加速加密支持  </p>  <hr />  <h2>结语：构建智能网络防御体系</h2>  <p>V2Ray不仅仅是一个工具，更代表了一种网络自由的技术哲学。通过本文的深度探索，您已掌握从基础部署到企业级应用的全套技能。记住：真正的网络安全始于对技术的理解，终于对规则的尊重。建议每月关注GitHub官方仓库的更新动态，让您的网络防线与时俱进。  </p>  <blockquote>   <p><strong>技术点评</strong>：V2Ray的设计体现了"安全性不妥协，灵活性最大化"的工程智慧。其模块化架构允许用户像搭积木一样组合功能，而流量混淆算法则展现了与审查机制博弈的艺术性。需要注意的是，任何工具都是一把双刃剑——建议用户始终在合法合规的前提下使用技术，将隐私保护与社会责任并重。</p> </blockquote>                 </div>
                 <div class="clearfix"></div>
                 <div class="col-md-12 mt-5">
-                                        <p>上一个：<a href="/free-nodes/2025-9-14-free-node-subscribe.htm">9月14日→20.1M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a></p>
-                                        <p>下一个：<a href="/free-nodes/2025-9-16-trojan-github.htm">9月16日→20.4M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a></p>
+                                        <p>上一个：<a href="/free-nodes/2025-9-14-free-node-subscribe.htm">9月14日→20.1M/S|2025年最新免费节点Clash节点/V2ray节点/Singbox/Trojan订阅链接地址</a></p>
+                                        <p>下一个：<a href="/free-nodes/2025-9-16-trojan-github.htm">9月16日→20.4M/S|2025年最新免费节点Clash节点/V2ray节点/Singbox/Trojan订阅链接地址</a></p>
                                     </div>
                                 <div class="panel panel-default mt-5">
                     <div class="panel-heading">
@@ -156,16 +156,16 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
                     </div>
                     <div class="panel-body">
                         <ul class="p-0 x-0">
-                                                        <li class="py-2"><a href="/free-nodes/2025-9-14-free-node-subscribe.htm">9月14日→20.1M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a></li>
-                                                        <li class="py-2"><a href="/free-nodes/2025-9-13-free-high-speed-nodes.htm">9月13日→19.1M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a></li>
-                                                        <li class="py-2"><a href="/free-nodes/2025-9-12-node-share-links.htm">9月12日→20.6M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a></li>
-                                                        <li class="py-2"><a href="/free-nodes/2025-9-11-free-node-subscribe-links.htm">9月11日→21.7M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a></li>
-                                                        <li class="py-2"><a href="/free-nodes/2025-9-10-free-node-subscribe-links.htm">9月10日→19.1M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a></li>
-                                                        <li class="py-2"><a href="/free-nodes/2025-9-9-node-share-links.htm">9月9日→21.2M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a></li>
-                                                        <li class="py-2"><a href="/free-nodes/2025-9-8-trojan-windows.htm">9月8日→22.3M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a></li>
-                                                        <li class="py-2"><a href="/free-nodes/2025-9-7-node-share-links.htm">9月7日→18.1M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a></li>
-                                                        <li class="py-2"><a href="/free-nodes/2025-9-6-free-node-subscribe.htm">9月6日→20.9M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a></li>
-                                                        <li class="py-2"><a href="/free-nodes/2025-9-5-free-trojan-node.htm">9月5日→19.9M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a></li>
+                                                        <li class="py-2"><a href="/free-nodes/2025-9-14-free-node-subscribe.htm">9月14日→20.1M/S|2025年最新免费节点Clash节点/V2ray节点/Singbox/Trojan订阅链接地址</a></li>
+                                                        <li class="py-2"><a href="/free-nodes/2025-9-13-free-high-speed-nodes.htm">9月13日→19.1M/S|2025年最新免费节点Clash节点/V2ray节点/Singbox/Trojan订阅链接地址</a></li>
+                                                        <li class="py-2"><a href="/free-nodes/2025-9-12-node-share-links.htm">9月12日→20.6M/S|2025年最新免费节点Clash节点/V2ray节点/Singbox/Trojan订阅链接地址</a></li>
+                                                        <li class="py-2"><a href="/free-nodes/2025-9-11-free-node-subscribe-links.htm">9月11日→21.7M/S|2025年最新免费节点Clash节点/V2ray节点/Singbox/Trojan订阅链接地址</a></li>
+                                                        <li class="py-2"><a href="/free-nodes/2025-9-10-free-node-subscribe-links.htm">9月10日→19.1M/S|2025年最新免费节点Clash节点/V2ray节点/Singbox/Trojan订阅链接地址</a></li>
+                                                        <li class="py-2"><a href="/free-nodes/2025-9-9-node-share-links.htm">9月9日→21.2M/S|2025年最新免费节点Clash节点/V2ray节点/Singbox/Trojan订阅链接地址</a></li>
+                                                        <li class="py-2"><a href="/free-nodes/2025-9-8-trojan-windows.htm">9月8日→22.3M/S|2025年最新免费节点Clash节点/V2ray节点/Singbox/Trojan订阅链接地址</a></li>
+                                                        <li class="py-2"><a href="/free-nodes/2025-9-7-node-share-links.htm">9月7日→18.1M/S|2025年最新免费节点Clash节点/V2ray节点/Singbox/Trojan订阅链接地址</a></li>
+                                                        <li class="py-2"><a href="/free-nodes/2025-9-6-free-node-subscribe.htm">9月6日→20.9M/S|2025年最新免费节点Clash节点/V2ray节点/Singbox/Trojan订阅链接地址</a></li>
+                                                        <li class="py-2"><a href="/free-nodes/2025-9-5-free-trojan-node.htm">9月5日→19.9M/S|2025年最新免费节点Clash节点/V2ray节点/Singbox/Trojan订阅链接地址</a></li>
                                                     </ul>
                     </div>
                 </div>
@@ -177,16 +177,16 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2025-9-12-node-share-links.htm" title="9月12日→20.6M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">9月12日→20.6M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-8-7-free-node-subscribe-links.htm" title="8月7日最新V2rayU订阅 | 21.3M/S|2025年V2ray/Shadowrocket/SSR/Clash免费节点链接地址">8月7日最新V2rayU订阅 | 21.3M/S|2025年V2ray/Shadowrocket/SSR/Clash免费节点链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-9-16-trojan-github.htm" title="9月16日→20.4M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">9月16日→20.4M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-8-8-node-share.htm" title="8月8日最新V2rayU订阅 | 21.5M/S|2025年Clash/SSR/Shadowrocket/V2ray免费节点链接地址">8月8日最新V2rayU订阅 | 21.5M/S|2025年Clash/SSR/Shadowrocket/V2ray免费节点链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-8-20-free-node-subscribe-links.htm" title="8月20日最新V2rayU订阅 | 22.2M/S|2025年Shadowrocket/Clash/V2ray/SSR免费节点链接地址">8月20日最新V2rayU订阅 | 22.2M/S|2025年Shadowrocket/Clash/V2ray/SSR免费节点链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-9-8-trojan-windows.htm" title="9月8日→22.3M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">9月8日→22.3M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-9-11-free-node-subscribe-links.htm" title="9月11日→21.7M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">9月11日→21.7M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-9-7-node-share-links.htm" title="9月7日→18.1M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">9月7日→18.1M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-9-5-free-trojan-node.htm" title="9月5日→19.9M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">9月5日→19.9M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-8-29-trojan-node-share.htm" title="8月29日→22M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">8月29日→22M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-9-11-free-node-subscribe-links.htm" title="9月11日→21.7M/S|2025年最新免费节点Clash节点/V2ray节点/Singbox/Trojan订阅链接地址">9月11日→21.7M/S|2025年最新免费节点Clash节点/V2ray节点/Singbox/Trojan订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-9-2-trojan-github.htm" title="9月2日→20.9M/S|2025年最新免费节点Clash节点/V2ray节点/Singbox/Trojan订阅链接地址">9月2日→20.9M/S|2025年最新免费节点Clash节点/V2ray节点/Singbox/Trojan订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-9-13-free-high-speed-nodes.htm" title="9月13日→19.1M/S|2025年最新免费节点Clash节点/V2ray节点/Singbox/Trojan订阅链接地址">9月13日→19.1M/S|2025年最新免费节点Clash节点/V2ray节点/Singbox/Trojan订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-8-27-free-subscribe-node.htm" title="8月27日→18.9M/S|2025年最新免费节点Clash节点/V2ray节点/Singbox/Trojan订阅链接地址">8月27日→18.9M/S|2025年最新免费节点Clash节点/V2ray节点/Singbox/Trojan订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-9-6-free-node-subscribe.htm" title="9月6日→20.9M/S|2025年最新免费节点Clash节点/V2ray节点/Singbox/Trojan订阅链接地址">9月6日→20.9M/S|2025年最新免费节点Clash节点/V2ray节点/Singbox/Trojan订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-9-1-free-node-subscribe.htm" title="9月1日→19M/S|2025年最新免费节点Clash节点/V2ray节点/Singbox/Trojan订阅链接地址">9月1日→19M/S|2025年最新免费节点Clash节点/V2ray节点/Singbox/Trojan订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-8-14-free-v2ray-subscribe.htm" title="8月14日最新V2rayU订阅 | 18M/S|2025年Shadowrocket节点/SSR/V2ray节点/Clash免费节点链接地址">8月14日最新V2rayU订阅 | 18M/S|2025年Shadowrocket节点/SSR/V2ray节点/Clash免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-8-31-free-subscribe-node.htm" title="8月31日→21.2M/S|2025年最新免费节点Clash节点/V2ray节点/Singbox/Trojan订阅链接地址">8月31日→21.2M/S|2025年最新免费节点Clash节点/V2ray节点/Singbox/Trojan订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-8-17-free-subscribe-node.htm" title="8月17日最新V2rayU订阅 | 20.1M/S|2025年Shadowrocket节点/SSR/V2ray节点/Clash免费节点链接地址">8月17日最新V2rayU订阅 | 20.1M/S|2025年Shadowrocket节点/SSR/V2ray节点/Clash免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-9-20-node-share.htm" title="9月20日→19.5M/S|2025年最新免费节点Clash节点/V2ray节点/Singbox/Trojan订阅链接地址">9月20日→19.5M/S|2025年最新免费节点Clash节点/V2ray节点/Singbox/Trojan订阅链接地址</a></li>
                     </ul>
     </div>
 </div>
@@ -198,7 +198,7 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">16</span> <a href="/date/2025-09/" title="2025-09 归档">2025-09</a></h4>
+                <h4><span class="badge" style="float: right;">23</span> <a href="/date/2025-09/" title="2025-09 归档">2025-09</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">28</span> <a href="/date/2025-08/" title="2025-08 归档">2025-08</a></h4>
@@ -219,7 +219,8 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="text-center">
-                                                <p>
+                                                <p>本站内容仅供学习与技术研究用途，无意传播或倡导任何违反法律法规的行为。在此声明：用户须自行了解所在地法律法规，合法合规使用；因使用不当产生的法律责任，与本站及作者无关；请在使用前仔细阅读本声明，继续使用即视为同意以上条款。</p>
+                    <p>
                                                 <a href="/">首页</a> |
                                                 <a href="/free-nodes/">免费节点</a> |
                                                 <a href="/paid-subscribe/">推荐机场</a> |
@@ -230,7 +231,7 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
                         <a href="/privacy.htm">隐私申明</a> |
                         <a href="/sitemap.xml">网站地图</a>
                     </p>
-                            <span class="text-light-gray">
+                                                <span class="text-light-gray">
                                 NodeTrojan节点订阅官网 版权所有
                                 <br />
                                 Powered by WordPress
