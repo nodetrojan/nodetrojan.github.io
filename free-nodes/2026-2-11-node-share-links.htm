@@ -152,9 +152,34 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
+    <div class="panel-heading"><h5>VMess AEAD 加密在高封锁网络的作用？</h5></div>
+    <div class="panel-body">
+        AEAD 加密可防止数据篡改和流量特征泄露，降低被封锁和 DPI 检测风险。保证节点长期可用，提高数据传输安全性和访问可靠性，优化用户科学上网体验。<hr />    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-heading"><h5>Sing-box 的策略组如何实现按域名分流？</h5></div>
     <div class="panel-body">
         Sing-box 支持根据域名规则匹配流量，将不同网站或应用流量分配到指定节点。结合策略组自动切换低延迟节点，可优化访问速度，保证网络稳定性和流畅体验。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Hysteria2 的 QUIC 协议如何降低延迟？</h5></div>
+    <div class="panel-body">
+        QUIC 协议基于 UDP，多路复用和拥塞控制优化，可减少握手延迟和包重传次数。Hysteria2 利用 QUIC 的特性，使高延迟或丢包网络下依然保持低延迟和高稳定性。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Sing-box 如何实现精确域名分流？</h5></div>
+    <div class="panel-body">
+        Sing-box 可以按域名设置分流规则，将不同流量发送到指定节点。结合策略组使用，可实现网页、视频和游戏流量精准分配，提高访问速度和网络稳定性。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Nekobox 是否支持多客户端节点管理？</h5></div>
+    <div class="panel-body">
+        支持。Nekobox 可以独立管理 Shadowsocks、Clash 等客户端节点，互不干扰。结合策略组，可实现多客户端流量分流和网络优化，提高节点管理效率和使用便利性。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Sing-box 是否比 Clash 更省资源？</h5></div>
+    <div class="panel-body">
+        Sing-box 在性能优化上比 Clash 更出色。它采用 Go 语言重构核心模块，并对并发模型进行了优化，内存占用更低，启动速度更快，适合低配置设备或嵌入式环境。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Clash 的规则模式有哪些？</h5></div>
@@ -162,9 +187,9 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
         Clash 提供三种主要模式：Global（全局代理）、Rule（规则代理）和Direct（直连）。全局模式会让所有流量通过代理；规则模式根据规则文件自动分流；直连模式则完全不经过代理。用户可根据需求灵活切换。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Sing-box 如何实现精确域名分流？</h5></div>
+    <div class="panel-heading"><h5>Hiddify Next 用户带宽限制如何配置？</h5></div>
     <div class="panel-body">
-        Sing-box 可以按域名设置分流规则，将不同流量发送到指定节点。结合策略组使用，可实现网页、视频和游戏流量精准分配，提高访问速度和网络稳定性。<hr />    </div>
+        管理员可设置每个用户上传、下载和总流量上限，超出限制可自动降速或阻止访问。保证服务器资源合理分配，避免单用户占用过多带宽，提高整体网络公平性。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>使用 Reality 协议后，客户端与服务端的密钥如何管理？</h5></div>
@@ -174,32 +199,7 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Hysteria2 使用哪种加密算法？</h5></div>
     <div class="panel-body">
-        Hysteria2 默认使用 AEAD 加密算法（如 ChaCha20-Poly1305），并可结合 TLS 层加密保障安全性。其设计兼顾速度与抗干扰能力，适合高延迟跨境网络环境。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Sing-box 是否比 Clash 更省资源？</h5></div>
-    <div class="panel-body">
-        Sing-box 在性能优化上比 Clash 更出色。它采用 Go 语言重构核心模块，并对并发模型进行了优化，内存占用更低，启动速度更快，适合低配置设备或嵌入式环境。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Nekobox 是否支持多客户端节点管理？</h5></div>
-    <div class="panel-body">
-        支持。Nekobox 可以独立管理 Shadowsocks、Clash 等客户端节点，互不干扰。结合策略组，可实现多客户端流量分流和网络优化，提高节点管理效率和使用便利性。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>VMess AEAD 加密在高封锁网络的作用？</h5></div>
-    <div class="panel-body">
-        AEAD 加密可防止数据篡改和流量特征泄露，降低被封锁和 DPI 检测风险。保证节点长期可用，提高数据传输安全性和访问可靠性，优化用户科学上网体验。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Hysteria2 的 QUIC 协议如何降低延迟？</h5></div>
-    <div class="panel-body">
-        QUIC 协议基于 UDP，多路复用和拥塞控制优化，可减少握手延迟和包重传次数。Hysteria2 利用 QUIC 的特性，使高延迟或丢包网络下依然保持低延迟和高稳定性。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Hiddify Next 用户带宽限制如何配置？</h5></div>
-    <div class="panel-body">
-        管理员可设置每个用户上传、下载和总流量上限，超出限制可自动降速或阻止访问。保证服务器资源合理分配，避免单用户占用过多带宽，提高整体网络公平性。    </div>
+        Hysteria2 默认使用 AEAD 加密算法（如 ChaCha20-Poly1305），并可结合 TLS 层加密保障安全性。其设计兼顾速度与抗干扰能力，适合高延迟跨境网络环境。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -228,16 +228,16 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2026-2-7-trojan-node-github.htm" title="2月7日→22.3M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">2月7日→22.3M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-1-24-trojan-node-github.htm" title="1月24日→22.1M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">1月24日→22.1M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-2-14-trojan-node.htm" title="2月14日→22.8M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">2月14日→22.8M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a></li>
                         <li class="py-2"><a href="/free-nodes/2026-2-10-free-subscribe-node.htm" title="2月10日→21.1M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">2月10日→21.1M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-2-1-today-trojan-node.htm" title="2月1日→20.4M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">2月1日→20.4M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-2-11-node-share-links.htm" title="2月11日→21.1M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">2月11日→21.1M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-1-25-latest-trojan-node.htm" title="1月25日→18.7M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">1月25日→18.7M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-1-20-node-share.htm" title="1月20日→20.3M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">1月20日→20.3M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-2-13-node-share.htm" title="2月13日→19.6M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">2月13日→19.6M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-2-17-trojan-node.htm" title="2月17日→22.5M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">2月17日→22.5M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-2-16-trojan-node.htm" title="2月16日→20.9M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">2月16日→20.9M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-1-28-free-trojan-node.htm" title="1月28日→18M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">1月28日→18M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a></li>
                         <li class="py-2"><a href="/free-nodes/2026-1-23-trojan-node-share.htm" title="1月23日→20.9M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">1月23日→20.9M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-1-17-latest-trojan-node.htm" title="1月17日→20.8M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">1月17日→20.8M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-2-6-node-share.htm" title="2月6日→20.5M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">2月6日→20.5M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-2-18-latest-trojan-node.htm" title="2月18日→19M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">2月18日→19M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-1-29-trojan-windows.htm" title="1月29日→20.4M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">1月29日→20.4M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-1-22-free-node-subscribe.htm" title="1月22日→21.8M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">1月22日→21.8M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a></li>
                     </ul>
     </div>
 </div>
@@ -249,7 +249,7 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">13</span> <a href="/date/2026-02/" title="2026-02 归档">2026-02</a></h4>
+                <h4><span class="badge" style="float: right;">20</span> <a href="/date/2026-02/" title="2026-02 归档">2026-02</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">18</span> <a href="/date/2026-01/" title="2026-01 归档">2026-01</a></h4>
