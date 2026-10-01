@@ -423,19 +423,19 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
         可以。Sing-box 原生支持解析 Clash YAML 配置，并自动转换为自身 JSON 结构。节点和规则基本兼容，但部分脚本和自定义插件可能需要手动调整。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>WinXray 的 PAC 模式如何优化访问？</h5></div>
-    <div class="panel-body">
-        PAC 模式可根据规则动态判断流量是否走代理，无需手动切换节点。适合国内外混合访问场景，提高访问速度和稳定性，减少误操作导致的访问失败。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>WinXray 节点延迟检测如何优化视频访问？</h5></div>
     <div class="panel-body">
         WinXray 定期测速节点延迟和丢包率，并结合策略组自动选择最佳节点。保证视频流量通过低延迟节点，减少缓冲和卡顿，提高播放流畅度和网络体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>PassWall2 自动切换节点机制如何工作？</h5></div>
+    <div class="panel-heading"><h5>VMess AEAD 加密如何确保数据传输安全？</h5></div>
     <div class="panel-body">
-        PassWall2 会根据节点延迟和丢包率测试结果，结合策略组自动选择最优节点处理流量。无需用户手动切换，保证网页、视频和游戏流量的速度和稳定性，优化网络体验。<hr />    </div>
+        AEAD 加密可防止数据篡改、重放攻击和流量特征泄露。在高封锁环境中保证节点可用，提升数据安全和连接稳定性，降低被检测风险，确保长期安全访问体验。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>WinXray 的 PAC 模式如何优化访问？</h5></div>
+    <div class="panel-body">
+        PAC 模式可根据规则动态判断流量是否走代理，无需手动切换节点。适合国内外混合访问场景，提高访问速度和稳定性，减少误操作导致的访问失败。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Quantumult X 的“分流规则”如何管理？</h5></div>
@@ -443,19 +443,9 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
         Quantumult X 使用策略组管理分流规则。用户可将规则文件导入应用，通过“policy group”定义不同流量走向，实现国内直连、国外代理、广告拦截等功能的自动分配。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>V2Ray 的核心组件有哪些？</h5></div>
-    <div class="panel-body">
-        V2Ray 的核心由 inbound、outbound、routing、policy 等模块组成。Inbound 处理入站请求，Outbound 负责出站连接，Routing 管理流量分流策略。模块化的设计让用户可以自由组合代理方式。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>VMess AEAD 加密为何适合高封锁环境？</h5></div>
     <div class="panel-body">
         AEAD 加密可防止数据篡改和流量特征泄露，降低被检测风险。在高封锁网络中，保证节点可用性和连接稳定性，同时提升数据传输安全性，确保长期安全访问。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Shadowrocket 的分流规则如何实现广告拦截？</h5></div>
-    <div class="panel-body">
-        通过配置规则，将广告域名或请求路径匹配到黑名单策略，使请求直接阻断或重定向到本地地址。这样用户浏览网页或使用应用时可自动屏蔽大部分广告内容。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Shadowrocket 的重写功能有什么用途？</h5></div>
@@ -463,9 +453,19 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
         Shadowrocket 的重写功能允许用户在请求阶段修改 HTTP 头、响应内容或重定向 URL。这一功能常用于屏蔽广告、解锁区域限制或调试网页请求，非常灵活强大。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>VMess AEAD 加密如何确保数据传输安全？</h5></div>
+    <div class="panel-heading"><h5>PassWall2 自动切换节点机制如何工作？</h5></div>
     <div class="panel-body">
-        AEAD 加密可防止数据篡改、重放攻击和流量特征泄露。在高封锁环境中保证节点可用，提升数据安全和连接稳定性，降低被检测风险，确保长期安全访问体验。    </div>
+        PassWall2 会根据节点延迟和丢包率测试结果，结合策略组自动选择最优节点处理流量。无需用户手动切换，保证网页、视频和游戏流量的速度和稳定性，优化网络体验。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Shadowrocket 的分流规则如何实现广告拦截？</h5></div>
+    <div class="panel-body">
+        通过配置规则，将广告域名或请求路径匹配到黑名单策略，使请求直接阻断或重定向到本地地址。这样用户浏览网页或使用应用时可自动屏蔽大部分广告内容。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>V2Ray 的核心组件有哪些？</h5></div>
+    <div class="panel-body">
+        V2Ray 的核心由 inbound、outbound、routing、policy 等模块组成。Inbound 处理入站请求，Outbound 负责出站连接，Routing 管理流量分流策略。模块化的设计让用户可以自由组合代理方式。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -513,16 +513,16 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2026-9-18-node-share.htm" title="9月18日→19.9M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">9月18日→19.9M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/node-share-links-2026-8-21.htm" title="8月21日→18.2M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">8月21日→18.2M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/free-high-speed-nodes-2026-8-15.htm" title="8月15日→22.6M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">8月15日→22.6M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-8-trojan-node.htm" title="8月8日→20.5M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">8月8日→20.5M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-9-10-free-node-subscribe.htm" title="9月10日→20.2M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">9月10日→20.2M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-22-free-trojan-node.htm" title="8月22日→21M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">8月22日→21M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/trojan-node-share-2026-8-27.htm" title="8月27日→18.6M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">8月27日→18.6M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-30-trojan-github.htm" title="8月30日→19.8M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">8月30日→19.8M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-6-today-trojan-node.htm" title="8月6日→22.1M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">8月6日→22.1M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-node-subscribe-links-2026-9-9.htm" title="9月9日→19.8M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">9月9日→19.8M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-16-trojan-node.htm" title="9月16日→19.5M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">9月16日→19.5M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-6-node-share.htm" title="9月6日→18.5M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">9月6日→18.5M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-26-today-trojan-node.htm" title="8月26日→22.7M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">8月26日→22.7M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-10-trojan-github.htm" title="8月10日→20.8M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">8月10日→20.8M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/2026-9-2-today-trojan-node.htm" title="9月2日→19.6M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">9月2日→19.6M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-12-trojan-github.htm" title="8月12日→20.9M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">8月12日→20.9M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-20-node-share.htm" title="8月20日→20.6M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">8月20日→20.6M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-6-today-trojan-node.htm" title="8月6日→22.1M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">8月6日→22.1M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-30-trojan-github.htm" title="9月30日→18M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址">9月30日→18M/S|2025年最新免费节点Clash/V2ray/Singbox/Trojan订阅链接地址</a><hr /></li>
                     </ul>
     </div>
 </div>
@@ -534,7 +534,10 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">24</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
+                <h4><span class="badge" style="float: right;">1</span> <a href="/date/2026-10/" title="2026-10 归档">2026-10</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">26</span> <a href="/date/2026-08/" title="2026-08 归档">2026-08</a></h4>
